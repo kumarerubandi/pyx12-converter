@@ -6,3 +6,13 @@ pylint
 yolk
 coverage
 nose
+pyx12
+flask
+libxml2
+cStringIO
+json, dicttoxml
+fhir.fhir
+xml.etree.ElementTree
+itertools
+re
+flask_cors
