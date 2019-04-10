@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+######################################################################
+# Copyright (c) 2001-2008 Kalamazoo Community Mental Health Services,
+#   John Holland <jholland@kazoocmh.org> <john@zoner.org>
+# All rights reserved.
+#
+# This software is licensed as described in the file LICENSE.txt, which
+# you should have received as part of this distribution.
+#
+######################################################################
+
+-->
+
+<!-- pyx12 configuration file
+This file can be copied to the system-wide configuration directory
+(/usr/local/etc), to a user's home directory as ~/.pyx12.conf.xml,
+or can be passed on the command line using the -c option
+-->
+
+<params version="1.0">
+<!--
+    <param name="map_path">
+        <value>c:\\python25\\share\\pyx12\\map</value>
+        <comment>Where to find the xml maps</comment>
+    </param>
+-->
+    <param name="exclude_external_codes">
+        <!--<value>states</value>-->
+        <value></value>
+        <comment>Comma separated list of external_codes to exclude</comment>
+    </param>
+    <param name="charset">
+        <value>E</value>
+        <comment>E = extended, B = Basic</comment>
+    </param>
+    <param name="simple_dtd">
+        <value></value>
+        <comment></comment>
+    </param>
+    <param name="xmlout">
+        <value>simple</value>
+        <comment>Style of XML output</comment>
+    </param>
+</params>
