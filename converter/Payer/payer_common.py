@@ -177,6 +177,14 @@ def loopB(loop_elem,claim_json):
             #                 element_child.text = requestor_supp[1]
             #         if element_child.attrib['id'] == 'REF02':
             #             element_child.text = req['value']
+            elif seg_child.attrib['id'] == 'N3':
+                if 'address' in enterer:
+                    if 'text' in enterer['address'][0]:
+                        modify_name(seg_child, enterer)
+                    else:
+                        loop_elem.remove(seg_child)
+                else:
+                    loop_elem.remove(seg_child)
             elif seg_child.attrib['id'] == 'N4':
                 if 'address' in enterer:
                     modify_name(seg_child, enterer)

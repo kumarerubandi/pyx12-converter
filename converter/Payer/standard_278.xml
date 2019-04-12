@@ -69,6 +69,10 @@
                   <!--<ele id="REF01">EI</ele>-->
                   <!--<ele id="REF02">Requestor Supplemental Identifier</ele>-->
                <!--</seg>-->
+                <seg id="N3">
+                  <ele id="N301">claim_json.enterer.address.0.text</ele>
+                  <!--<ele id='N302'>claim_json.enterer.address.line.1</ele>-->
+               </seg>
                <seg id="N4">
                   <ele id="N401">claim_json.enterer.address.0.city</ele>
                   <ele id="N402">claim_json.enterer.address.0.state</ele>
@@ -90,6 +94,8 @@
             <!--Subscriber Name Loop-->
             <loop id="2010C">
                <seg id="NM1">
+                  <ele id="NM101">IL</ele>
+                  <ele id="NM102">1</ele>
                   <ele id="NM103">claim_json.Patient.name.0.family</ele>
                   <ele id="NM104">claim_json.Patient.name.0.given.0</ele>
                   <ele id="NM108">MI</ele>
