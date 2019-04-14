@@ -5623,6 +5623,7 @@
                                        <usage>R</usage>
                                        <seq>01</seq>
                                        <valid_codes>
+                                          <code>71</code>
                                           <code>72</code>
                                           <code>73</code>
                                           <code>77</code>
@@ -6047,557 +6048,468 @@
                                        </element>
                                     </segment>
                                     <!--End of N4 segment-->
-                                    <loop xid="2000F">
+                                 </loop>
+                                 <!--End of 2010EB loop-->
+                                 <loop xid="2000F">
+                                    <name>Service Level</name>
+                                    <usage>S</usage>
+                                    <pos>180</pos>
+                                    <repeat>>1</repeat>
+                                    <segment xid="HL">
                                        <name>Service Level</name>
-                                       <usage>R</usage>
-                                       <pos>180</pos>
-                                       <repeat>>1</repeat>
-                                       <segment xid="HL">
-                                          <name>Service Level</name>
-                                          <usage>S</usage>
-                                          <pos>010</pos>
-                                          <max_use>1</max_use>
-                                          <element xid="HL01">
-                                             <data_ele>628</data_ele>
-                                             <name>Hierarchical ID Number</name>
-                                             <usage>R</usage>
-                                             <seq>01</seq>
-                                          </element>
-                                          <element xid="HL02">
-                                             <data_ele>734</data_ele>
-                                             <name>Hierarchical Parent ID Number</name>
-                                             <usage>R</usage>
-                                             <seq>02</seq>
-                                          </element>
-                                          <element xid="HL03">
-                                             <data_ele>735</data_ele>
-                                             <name>Hierarchical Level Code</name>
-                                             <usage>R</usage>
-                                             <seq>03</seq>
-                                             <valid_codes>
-                                                <code>SS</code>
-                                             </valid_codes>
-                                          </element>
-                                          <element xid="HL04">
-                                             <data_ele>736</data_ele>
-                                             <name>Hierarchical Child Code</name>
-                                             <usage>R</usage>
-                                             <seq>04</seq>
-                                             <valid_codes>
-                                                <code>0</code>
-                                             </valid_codes>
-                                          </element>
-                                       </segment>
-                                       <!--End of HL segment-->
-                                       <segment xid="TRN">
+                                       <usage>S</usage>
+                                       <pos>010</pos>
+                                       <max_use>1</max_use>
+                                       <element xid="HL01">
+                                          <data_ele>628</data_ele>
+                                          <name>Hierarchical ID Number</name>
+                                          <usage>R</usage>
+                                          <seq>01</seq>
+                                       </element>
+                                       <element xid="HL02">
+                                          <data_ele>734</data_ele>
+                                          <name>Hierarchical Parent ID Number</name>
+                                          <usage>R</usage>
+                                          <seq>02</seq>
+                                       </element>
+                                       <element xid="HL03">
+                                          <data_ele>735</data_ele>
+                                          <name>Hierarchical Level Code</name>
+                                          <usage>R</usage>
+                                          <seq>03</seq>
+                                          <valid_codes>
+                                             <code>SS</code>
+                                          </valid_codes>
+                                       </element>
+                                       <element xid="HL04">
+                                          <data_ele>736</data_ele>
+                                          <name>Hierarchical Child Code</name>
+                                          <usage>R</usage>
+                                          <seq>04</seq>
+                                          <valid_codes>
+                                             <code>0</code>
+                                          </valid_codes>
+                                       </element>
+                                    </segment>
+                                    <!--End of HL segment-->
+                                    <segment xid="TRN">
+                                       <name>Service Trace Number</name>
+                                       <usage>S</usage>
+                                       <pos>020</pos>
+                                       <max_use>2</max_use>
+                                       <element xid="TRN01">
+                                          <data_ele>481</data_ele>
+                                          <name>Trace Type Code</name>
+                                          <usage>R</usage>
+                                          <seq>01</seq>
+                                          <valid_codes>
+                                             <code>1</code>
+                                          </valid_codes>
+                                       </element>
+                                       <element xid="TRN02">
+                                          <data_ele>127</data_ele>
                                           <name>Service Trace Number</name>
+                                          <usage>R</usage>
+                                          <seq>02</seq>
+                                       </element>
+                                       <element xid="TRN03">
+                                          <data_ele>509</data_ele>
+                                          <name>Trace Assigning Entity Identifier</name>
+                                          <usage>R</usage>
+                                          <seq>03</seq>
+                                       </element>
+                                       <element xid="TRN04">
+                                          <data_ele>127</data_ele>
+                                          <name>Trace Assigning Entity Additional Identifier</name>
                                           <usage>S</usage>
-                                          <pos>020</pos>
-                                          <max_use>2</max_use>
-                                          <element xid="TRN01">
-                                             <data_ele>481</data_ele>
-                                             <name>Trace Type Code</name>
+                                          <seq>04</seq>
+                                       </element>
+                                    </segment>
+                                    <!--End of TRN segment-->
+                                    <segment xid="UM">
+                                       <name>Health Care Services Review Information</name>
+                                       <usage>S</usage>
+                                       <pos>040</pos>
+                                       <max_use>1</max_use>
+                                       <element xid="UM01">
+                                          <data_ele>1525</data_ele>
+                                          <name>Request Category Code</name>
+                                          <usage>S</usage>
+                                          <seq>01</seq>
+                                          <valid_codes>
+                                             <code>HS</code>
+                                             <code>SC</code>
+                                          </valid_codes>
+                                       </element>
+                                       <element xid="UM02">
+                                          <data_ele>1322</data_ele>
+                                          <name>Certification Type Code</name>
+                                          <usage>S</usage>
+                                          <seq>02</seq>
+                                          <valid_codes>
+                                             <code>1</code>
+                                             <code>2</code>
+                                             <code>3</code>
+                                             <code>4</code>
+                                             <code>I</code>
+                                             <code>N</code>
+                                             <code>R</code>
+                                             <code>S</code>
+                                          </valid_codes>
+                                       </element>
+                                       <element xid="UM03">
+                                          <data_ele>1365</data_ele>
+                                          <name>Service Type Code</name>
+                                          <usage>S</usage>
+                                          <seq>03</seq>
+                                          <valid_codes>
+                                             <code>1</code>
+                                             <code>2</code>
+                                             <code>3</code>
+                                             <code>4</code>
+                                             <code>5</code>
+                                             <code>6</code>
+                                             <code>7</code>
+                                             <code>8</code>
+                                             <code>11</code>
+                                             <code>12</code>
+                                             <code>14</code>
+                                             <code>15</code>
+                                             <code>16</code>
+                                             <code>17</code>
+                                             <code>18</code>
+                                             <code>20</code>
+                                             <code>21</code>
+                                             <code>23</code>
+                                             <code>24</code>
+                                             <code>25</code>
+                                             <code>26</code>
+                                             <code>27</code>
+                                             <code>28</code>
+                                             <code>33</code>
+                                             <code>35</code>
+                                             <code>36</code>
+                                             <code>37</code>
+                                             <code>38</code>
+                                             <code>39</code>
+                                             <code>40</code>
+                                             <code>42</code>
+                                             <code>44</code>
+                                             <code>45</code>
+                                             <code>46</code>
+                                             <code>54</code>
+                                             <code>56</code>
+                                             <code>61</code>
+                                             <code>62</code>
+                                             <code>63</code>
+                                             <code>64</code>
+                                             <code>65</code>
+                                             <code>66</code>
+                                             <code>67</code>
+                                             <code>68</code>
+                                             <code>69</code>
+                                             <code>70</code>
+                                             <code>71</code>
+                                             <code>72</code>
+                                             <code>73</code>
+                                             <code>74</code>
+                                             <code>75</code>
+                                             <code>76</code>
+                                             <code>77</code>
+                                             <code>78</code>
+                                             <code>79</code>
+                                             <code>80</code>
+                                             <code>82</code>
+                                             <code>83</code>
+                                             <code>84</code>
+                                             <code>85</code>
+                                             <code>86</code>
+                                             <code>87</code>
+                                             <code>88</code>
+                                             <code>93</code>
+                                             <code>A4</code>
+                                             <code>A6</code>
+                                             <code>A9</code>
+                                             <code>AD</code>
+                                             <code>AE</code>
+                                             <code>AF</code>
+                                             <code>AG</code>
+                                             <code>AI</code>
+                                             <code>AJ</code>
+                                             <code>AK</code>
+                                             <code>AL</code>
+                                             <code>AR</code>
+                                             <code>B1</code>
+                                             <code>BB</code>
+                                             <code>BC</code>
+                                             <code>BD</code>
+                                             <code>BE</code>
+                                             <code>BF</code>
+                                             <code>BG</code>
+                                             <code>BL</code>
+                                             <code>BN</code>
+                                             <code>BP</code>
+                                             <code>BQ</code>
+                                             <code>BS</code>
+                                             <code>BY</code>
+                                             <code>BZ</code>
+                                             <code>C1</code>
+                                             <code>CQ</code>
+                                             <code>GY</code>
+                                             <code>IC</code>
+                                             <code>MH</code>
+                                             <code>NI</code>
+                                             <code>ON</code>
+                                             <code>PT</code>
+                                             <code>PU</code>
+                                             <code>RN</code>
+                                             <code>RT</code>
+                                             <code>TC</code>
+                                             <code>TN</code>
+                                          </valid_codes>
+                                       </element>
+                                       <composite>
+                                          <data_ele>C023</data_ele>
+                                          <name>Health Care Service Location Information</name>
+                                          <usage>S</usage>
+                                          <seq>04</seq>
+                                          <element xid="UM04-01">
+                                             <data_ele>1331</data_ele>
+                                             <name>Facility Type Code</name>
                                              <usage>R</usage>
                                              <seq>01</seq>
-                                             <valid_codes>
-                                                <code>1</code>
-                                             </valid_codes>
                                           </element>
-                                          <element xid="TRN02">
-                                             <data_ele>127</data_ele>
-                                             <name>Service Trace Number</name>
+                                          <element xid="UM04-02">
+                                             <data_ele>1332</data_ele>
+                                             <name>Facility Code Qualifier</name>
                                              <usage>R</usage>
                                              <seq>02</seq>
+                                             <valid_codes>
+                                                <code>A</code>
+                                                <code>B</code>
+                                             </valid_codes>
                                           </element>
-                                          <element xid="TRN03">
-                                             <data_ele>509</data_ele>
-                                             <name>Trace Assigning Entity Identifier</name>
-                                             <usage>R</usage>
+                                          <element xid="UM04-03">
+                                             <data_ele>1325</data_ele>
+                                             <name>Claim Frequency Type Code</name>
+                                             <usage>N</usage>
                                              <seq>03</seq>
                                           </element>
-                                          <element xid="TRN04">
-                                             <data_ele>127</data_ele>
-                                             <name>Trace Assigning Entity Additional Identifier</name>
-                                             <usage>S</usage>
-                                             <seq>04</seq>
-                                          </element>
-                                       </segment>
-                                       <!--End of TRN segment-->
-                                       <segment xid="UM">
-                                          <name>Health Care Services Review Information</name>
-                                          <usage>S</usage>
-                                          <pos>040</pos>
-                                          <max_use>1</max_use>
-                                          <element xid="UM01">
-                                             <data_ele>1525</data_ele>
-                                             <name>Request Category Code</name>
-                                             <usage>S</usage>
-                                             <seq>01</seq>
-                                             <valid_codes>
-                                                <code>HS</code>
-                                                <code>SC</code>
-                                             </valid_codes>
-                                          </element>
-                                          <element xid="UM02">
-                                             <data_ele>1322</data_ele>
-                                             <name>Certification Type Code</name>
-                                             <usage>S</usage>
-                                             <seq>02</seq>
-                                             <valid_codes>
-                                                <code>1</code>
-                                                <code>2</code>
-                                                <code>3</code>
-                                                <code>4</code>
-                                                <code>I</code>
-                                                <code>N</code>
-                                                <code>R</code>
-                                                <code>S</code>
-                                             </valid_codes>
-                                          </element>
-                                          <element xid="UM03">
-                                             <data_ele>1365</data_ele>
-                                             <name>Service Type Code</name>
-                                             <usage>S</usage>
-                                             <seq>03</seq>
-                                             <valid_codes>
-                                               <code>1</code>
-                                               <code>2</code>
-                                               <code>3</code>
-                                               <code>4</code>
-                                               <code>5</code>
-                                               <code>6</code>
-                                               <code>7</code>
-                                               <code>8</code>
-                                               <code>11</code>
-                                               <code>12</code>
-                                               <code>14</code>
-                                               <code>15</code>
-                                               <code>16</code>
-                                               <code>17</code>
-                                               <code>18</code>
-                                               <code>20</code>
-                                               <code>21</code>
-                                               <code>23</code>
-                                               <code>24</code>
-                                               <code>25</code>
-                                               <code>26</code>
-                                               <code>27</code>
-                                               <code>28</code>
-                                               <code>33</code>
-                                               <code>35</code>
-                                               <code>36</code>
-                                               <code>37</code>
-                                               <code>38</code>
-                                               <code>39</code>
-                                               <code>40</code>
-                                               <code>42</code>
-                                               <code>44</code>
-                                               <code>45</code>
-                                               <code>46</code>
-                                               <code>54</code>
-                                               <code>56</code>
-                                               <code>61</code>
-                                               <code>62</code>
-                                               <code>63</code>
-                                               <code>64</code>
-                                               <code>65</code>
-                                               <code>66</code>
-                                               <code>67</code>
-                                               <code>68</code>
-                                               <code>69</code>
-                                               <code>70</code>
-                                               <code>71</code>
-                                               <code>72</code>
-                                               <code>73</code>
-                                               <code>74</code>
-                                               <code>75</code>
-                                               <code>76</code>
-                                               <code>77</code>
-                                               <code>78</code>
-                                               <code>79</code>
-                                               <code>80</code>
-                                               <code>82</code>
-                                               <code>83</code>
-                                               <code>84</code>
-                                               <code>85</code>
-                                               <code>86</code>
-                                               <code>87</code>
-                                               <code>88</code>
-                                               <code>93</code>
-                                               <code>A4</code>
-                                               <code>A6</code>
-                                               <code>A9</code>
-                                               <code>AD</code>
-                                               <code>AE</code>
-                                               <code>AF</code>
-                                               <code>AG</code>
-                                               <code>AI</code>
-                                               <code>AJ</code>
-                                               <code>AK</code>
-                                               <code>AL</code>
-                                               <code>AR</code>
-                                               <code>B1</code>
-                                               <code>BB</code>
-                                               <code>BC</code>
-                                               <code>BD</code>
-                                               <code>BE</code>
-                                               <code>BF</code>
-                                               <code>BG</code>
-                                               <code>BL</code>
-                                               <code>BN</code>
-                                               <code>BP</code>
-                                               <code>BQ</code>
-                                               <code>BS</code>
-                                               <code>BY</code>
-                                               <code>BZ</code>
-                                               <code>C1</code>
-                                               <code>CQ</code>
-                                               <code>GY</code>
-                                               <code>IC</code>
-                                               <code>MH</code>
-                                               <code>NI</code>
-                                               <code>ON</code>
-                                               <code>PT</code>
-                                               <code>PU</code>
-                                               <code>RN</code>
-                                               <code>RT</code>
-                                               <code>TC</code>
-                                               <code>TN</code>
-                                             </valid_codes>
-                                          </element>
-                                          <composite>
-                                             <data_ele>C023</data_ele>
-                                             <name>Health Care Service Location Information</name>
-                                             <usage>S</usage>
-                                             <seq>04</seq>
-                                             <element xid="UM04-01">
-                                                <data_ele>1331</data_ele>
-                                                <name>Facility Type Code</name>
-                                                <usage>R</usage>
-                                                <seq>01</seq>
-                                             </element>
-                                             <element xid="UM04-02">
-                                                <data_ele>1332</data_ele>
-                                                <name>Facility Code Qualifier</name>
-                                                <usage>R</usage>
-                                                <seq>02</seq>
-                                                <valid_codes>
-                                                   <code>A</code>
-                                                   <code>B</code>
-                                                </valid_codes>
-                                             </element>
-                                             <element xid="UM04-03">
-                                                <data_ele>1325</data_ele>
-                                                <name>Claim Frequency Type Code</name>
-                                                <usage>N</usage>
-                                                <seq>03</seq>
-                                             </element>
-                                          </composite>
-                                       </segment>
-                                       <!--End of UM segment-->
-                                       <segment xid="REF">
+                                       </composite>
+                                    </segment>
+                                    <!--End of UM segment-->
+                                    <segment xid="REF">
+                                       <name>Previous Review Authorization Number</name>
+                                       <usage>S</usage>
+                                       <pos>060</pos>
+                                       <max_use>1</max_use>
+                                       <element xid="REF01">
+                                          <data_ele>128</data_ele>
+                                          <name>Reference Identification Qualifier</name>
+                                          <usage>R</usage>
+                                          <seq>01</seq>
+                                          <valid_codes>
+                                             <code>BB</code>
+                                          </valid_codes>
+                                       </element>
+                                       <element xid="REF02">
+                                          <data_ele>127</data_ele>
                                           <name>Previous Review Authorization Number</name>
-                                          <usage>S</usage>
-                                          <pos>060</pos>
-                                          <max_use>1</max_use>
-                                          <element xid="REF01">
-                                             <data_ele>128</data_ele>
-                                             <name>Reference Identification Qualifier</name>
-                                             <usage>R</usage>
-                                             <seq>01</seq>
-                                             <valid_codes>
-                                                <code>BB</code>
-                                             </valid_codes>
-                                          </element>
-                                          <element xid="REF02">
-                                             <data_ele>127</data_ele>
-                                             <name>Previous Review Authorization Number</name>
-                                             <usage>R</usage>
-                                             <seq>02</seq>
-                                          </element>
-                                          <element xid="REF03">
-                                             <data_ele>352</data_ele>
-                                             <name>Description</name>
-                                             <usage>N</usage>
-                                             <seq>03</seq>
-                                          </element>
-                                          <composite>
-                                             <data_ele>C040</data_ele>
-                                             <name>Reference Identifier</name>
-                                             <usage>N</usage>
-                                             <seq>04</seq>
-                                          </composite>
-                                       </segment>
-                                       <!--End of REF segment-->
-                                      <segment xid="REF">
+                                          <usage>R</usage>
+                                          <seq>02</seq>
+                                       </element>
+                                       <element xid="REF03">
+                                          <data_ele>352</data_ele>
+                                          <name>Description</name>
+                                          <usage>N</usage>
+                                          <seq>03</seq>
+                                       </element>
+                                       <composite>
+                                          <data_ele>C040</data_ele>
+                                          <name>Reference Identifier</name>
+                                          <usage>N</usage>
+                                          <seq>04</seq>
+                                       </composite>
+                                    </segment>
+                                    <!--End of REF segment-->
+                                    <segment xid="REF">
+                                       <name>Previous Review Administrative Reference Number</name>
+                                       <usage>S</usage>
+                                       <pos>060</pos>
+                                       <max_use>1</max_use>
+                                       <element xid="REF01">
+                                          <data_ele>128</data_ele>
+                                          <name>Reference Identification Qualifier</name>
+                                          <usage>R</usage>
+                                          <seq>01</seq>
+                                          <valid_codes>
+                                             <code>NT</code>
+                                          </valid_codes>
+                                       </element>
+                                       <element xid="REF02">
+                                          <data_ele>127</data_ele>
                                           <name>Previous Review Administrative Reference Number</name>
-                                          <usage>S</usage>
-                                          <pos>060</pos>
-                                          <max_use>1</max_use>
-                                          <element xid="REF01">
-                                             <data_ele>128</data_ele>
-                                             <name>Reference Identification Qualifier</name>
+                                          <usage>R</usage>
+                                          <seq>02</seq>
+                                       </element>
+                                       <element xid="REF03">
+                                          <data_ele>352</data_ele>
+                                          <name>Description</name>
+                                          <usage>N</usage>
+                                          <seq>03</seq>
+                                       </element>
+                                       <composite>
+                                          <data_ele>C040</data_ele>
+                                          <name>Reference Identifier</name>
+                                          <usage>N</usage>
+                                          <seq>04</seq>
+                                       </composite>
+                                    </segment>
+                                    <!--End of REF segment-->
+                                    <segment xid="DTP">
+                                       <name>Service Date</name>
+                                       <usage>S</usage>
+                                       <pos>070</pos>
+                                       <max_use>1</max_use>
+                                       <element xid="DTP01">
+                                          <data_ele>374</data_ele>
+                                          <name>Date Time Qualifier</name>
+                                          <usage>R</usage>
+                                          <seq>01</seq>
+                                          <valid_codes>
+                                             <code>472</code>
+                                          </valid_codes>
+                                       </element>
+                                       <element xid="DTP02">
+                                          <data_ele>1250</data_ele>
+                                          <name>Date Time Period Format Qualifier</name>
+                                          <usage>R</usage>
+                                          <seq>02</seq>
+                                          <valid_codes>
+                                             <code>D8</code>
+                                             <code>RD8</code>
+                                          </valid_codes>
+                                       </element>
+                                       <element xid="DTP03">
+                                          <data_ele>1251</data_ele>
+                                          <name>Proposed or Actual Service Date</name>
+                                          <usage>R</usage>
+                                          <seq>03</seq>
+                                       </element>
+                                    </segment>
+                                    <!--End of DTP segment-->
+                                    <segment xid="SV1">
+                                       <name>Professional Service</name>
+                                       <usage>S</usage>
+                                       <pos>3700</pos>
+                                       <max_use>1</max_use>
+                                       <syntax>P0304</syntax>
+                                       <composite xid="SV101">
+                                          <data_ele>C003</data_ele>
+                                          <name>Composite Medical Procedure Identifier</name>
+                                          <usage>R</usage>
+                                          <seq>01</seq>
+                                          <element xid="SV101-01">
+                                             <data_ele>235</data_ele>
+                                             <name>Product or Service ID Qualifier</name>
                                              <usage>R</usage>
                                              <seq>01</seq>
                                              <valid_codes>
-                                                <code>NT</code>
-                                             </valid_codes>
-                                          </element>
-                                          <element xid="REF02">
-                                             <data_ele>127</data_ele>
-                                             <name>Previous Review Administrative Reference Number</name>
-                                             <usage>R</usage>
-                                             <seq>02</seq>
-                                          </element>
-                                          <element xid="REF03">
-                                             <data_ele>352</data_ele>
-                                             <name>Description</name>
-                                             <usage>N</usage>
-                                             <seq>03</seq>
-                                          </element>
-                                          <composite>
-                                             <data_ele>C040</data_ele>
-                                             <name>Reference Identifier</name>
-                                             <usage>N</usage>
-                                             <seq>04</seq>
-                                          </composite>
-                                       </segment>
-                                       <!--End of REF segment-->
-                                        <segment xid="DTP">
-                                          <name>Service Date</name>
-                                          <usage>S</usage>
-                                          <pos>070</pos>
-                                          <max_use>1</max_use>
-                                          <element xid="DTP01">
-                                            <data_ele>374</data_ele>
-                                            <name>Date Time Qualifier</name>
-                                            <usage>R</usage>
-                                            <seq>01</seq>
-                                            <valid_codes>
-                                              <code>472</code>
-                                            </valid_codes>
-                                          </element>
-                                          <element xid="DTP02">
-                                            <data_ele>1250</data_ele>
-                                            <name>Date Time Period Format Qualifier</name>
-                                            <usage>R</usage>
-                                            <seq>02</seq>
-                                            <valid_codes>
-                                              <code>D8</code>
-                                              <code>RD8</code>
-                                            </valid_codes>
-                                          </element>
-                                          <element xid="DTP03">
-                                            <data_ele>1251</data_ele>
-                                            <name>Proposed or Actual Service Date</name>
-                                            <usage>R</usage>
-                                            <seq>03</seq>
-                                          </element>
-                                        </segment>
-                                        <!--End of DTP segment-->
-                                        <segment xid="SV1">
-                                          <name>Professional Service</name>
-                                          <usage>S</usage>
-                                          <pos>3700</pos>
-                                          <max_use>1</max_use>
-                                          <syntax>P0304</syntax>
-                                          <composite xid="SV101">
-                                            <data_ele>C003</data_ele>
-                                            <name>Composite Medical Procedure Identifier</name>
-                                            <usage>R</usage>
-                                            <seq>01</seq>
-                                            <element xid="SV101-01">
-                                              <data_ele>235</data_ele>
-                                              <name>Product or Service ID Qualifier</name>
-                                              <usage>R</usage>
-                                              <seq>01</seq>
-                                              <valid_codes>
                                                 <code>N4</code>
                                                 <code>HC</code>
                                                 <code>IV</code>
                                                 <code>WK</code>
-                                              </valid_codes>
-                                            </element>
-                                            <element xid="SV101-02">
-                                              <data_ele>234</data_ele>
-                                              <name>Procedure Code</name>
-                                              <usage>R</usage>
-                                              <seq>02</seq>
-                                            </element>
-                                            <element xid="SV101-03">
-                                              <data_ele>1339</data_ele>
-                                              <name>Procedure Modifier 1</name>
-                                              <usage>S</usage>
-                                              <seq>03</seq>
-                                            </element>
-                                            <element xid="SV101-04">
-                                              <data_ele>1339</data_ele>
-                                              <name>Procedure Modifier 2</name>
-                                              <usage>S</usage>
-                                              <seq>04</seq>
-                                            </element>
-                                            <element xid="SV101-05">
-                                              <data_ele>1339</data_ele>
-                                              <name>Procedure Modifier 3</name>
-                                              <usage>S</usage>
-                                              <seq>05</seq>
-                                            </element>
-                                            <element xid="SV101-06">
-                                              <data_ele>1339</data_ele>
-                                              <name>Procedure Modifier 4</name>
-                                              <usage>S</usage>
-                                              <seq>06</seq>
-                                            </element>
-                                            <element xid="SV101-07">
-                                              <data_ele>352</data_ele>
-                                              <name>Description</name>
-                                              <usage>S</usage>
-                                              <seq>07</seq>
-                                            </element>
-                                            <element xid="SV101-08">
-                                              <data_ele>234</data_ele>
-                                              <name>Product/Service ID</name>
-                                              <usage>N</usage>
-                                              <seq>08</seq>
-                                            </element>
-                                          </composite>
-                                          <element xid="SV102">
-                                            <data_ele>782</data_ele>
-                                            <name>Line Item Charge Amount</name>
-                                            <usage>S</usage>
-                                            <seq>02</seq>
+                                             </valid_codes>
                                           </element>
-                                          <element xid="SV103">
-                                            <data_ele>355</data_ele>
-                                            <name>Unit or Basis for Measurement Code</name>
-                                            <usage>S</usage>
-                                            <seq>03</seq>
-                                            <valid_codes>
-                                              <code>MJ</code>
-                                              <code>F2</code>
-                                              <code>UN</code>
-                                            </valid_codes>
+                                          <element xid="SV101-02">
+                                             <data_ele>234</data_ele>
+                                             <name>Procedure Code</name>
+                                             <usage>R</usage>
+                                             <seq>02</seq>
                                           </element>
-                                          <element xid="SV104">
-                                            <data_ele>380</data_ele>
-                                            <name>Service Unit Count</name>
-                                            <usage>S</usage>
-                                            <seq>04</seq>
+                                          <element xid="SV101-03">
+                                             <data_ele>1339</data_ele>
+                                             <name>Procedure Modifier 1</name>
+                                             <usage>S</usage>
+                                             <seq>03</seq>
                                           </element>
-                                          <element xid="SV105">
-                                            <data_ele>1331</data_ele>
-                                            <name>Place of Service Code</name>
-                                            <usage>S</usage>
-                                            <seq>05</seq>
-                                            <valid_codes external="pos" />
+                                          <element xid="SV101-04">
+                                             <data_ele>1339</data_ele>
+                                             <name>Procedure Modifier 2</name>
+                                             <usage>S</usage>
+                                             <seq>04</seq>
                                           </element>
-                                          <element xid="SV106">
-                                            <data_ele>1365</data_ele>
-                                            <name>Service Type Code</name>
-                                            <usage>N</usage>
-                                            <seq>06</seq>
+                                          <element xid="SV101-05">
+                                             <data_ele>1339</data_ele>
+                                             <name>Procedure Modifier 3</name>
+                                             <usage>S</usage>
+                                             <seq>05</seq>
                                           </element>
-                                          <composite xid="SV107">
-                                            <data_ele>C004</data_ele>
-                                            <name>Composite Diagnosis Code Pointer</name>
-                                            <usage>R</usage>
-                                            <seq>07</seq>
-                                            <element xid="SV107-01">
-                                              <data_ele>1328</data_ele>
-                                              <name>Diagnosis Code Pointer</name>
-                                              <usage>R</usage>
-                                              <seq>01</seq>
-                                              <valid_codes>
-                                                <code>1</code>
-                                                <code>2</code>
-                                                <code>3</code>
-                                                <code>4</code>
-                                                <code>5</code>
-                                                <code>6</code>
-                                                <code>7</code>
-                                                <code>8</code>
-                                                <code>9</code>
-                                                <code>10</code>
-                                                <code>11</code>
-                                                <code>12</code>
-                                              </valid_codes>
-                                            </element>
-                                            <element xid="SV107-02">
-                                              <data_ele>1328</data_ele>
-                                              <name>Diagnosis Code Pointer</name>
-                                              <usage>S</usage>
-                                              <seq>02</seq>
-                                              <valid_codes>
-                                                <code>1</code>
-                                                <code>2</code>
-                                                <code>3</code>
-                                                <code>4</code>
-                                                <code>5</code>
-                                                <code>6</code>
-                                                <code>7</code>
-                                                <code>8</code>
-                                                <code>9</code>
-                                                <code>10</code>
-                                                <code>11</code>
-                                                <code>12</code>
-                                              </valid_codes>
-                                            </element>
-                                            <element xid="SV107-03">
-                                              <data_ele>1328</data_ele>
-                                              <name>Diagnosis Code Pointer</name>
-                                              <usage>S</usage>
-                                              <seq>03</seq>
-                                              <valid_codes>
-                                                <code>1</code>
-                                                <code>2</code>
-                                                <code>3</code>
-                                                <code>4</code>
-                                                <code>5</code>
-                                                <code>6</code>
-                                                <code>7</code>
-                                                <code>8</code>
-                                                <code>9</code>
-                                                <code>10</code>
-                                                <code>11</code>
-                                                <code>12</code>
-                                              </valid_codes>
-                                            </element>
-                                            <element xid="SV107-04">
-                                              <data_ele>1328</data_ele>
-                                              <name>Diagnosis Code Pointer</name>
-                                              <usage>S</usage>
-                                              <seq>04</seq>
-                                              <valid_codes>
-                                                <code>1</code>
-                                                <code>2</code>
-                                                <code>3</code>
-                                                <code>4</code>
-                                                <code>5</code>
-                                                <code>6</code>
-                                                <code>7</code>
-                                                <code>8</code>
-                                                <code>9</code>
-                                                <code>10</code>
-                                                <code>11</code>
-                                                <code>12</code>
-                                              </valid_codes>
-                                            </element>
-                                          </composite>
-                                          <element xid="SV111">
-                                            <data_ele>1073</data_ele>
-                                            <name>EPSDT Indicator</name>
-                                            <usage>S</usage>
-                                            <seq>11</seq>
-                                            <valid_codes>
-                                              <code>Y</code>
-                                              <code>N</code>
-                                            </valid_codes>
+                                          <element xid="SV101-06">
+                                             <data_ele>1339</data_ele>
+                                             <name>Procedure Modifier 4</name>
+                                             <usage>S</usage>
+                                             <seq>06</seq>
                                           </element>
-                                          <element xid="SV120">
-                                            <data_ele>1337</data_ele>
-                                            <name>Level of Care Code</name>
-                                            <usage>N</usage>
-                                            <seq>20</seq>
+                                          <element xid="SV101-07">
+                                             <data_ele>352</data_ele>
+                                             <name>Description</name>
+                                             <usage>S</usage>
+                                             <seq>07</seq>
+                                          </element>
+                                          <element xid="SV101-08">
+                                             <data_ele>234</data_ele>
+                                             <name>Product/Service ID</name>
+                                             <usage>N</usage>
+                                             <seq>08</seq>
+                                          </element>
+                                       </composite>
+                                       <element xid="SV102">
+                                          <data_ele>782</data_ele>
+                                          <name>Line Item Charge Amount</name>
+                                          <usage>S</usage>
+                                          <seq>02</seq>
+                                       </element>
+                                       <element xid="SV103">
+                                          <data_ele>355</data_ele>
+                                          <name>Unit or Basis for Measurement Code</name>
+                                          <usage>S</usage>
+                                          <seq>03</seq>
+                                          <valid_codes>
+                                             <code>MJ</code>
+                                             <code>F2</code>
+                                             <code>UN</code>
+                                          </valid_codes>
+                                       </element>
+                                       <element xid="SV104">
+                                          <data_ele>380</data_ele>
+                                          <name>Service Unit Count</name>
+                                          <usage>S</usage>
+                                          <seq>04</seq>
+                                       </element>
+                                       <element xid="SV105">
+                                          <data_ele>1331</data_ele>
+                                          <name>Place of Service Code</name>
+                                          <usage>S</usage>
+                                          <seq>05</seq>
+                                          <valid_codes external="pos" />
+                                       </element>
+                                       <element xid="SV106">
+                                          <data_ele>1365</data_ele>
+                                          <name>Service Type Code</name>
+                                          <usage>N</usage>
+                                          <seq>06</seq>
+                                       </element>
+                                       <composite xid="SV107">
+                                          <data_ele>C004</data_ele>
+                                          <name>Composite Diagnosis Code Pointer</name>
+                                          <usage>R</usage>
+                                          <seq>07</seq>
+                                          <element xid="SV107-01">
+                                             <data_ele>1328</data_ele>
+                                             <name>Diagnosis Code Pointer</name>
+                                             <usage>R</usage>
+                                             <seq>01</seq>
                                              <valid_codes>
                                                 <code>1</code>
                                                 <code>2</code>
@@ -6607,1033 +6519,1122 @@
                                                 <code>6</code>
                                                 <code>7</code>
                                                 <code>8</code>
-                                              </valid_codes>
+                                                <code>9</code>
+                                                <code>10</code>
+                                                <code>11</code>
+                                                <code>12</code>
+                                             </valid_codes>
                                           </element>
-                                        </segment>
-                                        <!--End of SV1 segment-->
-                                      <segment xid="SV2">
-                                          <name>Institutional Service</name>
+                                          <element xid="SV107-02">
+                                             <data_ele>1328</data_ele>
+                                             <name>Diagnosis Code Pointer</name>
+                                             <usage>S</usage>
+                                             <seq>02</seq>
+                                             <valid_codes>
+                                                <code>1</code>
+                                                <code>2</code>
+                                                <code>3</code>
+                                                <code>4</code>
+                                                <code>5</code>
+                                                <code>6</code>
+                                                <code>7</code>
+                                                <code>8</code>
+                                                <code>9</code>
+                                                <code>10</code>
+                                                <code>11</code>
+                                                <code>12</code>
+                                             </valid_codes>
+                                          </element>
+                                          <element xid="SV107-03">
+                                             <data_ele>1328</data_ele>
+                                             <name>Diagnosis Code Pointer</name>
+                                             <usage>S</usage>
+                                             <seq>03</seq>
+                                             <valid_codes>
+                                                <code>1</code>
+                                                <code>2</code>
+                                                <code>3</code>
+                                                <code>4</code>
+                                                <code>5</code>
+                                                <code>6</code>
+                                                <code>7</code>
+                                                <code>8</code>
+                                                <code>9</code>
+                                                <code>10</code>
+                                                <code>11</code>
+                                                <code>12</code>
+                                             </valid_codes>
+                                          </element>
+                                          <element xid="SV107-04">
+                                             <data_ele>1328</data_ele>
+                                             <name>Diagnosis Code Pointer</name>
+                                             <usage>S</usage>
+                                             <seq>04</seq>
+                                             <valid_codes>
+                                                <code>1</code>
+                                                <code>2</code>
+                                                <code>3</code>
+                                                <code>4</code>
+                                                <code>5</code>
+                                                <code>6</code>
+                                                <code>7</code>
+                                                <code>8</code>
+                                                <code>9</code>
+                                                <code>10</code>
+                                                <code>11</code>
+                                                <code>12</code>
+                                             </valid_codes>
+                                          </element>
+                                       </composite>
+                                       <element xid="SV111">
+                                          <data_ele>1073</data_ele>
+                                          <name>EPSDT Indicator</name>
                                           <usage>S</usage>
-                                          <pos>3700</pos>
-                                          <max_use>1</max_use>
-                                          <syntax>P0304</syntax>
-                                          <element xid="SV201">
-                                              <data_ele>235</data_ele>
-                                              <name>Service Line Revenue Code</name>
-                                              <usage>S</usage>
-                                              <seq>01</seq>
-                                            </element>
-                                          <composite xid="SV202">
-                                            <data_ele>C003</data_ele>
-                                            <name>Composite Medical Procedure Identifier</name>
-                                            <usage>S</usage>
-                                            <seq>01</seq>
-                                            <element xid="SV202-01">
-                                              <data_ele>235</data_ele>
-                                              <name>Product or Service ID Qualifier</name>
-                                              <usage>R</usage>
-                                              <seq>01</seq>
-                                              <valid_codes>
+                                          <seq>11</seq>
+                                          <valid_codes>
+                                             <code>Y</code>
+                                             <code>N</code>
+                                          </valid_codes>
+                                       </element>
+                                       <element xid="SV120">
+                                          <data_ele>1337</data_ele>
+                                          <name>Level of Care Code</name>
+                                          <usage>N</usage>
+                                          <seq>20</seq>
+                                          <valid_codes>
+                                             <code>1</code>
+                                             <code>2</code>
+                                             <code>3</code>
+                                             <code>4</code>
+                                             <code>5</code>
+                                             <code>6</code>
+                                             <code>7</code>
+                                             <code>8</code>
+                                          </valid_codes>
+                                       </element>
+                                    </segment>
+                                    <!--End of SV1 segment-->
+                                    <segment xid="SV2">
+                                       <name>Institutional Service</name>
+                                       <usage>S</usage>
+                                       <pos>3700</pos>
+                                       <max_use>1</max_use>
+                                       <syntax>P0304</syntax>
+                                       <element xid="SV201">
+                                          <data_ele>235</data_ele>
+                                          <name>Service Line Revenue Code</name>
+                                          <usage>S</usage>
+                                          <seq>01</seq>
+                                       </element>
+                                       <composite xid="SV202">
+                                          <data_ele>C003</data_ele>
+                                          <name>Composite Medical Procedure Identifier</name>
+                                          <usage>S</usage>
+                                          <seq>01</seq>
+                                          <element xid="SV202-01">
+                                             <data_ele>235</data_ele>
+                                             <name>Product or Service ID Qualifier</name>
+                                             <usage>R</usage>
+                                             <seq>01</seq>
+                                             <valid_codes>
                                                 <code>ID</code>
                                                 <code>HC</code>
                                                 <code>N4</code>
                                                 <code>ZZ</code>
                                                 <code>IV</code>
                                                 <code>WK</code>
-                                              </valid_codes>
-                                            </element>
-                                            <element xid="SV202-02">
-                                              <data_ele>234</data_ele>
-                                              <name>Procedure Code</name>
-                                              <usage>R</usage>
-                                              <seq>02</seq>
-                                            </element>
-                                            <element xid="SV202-03">
-                                              <data_ele>1339</data_ele>
-                                              <name>Procedure Modifier 1</name>
-                                              <usage>S</usage>
-                                              <seq>03</seq>
-                                            </element>
-                                            <element xid="SV202-04">
-                                              <data_ele>1339</data_ele>
-                                              <name>Procedure Modifier 2</name>
-                                              <usage>S</usage>
-                                              <seq>04</seq>
-                                            </element>
-                                            <element xid="SV202-05">
-                                              <data_ele>1339</data_ele>
-                                              <name>Procedure Modifier 3</name>
-                                              <usage>S</usage>
-                                              <seq>05</seq>
-                                            </element>
-                                            <element xid="SV202-06">
-                                              <data_ele>1339</data_ele>
-                                              <name>Procedure Modifier 4</name>
-                                              <usage>S</usage>
-                                              <seq>06</seq>
-                                            </element>
-                                            <element xid="SV202-07">
-                                              <data_ele>352</data_ele>
-                                              <name>Description</name>
-                                              <usage>S</usage>
-                                              <seq>07</seq>
-                                            </element>
-                                            <element xid="SV202-08">
-                                              <data_ele>234</data_ele>
-                                              <name>Product/Service Code</name>
-                                              <usage>S</usage>
-                                              <seq>08</seq>
-                                            </element>
-                                          </composite>
-                                          <element xid="SV203">
-                                            <data_ele>782</data_ele>
-                                            <name>Line Item Charge Amount</name>
-                                            <usage>S</usage>
-                                            <seq>02</seq>
-                                          </element>
-                                          <element xid="SV204">
-                                            <data_ele>355</data_ele>
-                                            <name>Unit or Basis for Measurement Code</name>
-                                            <usage>S</usage>
-                                            <seq>03</seq>
-                                            <valid_codes>
-                                              <code>DA</code>
-                                              <code>F2</code>
-                                              <code>UN</code>
-                                            </valid_codes>
-                                          </element>
-                                          <element xid="SV205">
-                                            <data_ele>380</data_ele>
-                                            <name>Service Unit Count</name>
-                                            <usage>S</usage>
-                                            <seq>04</seq>
-                                          </element>
-                                          <element xid="SV206">
-                                            <data_ele>1331</data_ele>
-                                            <name>Service line Rate</name>
-                                            <usage>S</usage>
-                                            <seq>05</seq>
-                                            <valid_codes external="pos" />
-                                          </element>
-                                          <element xid="SV209">
-                                            <data_ele>1337</data_ele>
-                                            <name>Nursing Home Residential Status Code</name>
-                                            <usage>S</usage>
-                                            <seq>20</seq>
-                                             <valid_codes>
-                                                <code>1</code>
-                                                <code>2</code>
-                                                <code>3</code>
-                                                <code>4</code>
-                                                <code>5</code>
-                                                <code>6</code>
-                                                <code>7</code>
-                                                <code>8</code>
-                                              </valid_codes>
-                                          </element>
-                                          <element xid="SV210">
-                                            <data_ele>1337</data_ele>
-                                            <name>Nursing Home Level of Care</name>
-                                            <usage>S</usage>
-                                            <seq>20</seq>
-                                             <valid_codes>
-                                                <code>1</code>
-                                                <code>2</code>
-                                                <code>3</code>
-                                                <code>4</code>
-                                                <code>5</code>
-                                                <code>6</code>
-                                                <code>7</code>
-                                                <code>8</code>
-                                              </valid_codes>
-                                          </element>
-                                        </segment>
-                                        <!--End of SV2 segment-->
-                                        <segment xid="SV3">
-                                          <name>Dental Service</name>
-                                          <usage>S</usage>
-                                          <pos>3700</pos>
-                                          <max_use>1</max_use>
-                                          <syntax>P0304</syntax>
-                                          <composite xid="SV301">
-                                            <data_ele>C003</data_ele>
-                                            <name>Composite Medical Procedure Identifier</name>
-                                            <usage>R</usage>
-                                            <seq>01</seq>
-                                            <element xid="SV301-01">
-                                              <data_ele>235</data_ele>
-                                              <name>Product or Service ID Qualifier</name>
-                                              <usage>R</usage>
-                                              <seq>01</seq>
-                                              <valid_codes>
-                                                <code>AD</code>
-                                              </valid_codes>
-                                            </element>
-                                            <element xid="SV301-02">
-                                              <data_ele>234</data_ele>
-                                              <name>Procedure Code</name>
-                                              <usage>R</usage>
-                                              <seq>02</seq>
-                                            </element>
-                                            <element xid="SV301-03">
-                                              <data_ele>1339</data_ele>
-                                              <name>Procedure Modifier 1</name>
-                                              <usage>S</usage>
-                                              <seq>03</seq>
-                                            </element>
-                                            <element xid="SV301-04">
-                                              <data_ele>1339</data_ele>
-                                              <name>Procedure Modifier 2</name>
-                                              <usage>S</usage>
-                                              <seq>04</seq>
-                                            </element>
-                                            <element xid="SV301-05">
-                                              <data_ele>1339</data_ele>
-                                              <name>Procedure Modifier 3</name>
-                                              <usage>S</usage>
-                                              <seq>05</seq>
-                                            </element>
-                                            <element xid="SV301-06">
-                                              <data_ele>1339</data_ele>
-                                              <name>Procedure Modifier 4</name>
-                                              <usage>S</usage>
-                                              <seq>06</seq>
-                                            </element>
-                                            <element xid="SV301-07">
-                                              <data_ele>352</data_ele>
-                                              <name>Description</name>
-                                              <usage>S</usage>
-                                              <seq>07</seq>
-                                            </element>
-                                            <element xid="SV301-08">
-                                              <data_ele>234</data_ele>
-                                              <name>Product/Service Code</name>
-                                              <usage>S</usage>
-                                              <seq>08</seq>
-                                            </element>
-                                          </composite>
-                                          <element xid="SV302">
-                                            <data_ele>1331</data_ele>
-                                            <name>Service line Amount</name>
-                                            <usage>S</usage>
-                                            <seq>05</seq>
-                                            <valid_codes/>
-                                          </element>
-                                          <composite xid="SV304">
-                                            <data_ele>C003</data_ele>
-                                            <name>Oral Cavity Designation</name>
-                                            <usage>R</usage>
-                                            <seq>01</seq>
-                                            <element xid="SV304-01">
-                                              <data_ele>235</data_ele>
-                                              <name>Oral Cavity Designation code</name>
-                                              <usage>R</usage>
-                                              <seq>01</seq>
-                                              <valid_codes>
-                                                <code>AD</code>
-                                              </valid_codes>
-                                            </element>
-                                            <element xid="SV304-02">
-                                              <data_ele>234</data_ele>
-                                              <name>Oral Cavity Designation code</name>
-                                              <usage>S</usage>
-                                              <seq>02</seq>
-                                            </element>
-                                            <element xid="SV304-03">
-                                              <data_ele>1339</data_ele>
-                                              <name>Oral Cavity Designation code</name>
-                                              <usage>S</usage>
-                                              <seq>03</seq>
-                                            </element>
-                                            <element xid="SV304-04">
-                                              <data_ele>1339</data_ele>
-                                              <name>Oral Cavity Designation code</name>
-                                              <usage>S</usage>
-                                              <seq>04</seq>
-                                            </element>
-                                            <element xid="SV304-05">
-                                              <data_ele>1339</data_ele>
-                                              <name>Prosthesis, Crown or Inlay Code</name>
-                                              <usage>S</usage>
-                                              <seq>05</seq>
-                                              <valid_codes>
-                                                <code>I</code>
-                                                <code>R</code>
-                                              </valid_codes>
-                                            </element>
-                                            <element xid="SV304-06">
-                                              <data_ele>1339</data_ele>
-                                              <name>Service Unit Count</name>
-                                              <usage>R</usage>
-                                              <seq>06</seq>
-                                            </element>
-                                            <element xid="SV304-07">
-                                              <data_ele>352</data_ele>
-                                              <name>Description</name>
-                                              <usage>S</usage>
-                                              <seq>07</seq>
-                                            </element>
-                                          </composite>
-                                        </segment>
-                                        <!--End of SV3 segment-->
-                                        <segment xid="TOO">
-                                          <name>Tooth Information</name>
-                                          <usage>S</usage>
-                                          <pos>382</pos>
-                                          <max_use>32</max_use>
-                                          <element xid="TOO01">
-                                            <data_ele>1270</data_ele>
-                                            <name>Code List Qualifier Code</name>
-                                            <usage>R</usage>
-                                            <seq>01</seq>
-                                            <valid_codes>
-                                              <code>JP</code>
-                                            </valid_codes>
-                                          </element>
-                                          <element xid="TOO02">
-                                            <data_ele>1271</data_ele>
-                                            <name>Tooth Code</name>
-                                            <usage>R</usage>
-                                            <seq>02</seq>
-                                          </element>
-                                          <composite>
-                                            <data_ele>C005</data_ele>
-                                            <name>Tooth Surface</name>
-                                            <usage>S</usage>
-                                            <seq>03</seq>
-                                            <element xid="TOO03-01">
-                                              <data_ele>1369</data_ele>
-                                              <name>Tooth Surface Code</name>
-                                              <usage>R</usage>
-                                              <seq>01</seq>
-                                              <valid_codes>
-                                                <code>B</code>
-                                                <code>D</code>
-                                                <code>F</code>
-                                                <code>I</code>
-                                                <code>L</code>
-                                                <code>M</code>
-                                                <code>O</code>
-                                              </valid_codes>
-                                            </element>
-                                            <element xid="TOO03-02">
-                                              <data_ele>1369</data_ele>
-                                              <name>Tooth Surface Code</name>
-                                              <usage>S</usage>
-                                              <seq>02</seq>
-                                              <valid_codes>
-                                                <code>B</code>
-                                                <code>D</code>
-                                                <code>F</code>
-                                                <code>I</code>
-                                                <code>L</code>
-                                                <code>M</code>
-                                                <code>O</code>
-                                              </valid_codes>
-                                            </element>
-                                            <element xid="TOO03-03">
-                                              <data_ele>1369</data_ele>
-                                              <name>Tooth Surface Code</name>
-                                              <usage>S</usage>
-                                              <seq>03</seq>
-                                              <valid_codes>
-                                                <code>B</code>
-                                                <code>D</code>
-                                                <code>F</code>
-                                                <code>I</code>
-                                                <code>L</code>
-                                                <code>M</code>
-                                                <code>O</code>
-                                              </valid_codes>
-                                            </element>
-                                            <element xid="TOO03-04">
-                                              <data_ele>1369</data_ele>
-                                              <name>Tooth Surface Code</name>
-                                              <usage>S</usage>
-                                              <seq>04</seq>
-                                              <valid_codes>
-                                                <code>B</code>
-                                                <code>D</code>
-                                                <code>F</code>
-                                                <code>I</code>
-                                                <code>L</code>
-                                                <code>M</code>
-                                                <code>O</code>
-                                              </valid_codes>
-                                            </element>
-                                            <element xid="TOO03-05">
-                                              <data_ele>1369</data_ele>
-                                              <name>Tooth Surface Code</name>
-                                              <usage>S</usage>
-                                              <seq>05</seq>
-                                              <valid_codes>
-                                                <code>B</code>
-                                                <code>D</code>
-                                                <code>F</code>
-                                                <code>I</code>
-                                                <code>L</code>
-                                                <code>M</code>
-                                                <code>O</code>
-                                              </valid_codes>
-                                            </element>
-                                          </composite>
-                                        </segment>
-                                      <!--End of TOO segment-->
-                                       <segment xid="HSD">
-                                          <name>Health Care Services Delivery</name>
-                                          <usage>S</usage>
-                                          <pos>090</pos>
-                                          <max_use>1</max_use>
-                                          <element xid="HSD01">
-                                             <data_ele>673</data_ele>
-                                             <name>Quantity Qualifier</name>
-                                             <usage>S</usage>
-                                             <seq>01</seq>
-                                             <valid_codes>
-                                                <code>DY</code>
-                                                <code>FL</code>
-                                                <code>HS</code>
-                                                <code>MN</code>
-                                                <code>VS</code>
                                              </valid_codes>
                                           </element>
-                                          <element xid="HSD02">
-                                             <data_ele>380</data_ele>
-                                             <name>Service Unit Count</name>
-                                             <usage>S</usage>
+                                          <element xid="SV202-02">
+                                             <data_ele>234</data_ele>
+                                             <name>Procedure Code</name>
+                                             <usage>R</usage>
                                              <seq>02</seq>
                                           </element>
-                                          <element xid="HSD03">
-                                             <data_ele>355</data_ele>
-                                             <name>Unit or Basis for Measurement Code</name>
+                                          <element xid="SV202-03">
+                                             <data_ele>1339</data_ele>
+                                             <name>Procedure Modifier 1</name>
                                              <usage>S</usage>
                                              <seq>03</seq>
-                                             <valid_codes>
-                                                <code>DA</code>
-                                                <code>MO</code>
-                                                <code>WK</code>
-                                             </valid_codes>
                                           </element>
-                                          <element xid="HSD04">
-                                             <data_ele>1167</data_ele>
-                                             <name>Sample Selection Modulus</name>
+                                          <element xid="SV202-04">
+                                             <data_ele>1339</data_ele>
+                                             <name>Procedure Modifier 2</name>
                                              <usage>S</usage>
                                              <seq>04</seq>
                                           </element>
-                                          <element xid="HSD05">
-                                             <data_ele>615</data_ele>
-                                             <name>Time Period Qualifier</name>
+                                          <element xid="SV202-05">
+                                             <data_ele>1339</data_ele>
+                                             <name>Procedure Modifier 3</name>
                                              <usage>S</usage>
                                              <seq>05</seq>
-                                             <valid_codes>
-                                                <code>6</code>
-                                                <code>7</code>
-                                                <code>21</code>
-                                                <code>26</code>
-                                                <code>27</code>
-                                                <code>34</code>
-                                                <code>35</code>
-                                             </valid_codes>
                                           </element>
-                                          <element xid="HSD06">
-                                             <data_ele>616</data_ele>
-                                             <name>Period Count</name>
+                                          <element xid="SV202-06">
+                                             <data_ele>1339</data_ele>
+                                             <name>Procedure Modifier 4</name>
                                              <usage>S</usage>
                                              <seq>06</seq>
                                           </element>
-                                          <element xid="HSD07">
-                                             <data_ele>678</data_ele>
-                                             <name>Ship,Delivery or Calendar Pattern Code</name>
-                                             <usage>S</usage>
-                                             <seq>07</seq>
-                                             <valid_codes>
-                                                <code>1</code>
-                                                <code>2</code>
-                                                <code>3</code>
-                                                <code>4</code>
-                                                <code>5</code>
-                                                <code>6</code>
-                                                <code>7</code>
-                                                <code>8</code>
-                                                <code>9</code>
-                                                <code>A</code>
-                                                <code>B</code>
-                                                <code>C</code>
-                                                <code>D</code>
-                                                <code>E</code>
-                                                <code>F</code>
-                                                <code>G</code>
-                                                <code>H</code>
-                                                <code>J</code>
-                                                <code>K</code>
-                                                <code>L</code>
-                                                <code>M</code>
-                                                <code>N</code>
-                                                <code>O</code>
-                                                <code>P</code>
-                                                <code>Q</code>
-                                                <code>R</code>
-                                                <code>S</code>
-                                                <code>SA</code>
-                                                <code>SB</code>
-                                                <code>SC</code>
-                                                <code>SD</code>
-                                                <code>SG</code>
-                                                <code>SL</code>
-                                                <code>SP</code>
-                                                <code>SX</code>
-                                                <code>SY</code>
-                                                <code>SZ</code>
-                                                <code>T</code>
-                                                <code>U</code>
-                                                <code>V</code>
-                                                <code>W</code>
-                                                <code>X</code>
-                                                <code>Y</code>
-                                             </valid_codes>
-                                          </element>
-                                          <element xid="HSD08">
-                                             <data_ele>679</data_ele>
-                                             <name>Delivery Pattern Time Code</name>
-                                             <usage>S</usage>
-                                             <seq>08</seq>
-                                             <valid_codes>
-                                                <code>A</code>
-                                                <code>B</code>
-                                                <code>C</code>
-                                                <code>D</code>
-                                                <code>E</code>
-                                                <code>F</code>
-                                                <code>G</code>
-                                                <code>Y</code>
-                                             </valid_codes>
-                                          </element>
-                                       </segment>
-                                       <!--End of HSD segment-->
-                                       <segment xid="PWK">
-                                          <name>Additional Service Information</name>
-                                          <usage>S</usage>
-                                          <pos>155</pos>
-                                          <max_use>10</max_use>
-                                          <element xid="PWK01">
-                                             <data_ele>755</data_ele>
-                                             <name>Attachment Report Type Code</name>
-                                             <usage>R</usage>
-                                             <seq>01</seq>
-                                             <valid_codes>
-                                                <code>03</code>
-                                                <code>04</code>
-                                                <code>05</code>
-                                                <code>06</code>
-                                                <code>07</code>
-                                                <code>08</code>
-                                                <code>09</code>
-                                                <code>10</code>
-                                                <code>11</code>
-                                                <code>13</code>
-                                                <code>15</code>
-                                                <code>21</code>
-                                                <code>48</code>
-                                                <code>55</code>
-                                                <code>59</code>
-                                                <code>77</code>
-                                                <code>A3</code>
-                                                <code>A4</code>
-                                                <code>AM</code>
-                                                <code>AS</code>
-                                                <code>AT</code>
-                                                <code>B2</code>
-                                                <code>B3</code>
-                                                <code>BR</code>
-                                                <code>BS</code>
-                                                <code>BT</code>
-                                                <code>CB</code>
-                                                <code>CK</code>
-                                                <code>D2</code>
-                                                <code>DA</code>
-                                                <code>DB</code>
-                                                <code>DG</code>
-                                                <code>DJ</code>
-                                                <code>DS</code>
-                                                <code>FM</code>
-                                                <code>HC</code>
-                                                <code>HR</code>
-                                                <code>I5</code>
-                                                <code>IR</code>
-                                                <code>LA</code>
-                                                <code>M1</code>
-                                                <code>NN</code>
-                                                <code>OB</code>
-                                                <code>OC</code>
-                                                <code>OD</code>
-                                                <code>OE</code>
-                                                <code>OX</code>
-                                                <code>P4</code>
-                                                <code>P5</code>
-                                                <code>P6</code>
-                                                <code>P7</code>
-                                                <code>PE</code>
-                                                <code>PN</code>
-                                                <code>PO</code>
-                                                <code>PQ</code>
-                                                <code>PY</code>
-                                                <code>PZ</code>
-                                                <code>QC</code>
-                                                <code>QR</code>
-                                                <code>RB</code>
-                                                <code>RR</code>
-                                                <code>RT</code>
-                                                <code>RX</code>
-                                                <code>SG</code>
-                                                <code>V5</code>
-                                                <code>XP</code>
-                                             </valid_codes>
-                                          </element>
-                                          <element xid="PWK02">
-                                             <data_ele>756</data_ele>
-                                             <name>Attachment Transmission Code</name>
-                                             <usage>R</usage>
-                                             <seq>02</seq>
-                                             <valid_codes>
-                                                <code>AA</code>
-                                                <code>BM</code>
-                                                <code>EL</code>
-                                                <code>EM</code>
-                                                <code>FX</code>
-                                                <code>VO</code>
-                                             </valid_codes>
-                                          </element>
-                                          <element xid="PWK03">
-                                             <data_ele>757</data_ele>
-                                             <name>Report Copies Needed</name>
-                                             <usage>N</usage>
-                                             <seq>03</seq>
-                                          </element>
-                                          <element xid="PWK04">
-                                             <data_ele>98</data_ele>
-                                             <name>Entity Identifier Code</name>
-                                             <usage>N</usage>
-                                             <seq>04</seq>
-                                          </element>
-                                          <element xid="PWK05">
-                                             <data_ele>66</data_ele>
-                                             <name>Identification Code Qualifier</name>
-                                             <usage>S</usage>
-                                             <seq>05</seq>
-                                             <valid_codes>
-                                                <code>AC</code>
-                                             </valid_codes>
-                                          </element>
-                                          <element xid="PWK06">
-                                             <data_ele>67</data_ele>
-                                             <name>Attachment Control Number</name>
-                                             <usage>S</usage>
-                                             <seq>06</seq>
-                                          </element>
-                                          <element xid="PWK07">
+                                          <element xid="SV202-07">
                                              <data_ele>352</data_ele>
-                                             <name>Attachment Description</name>
+                                             <name>Description</name>
                                              <usage>S</usage>
                                              <seq>07</seq>
                                           </element>
-                                          <composite>
-                                             <data_ele>C002</data_ele>
-                                             <name>Actions Indicated</name>
-                                             <usage>N</usage>
+                                          <element xid="SV202-08">
+                                             <data_ele>234</data_ele>
+                                             <name>Product/Service Code</name>
+                                             <usage>S</usage>
                                              <seq>08</seq>
-                                          </composite>
-                                          <element xid="PWK09">
-                                             <data_ele>1525</data_ele>
-                                             <name>Request Category Code</name>
-                                             <usage>N</usage>
-                                             <seq>09</seq>
                                           </element>
-                                       </segment>
-                                       <!--End of PWK segment-->
-                                       <segment xid="MSG">
-                                          <name>Message Text</name>
+                                       </composite>
+                                       <element xid="SV203">
+                                          <data_ele>782</data_ele>
+                                          <name>Line Item Charge Amount</name>
                                           <usage>S</usage>
-                                          <pos>160</pos>
-                                          <max_use>1</max_use>
-                                          <element xid="MSG01">
-                                             <data_ele>933</data_ele>
-                                             <name>Free Form Message Text</name>
+                                          <seq>02</seq>
+                                       </element>
+                                       <element xid="SV204">
+                                          <data_ele>355</data_ele>
+                                          <name>Unit or Basis for Measurement Code</name>
+                                          <usage>S</usage>
+                                          <seq>03</seq>
+                                          <valid_codes>
+                                             <code>DA</code>
+                                             <code>F2</code>
+                                             <code>UN</code>
+                                          </valid_codes>
+                                       </element>
+                                       <element xid="SV205">
+                                          <data_ele>380</data_ele>
+                                          <name>Service Unit Count</name>
+                                          <usage>S</usage>
+                                          <seq>04</seq>
+                                       </element>
+                                       <element xid="SV206">
+                                          <data_ele>1331</data_ele>
+                                          <name>Service line Rate</name>
+                                          <usage>S</usage>
+                                          <seq>05</seq>
+                                          <valid_codes external="pos" />
+                                       </element>
+                                       <element xid="SV209">
+                                          <data_ele>1337</data_ele>
+                                          <name>Nursing Home Residential Status Code</name>
+                                          <usage>S</usage>
+                                          <seq>20</seq>
+                                          <valid_codes>
+                                             <code>1</code>
+                                             <code>2</code>
+                                             <code>3</code>
+                                             <code>4</code>
+                                             <code>5</code>
+                                             <code>6</code>
+                                             <code>7</code>
+                                             <code>8</code>
+                                          </valid_codes>
+                                       </element>
+                                       <element xid="SV210">
+                                          <data_ele>1337</data_ele>
+                                          <name>Nursing Home Level of Care</name>
+                                          <usage>S</usage>
+                                          <seq>20</seq>
+                                          <valid_codes>
+                                             <code>1</code>
+                                             <code>2</code>
+                                             <code>3</code>
+                                             <code>4</code>
+                                             <code>5</code>
+                                             <code>6</code>
+                                             <code>7</code>
+                                             <code>8</code>
+                                          </valid_codes>
+                                       </element>
+                                    </segment>
+                                    <!--End of SV2 segment-->
+                                    <segment xid="SV3">
+                                       <name>Dental Service</name>
+                                       <usage>S</usage>
+                                       <pos>3700</pos>
+                                       <max_use>1</max_use>
+                                       <syntax>P0304</syntax>
+                                       <composite xid="SV301">
+                                          <data_ele>C003</data_ele>
+                                          <name>Composite Medical Procedure Identifier</name>
+                                          <usage>R</usage>
+                                          <seq>01</seq>
+                                          <element xid="SV301-01">
+                                             <data_ele>235</data_ele>
+                                             <name>Product or Service ID Qualifier</name>
                                              <usage>R</usage>
                                              <seq>01</seq>
+                                             <valid_codes>
+                                                <code>AD</code>
+                                             </valid_codes>
                                           </element>
-                                          <element xid="MSG02">
-                                             <data_ele>934</data_ele>
-                                             <name>Printer Carriage Control Code</name>
-                                             <usage>N</usage>
+                                          <element xid="SV301-02">
+                                             <data_ele>234</data_ele>
+                                             <name>Procedure Code</name>
+                                             <usage>R</usage>
                                              <seq>02</seq>
                                           </element>
-                                          <element xid="MSG03">
-                                             <data_ele>1470</data_ele>
-                                             <name>Number</name>
-                                             <usage>N</usage>
+                                          <element xid="SV301-03">
+                                             <data_ele>1339</data_ele>
+                                             <name>Procedure Modifier 1</name>
+                                             <usage>S</usage>
                                              <seq>03</seq>
                                           </element>
-                                       </segment>
-                                       <!--End of MSG segment-->
-                                      <loop xid="2010F">
-                                        <name>Service Provider Name</name>
-                                        <usage>R</usage>
-                                        <pos>170</pos>
-                                        <repeat>10</repeat>
-                                        <segment xid="NM1">
+                                          <element xid="SV301-04">
+                                             <data_ele>1339</data_ele>
+                                             <name>Procedure Modifier 2</name>
+                                             <usage>S</usage>
+                                             <seq>04</seq>
+                                          </element>
+                                          <element xid="SV301-05">
+                                             <data_ele>1339</data_ele>
+                                             <name>Procedure Modifier 3</name>
+                                             <usage>S</usage>
+                                             <seq>05</seq>
+                                          </element>
+                                          <element xid="SV301-06">
+                                             <data_ele>1339</data_ele>
+                                             <name>Procedure Modifier 4</name>
+                                             <usage>S</usage>
+                                             <seq>06</seq>
+                                          </element>
+                                          <element xid="SV301-07">
+                                             <data_ele>352</data_ele>
+                                             <name>Description</name>
+                                             <usage>S</usage>
+                                             <seq>07</seq>
+                                          </element>
+                                          <element xid="SV301-08">
+                                             <data_ele>234</data_ele>
+                                             <name>Product/Service Code</name>
+                                             <usage>S</usage>
+                                             <seq>08</seq>
+                                          </element>
+                                       </composite>
+                                       <element xid="SV302">
+                                          <data_ele>1331</data_ele>
+                                          <name>Service line Amount</name>
+                                          <usage>S</usage>
+                                          <seq>05</seq>
+                                          <valid_codes />
+                                       </element>
+                                       <composite xid="SV304">
+                                          <data_ele>C003</data_ele>
+                                          <name>Oral Cavity Designation</name>
+                                          <usage>R</usage>
+                                          <seq>01</seq>
+                                          <element xid="SV304-01">
+                                             <data_ele>235</data_ele>
+                                             <name>Oral Cavity Designation code</name>
+                                             <usage>R</usage>
+                                             <seq>01</seq>
+                                             <valid_codes>
+                                                <code>AD</code>
+                                             </valid_codes>
+                                          </element>
+                                          <element xid="SV304-02">
+                                             <data_ele>234</data_ele>
+                                             <name>Oral Cavity Designation code</name>
+                                             <usage>S</usage>
+                                             <seq>02</seq>
+                                          </element>
+                                          <element xid="SV304-03">
+                                             <data_ele>1339</data_ele>
+                                             <name>Oral Cavity Designation code</name>
+                                             <usage>S</usage>
+                                             <seq>03</seq>
+                                          </element>
+                                          <element xid="SV304-04">
+                                             <data_ele>1339</data_ele>
+                                             <name>Oral Cavity Designation code</name>
+                                             <usage>S</usage>
+                                             <seq>04</seq>
+                                          </element>
+                                          <element xid="SV304-05">
+                                             <data_ele>1339</data_ele>
+                                             <name>Prosthesis, Crown or Inlay Code</name>
+                                             <usage>S</usage>
+                                             <seq>05</seq>
+                                             <valid_codes>
+                                                <code>I</code>
+                                                <code>R</code>
+                                             </valid_codes>
+                                          </element>
+                                          <element xid="SV304-06">
+                                             <data_ele>1339</data_ele>
+                                             <name>Service Unit Count</name>
+                                             <usage>R</usage>
+                                             <seq>06</seq>
+                                          </element>
+                                          <element xid="SV304-07">
+                                             <data_ele>352</data_ele>
+                                             <name>Description</name>
+                                             <usage>S</usage>
+                                             <seq>07</seq>
+                                          </element>
+                                       </composite>
+                                    </segment>
+                                    <!--End of SV3 segment-->
+                                    <segment xid="TOO">
+                                       <name>Tooth Information</name>
+                                       <usage>S</usage>
+                                       <pos>382</pos>
+                                       <max_use>32</max_use>
+                                       <element xid="TOO01">
+                                          <data_ele>1270</data_ele>
+                                          <name>Code List Qualifier Code</name>
+                                          <usage>R</usage>
+                                          <seq>01</seq>
+                                          <valid_codes>
+                                             <code>JP</code>
+                                          </valid_codes>
+                                       </element>
+                                       <element xid="TOO02">
+                                          <data_ele>1271</data_ele>
+                                          <name>Tooth Code</name>
+                                          <usage>R</usage>
+                                          <seq>02</seq>
+                                       </element>
+                                       <composite>
+                                          <data_ele>C005</data_ele>
+                                          <name>Tooth Surface</name>
+                                          <usage>S</usage>
+                                          <seq>03</seq>
+                                          <element xid="TOO03-01">
+                                             <data_ele>1369</data_ele>
+                                             <name>Tooth Surface Code</name>
+                                             <usage>R</usage>
+                                             <seq>01</seq>
+                                             <valid_codes>
+                                                <code>B</code>
+                                                <code>D</code>
+                                                <code>F</code>
+                                                <code>I</code>
+                                                <code>L</code>
+                                                <code>M</code>
+                                                <code>O</code>
+                                             </valid_codes>
+                                          </element>
+                                          <element xid="TOO03-02">
+                                             <data_ele>1369</data_ele>
+                                             <name>Tooth Surface Code</name>
+                                             <usage>S</usage>
+                                             <seq>02</seq>
+                                             <valid_codes>
+                                                <code>B</code>
+                                                <code>D</code>
+                                                <code>F</code>
+                                                <code>I</code>
+                                                <code>L</code>
+                                                <code>M</code>
+                                                <code>O</code>
+                                             </valid_codes>
+                                          </element>
+                                          <element xid="TOO03-03">
+                                             <data_ele>1369</data_ele>
+                                             <name>Tooth Surface Code</name>
+                                             <usage>S</usage>
+                                             <seq>03</seq>
+                                             <valid_codes>
+                                                <code>B</code>
+                                                <code>D</code>
+                                                <code>F</code>
+                                                <code>I</code>
+                                                <code>L</code>
+                                                <code>M</code>
+                                                <code>O</code>
+                                             </valid_codes>
+                                          </element>
+                                          <element xid="TOO03-04">
+                                             <data_ele>1369</data_ele>
+                                             <name>Tooth Surface Code</name>
+                                             <usage>S</usage>
+                                             <seq>04</seq>
+                                             <valid_codes>
+                                                <code>B</code>
+                                                <code>D</code>
+                                                <code>F</code>
+                                                <code>I</code>
+                                                <code>L</code>
+                                                <code>M</code>
+                                                <code>O</code>
+                                             </valid_codes>
+                                          </element>
+                                          <element xid="TOO03-05">
+                                             <data_ele>1369</data_ele>
+                                             <name>Tooth Surface Code</name>
+                                             <usage>S</usage>
+                                             <seq>05</seq>
+                                             <valid_codes>
+                                                <code>B</code>
+                                                <code>D</code>
+                                                <code>F</code>
+                                                <code>I</code>
+                                                <code>L</code>
+                                                <code>M</code>
+                                                <code>O</code>
+                                             </valid_codes>
+                                          </element>
+                                       </composite>
+                                    </segment>
+                                    <!--End of TOO segment-->
+                                    <segment xid="HSD">
+                                       <name>Health Care Services Delivery</name>
+                                       <usage>S</usage>
+                                       <pos>090</pos>
+                                       <max_use>1</max_use>
+                                       <element xid="HSD01">
+                                          <data_ele>673</data_ele>
+                                          <name>Quantity Qualifier</name>
+                                          <usage>S</usage>
+                                          <seq>01</seq>
+                                          <valid_codes>
+                                             <code>DY</code>
+                                             <code>FL</code>
+                                             <code>HS</code>
+                                             <code>MN</code>
+                                             <code>VS</code>
+                                          </valid_codes>
+                                       </element>
+                                       <element xid="HSD02">
+                                          <data_ele>380</data_ele>
+                                          <name>Service Unit Count</name>
+                                          <usage>S</usage>
+                                          <seq>02</seq>
+                                       </element>
+                                       <element xid="HSD03">
+                                          <data_ele>355</data_ele>
+                                          <name>Unit or Basis for Measurement Code</name>
+                                          <usage>S</usage>
+                                          <seq>03</seq>
+                                          <valid_codes>
+                                             <code>DA</code>
+                                             <code>MO</code>
+                                             <code>WK</code>
+                                          </valid_codes>
+                                       </element>
+                                       <element xid="HSD04">
+                                          <data_ele>1167</data_ele>
+                                          <name>Sample Selection Modulus</name>
+                                          <usage>S</usage>
+                                          <seq>04</seq>
+                                       </element>
+                                       <element xid="HSD05">
+                                          <data_ele>615</data_ele>
+                                          <name>Time Period Qualifier</name>
+                                          <usage>S</usage>
+                                          <seq>05</seq>
+                                          <valid_codes>
+                                             <code>6</code>
+                                             <code>7</code>
+                                             <code>21</code>
+                                             <code>26</code>
+                                             <code>27</code>
+                                             <code>34</code>
+                                             <code>35</code>
+                                          </valid_codes>
+                                       </element>
+                                       <element xid="HSD06">
+                                          <data_ele>616</data_ele>
+                                          <name>Period Count</name>
+                                          <usage>S</usage>
+                                          <seq>06</seq>
+                                       </element>
+                                       <element xid="HSD07">
+                                          <data_ele>678</data_ele>
+                                          <name>Ship,Delivery or Calendar Pattern Code</name>
+                                          <usage>S</usage>
+                                          <seq>07</seq>
+                                          <valid_codes>
+                                             <code>1</code>
+                                             <code>2</code>
+                                             <code>3</code>
+                                             <code>4</code>
+                                             <code>5</code>
+                                             <code>6</code>
+                                             <code>7</code>
+                                             <code>8</code>
+                                             <code>9</code>
+                                             <code>A</code>
+                                             <code>B</code>
+                                             <code>C</code>
+                                             <code>D</code>
+                                             <code>E</code>
+                                             <code>F</code>
+                                             <code>G</code>
+                                             <code>H</code>
+                                             <code>J</code>
+                                             <code>K</code>
+                                             <code>L</code>
+                                             <code>M</code>
+                                             <code>N</code>
+                                             <code>O</code>
+                                             <code>P</code>
+                                             <code>Q</code>
+                                             <code>R</code>
+                                             <code>S</code>
+                                             <code>SA</code>
+                                             <code>SB</code>
+                                             <code>SC</code>
+                                             <code>SD</code>
+                                             <code>SG</code>
+                                             <code>SL</code>
+                                             <code>SP</code>
+                                             <code>SX</code>
+                                             <code>SY</code>
+                                             <code>SZ</code>
+                                             <code>T</code>
+                                             <code>U</code>
+                                             <code>V</code>
+                                             <code>W</code>
+                                             <code>X</code>
+                                             <code>Y</code>
+                                          </valid_codes>
+                                       </element>
+                                       <element xid="HSD08">
+                                          <data_ele>679</data_ele>
+                                          <name>Delivery Pattern Time Code</name>
+                                          <usage>S</usage>
+                                          <seq>08</seq>
+                                          <valid_codes>
+                                             <code>A</code>
+                                             <code>B</code>
+                                             <code>C</code>
+                                             <code>D</code>
+                                             <code>E</code>
+                                             <code>F</code>
+                                             <code>G</code>
+                                             <code>Y</code>
+                                          </valid_codes>
+                                       </element>
+                                    </segment>
+                                    <!--End of HSD segment-->
+                                    <segment xid="PWK">
+                                       <name>Additional Service Information</name>
+                                       <usage>S</usage>
+                                       <pos>155</pos>
+                                       <max_use>10</max_use>
+                                       <element xid="PWK01">
+                                          <data_ele>755</data_ele>
+                                          <name>Attachment Report Type Code</name>
+                                          <usage>R</usage>
+                                          <seq>01</seq>
+                                          <valid_codes>
+                                             <code>03</code>
+                                             <code>04</code>
+                                             <code>05</code>
+                                             <code>06</code>
+                                             <code>07</code>
+                                             <code>08</code>
+                                             <code>09</code>
+                                             <code>10</code>
+                                             <code>11</code>
+                                             <code>13</code>
+                                             <code>15</code>
+                                             <code>21</code>
+                                             <code>48</code>
+                                             <code>55</code>
+                                             <code>59</code>
+                                             <code>77</code>
+                                             <code>A3</code>
+                                             <code>A4</code>
+                                             <code>AM</code>
+                                             <code>AS</code>
+                                             <code>AT</code>
+                                             <code>B2</code>
+                                             <code>B3</code>
+                                             <code>BR</code>
+                                             <code>BS</code>
+                                             <code>BT</code>
+                                             <code>CB</code>
+                                             <code>CK</code>
+                                             <code>D2</code>
+                                             <code>DA</code>
+                                             <code>DB</code>
+                                             <code>DG</code>
+                                             <code>DJ</code>
+                                             <code>DS</code>
+                                             <code>FM</code>
+                                             <code>HC</code>
+                                             <code>HR</code>
+                                             <code>I5</code>
+                                             <code>IR</code>
+                                             <code>LA</code>
+                                             <code>M1</code>
+                                             <code>NN</code>
+                                             <code>OB</code>
+                                             <code>OC</code>
+                                             <code>OD</code>
+                                             <code>OE</code>
+                                             <code>OX</code>
+                                             <code>P4</code>
+                                             <code>P5</code>
+                                             <code>P6</code>
+                                             <code>P7</code>
+                                             <code>PE</code>
+                                             <code>PN</code>
+                                             <code>PO</code>
+                                             <code>PQ</code>
+                                             <code>PY</code>
+                                             <code>PZ</code>
+                                             <code>QC</code>
+                                             <code>QR</code>
+                                             <code>RB</code>
+                                             <code>RR</code>
+                                             <code>RT</code>
+                                             <code>RX</code>
+                                             <code>SG</code>
+                                             <code>V5</code>
+                                             <code>XP</code>
+                                          </valid_codes>
+                                       </element>
+                                       <element xid="PWK02">
+                                          <data_ele>756</data_ele>
+                                          <name>Attachment Transmission Code</name>
+                                          <usage>R</usage>
+                                          <seq>02</seq>
+                                          <valid_codes>
+                                             <code>AA</code>
+                                             <code>BM</code>
+                                             <code>EL</code>
+                                             <code>EM</code>
+                                             <code>FX</code>
+                                             <code>VO</code>
+                                          </valid_codes>
+                                       </element>
+                                       <element xid="PWK03">
+                                          <data_ele>757</data_ele>
+                                          <name>Report Copies Needed</name>
+                                          <usage>N</usage>
+                                          <seq>03</seq>
+                                       </element>
+                                       <element xid="PWK04">
+                                          <data_ele>98</data_ele>
+                                          <name>Entity Identifier Code</name>
+                                          <usage>N</usage>
+                                          <seq>04</seq>
+                                       </element>
+                                       <element xid="PWK05">
+                                          <data_ele>66</data_ele>
+                                          <name>Identification Code Qualifier</name>
+                                          <usage>S</usage>
+                                          <seq>05</seq>
+                                          <valid_codes>
+                                             <code>AC</code>
+                                          </valid_codes>
+                                       </element>
+                                       <element xid="PWK06">
+                                          <data_ele>67</data_ele>
+                                          <name>Attachment Control Number</name>
+                                          <usage>S</usage>
+                                          <seq>06</seq>
+                                       </element>
+                                       <element xid="PWK07">
+                                          <data_ele>352</data_ele>
+                                          <name>Attachment Description</name>
+                                          <usage>S</usage>
+                                          <seq>07</seq>
+                                       </element>
+                                       <composite>
+                                          <data_ele>C002</data_ele>
+                                          <name>Actions Indicated</name>
+                                          <usage>N</usage>
+                                          <seq>08</seq>
+                                       </composite>
+                                       <element xid="PWK09">
+                                          <data_ele>1525</data_ele>
+                                          <name>Request Category Code</name>
+                                          <usage>N</usage>
+                                          <seq>09</seq>
+                                       </element>
+                                    </segment>
+                                    <!--End of PWK segment-->
+                                    <segment xid="MSG">
+                                       <name>Message Text</name>
+                                       <usage>S</usage>
+                                       <pos>160</pos>
+                                       <max_use>1</max_use>
+                                       <element xid="MSG01">
+                                          <data_ele>933</data_ele>
+                                          <name>Free Form Message Text</name>
+                                          <usage>R</usage>
+                                          <seq>01</seq>
+                                       </element>
+                                       <element xid="MSG02">
+                                          <data_ele>934</data_ele>
+                                          <name>Printer Carriage Control Code</name>
+                                          <usage>N</usage>
+                                          <seq>02</seq>
+                                       </element>
+                                       <element xid="MSG03">
+                                          <data_ele>1470</data_ele>
+                                          <name>Number</name>
+                                          <usage>N</usage>
+                                          <seq>03</seq>
+                                       </element>
+                                    </segment>
+                                    <!--End of MSG segment-->
+                                    <loop xid="2010F">
+                                       <name>Service Provider Name</name>
+                                       <usage>S</usage>
+                                       <pos>170</pos>
+                                       <repeat>10</repeat>
+                                       <segment xid="NM1">
                                           <name>Service Provider Name</name>
                                           <usage>R</usage>
                                           <pos>170</pos>
                                           <max_use>1</max_use>
                                           <element xid="NM101">
-                                            <data_ele>98</data_ele>
-                                            <name>Entity Identifier Code</name>
-                                            <usage>R</usage>
-                                            <seq>01</seq>
-                                            <valid_codes>
-                                              <code>72</code>
-                                              <code>73</code>
-                                              <code>77</code>
-                                              <code>AAJ</code>
-                                              <code>DD</code>
-                                              <code>DK</code>
-                                              <code>DN</code>
-                                              <code>G3</code>
-                                              <code>P3</code>
-                                              <code>FA</code>
-                                              <code>QB</code>
-                                              <code>QV</code>
-                                              <code>SJ</code>
-                                            </valid_codes>
+                                             <data_ele>98</data_ele>
+                                             <name>Entity Identifier Code</name>
+                                             <usage>R</usage>
+                                             <seq>01</seq>
+                                             <valid_codes>
+                                                <code>72</code>
+                                                <code>73</code>
+                                                <code>77</code>
+                                                <code>AAJ</code>
+                                                <code>DD</code>
+                                                <code>DK</code>
+                                                <code>DN</code>
+                                                <code>G3</code>
+                                                <code>P3</code>
+                                                <code>FA</code>
+                                                <code>QB</code>
+                                                <code>QV</code>
+                                                <code>SJ</code>
+                                             </valid_codes>
                                           </element>
                                           <element xid="NM102">
-                                            <data_ele>1065</data_ele>
-                                            <name>Entity Type Qualifier</name>
-                                            <usage>R</usage>
-                                            <seq>02</seq>
-                                            <valid_codes>
-                                              <code>1</code>
-                                              <code>2</code>
-                                            </valid_codes>
+                                             <data_ele>1065</data_ele>
+                                             <name>Entity Type Qualifier</name>
+                                             <usage>R</usage>
+                                             <seq>02</seq>
+                                             <valid_codes>
+                                                <code>1</code>
+                                                <code>2</code>
+                                             </valid_codes>
                                           </element>
                                           <element xid="NM103">
-                                            <data_ele>1035</data_ele>
-                                            <name>Service Provider Last or Organization Name</name>
-                                            <usage>S</usage>
-                                            <seq>03</seq>
+                                             <data_ele>1035</data_ele>
+                                             <name>Service Provider Last or Organization Name</name>
+                                             <usage>S</usage>
+                                             <seq>03</seq>
                                           </element>
                                           <element xid="NM104">
-                                            <data_ele>1036</data_ele>
-                                            <name>Service Provider First Name</name>
-                                            <usage>S</usage>
-                                            <seq>04</seq>
+                                             <data_ele>1036</data_ele>
+                                             <name>Service Provider First Name</name>
+                                             <usage>S</usage>
+                                             <seq>04</seq>
                                           </element>
                                           <element xid="NM105">
-                                            <data_ele>1037</data_ele>
-                                            <name>Service Provider Middle Name</name>
-                                            <usage>S</usage>
-                                            <seq>05</seq>
+                                             <data_ele>1037</data_ele>
+                                             <name>Service Provider Middle Name</name>
+                                             <usage>S</usage>
+                                             <seq>05</seq>
                                           </element>
                                           <element xid="NM106">
-                                            <data_ele>1038</data_ele>
-                                            <name>Name Prefix</name>
-                                            <usage>S</usage>
-                                            <seq>06</seq>
+                                             <data_ele>1038</data_ele>
+                                             <name>Name Prefix</name>
+                                             <usage>S</usage>
+                                             <seq>06</seq>
                                           </element>
                                           <element xid="NM107">
-                                            <data_ele>1039</data_ele>
-                                            <name>Service Provider Name Suffix</name>
-                                            <usage>S</usage>
-                                            <seq>07</seq>
+                                             <data_ele>1039</data_ele>
+                                             <name>Service Provider Name Suffix</name>
+                                             <usage>S</usage>
+                                             <seq>07</seq>
                                           </element>
                                           <element xid="NM108">
-                                            <data_ele>66</data_ele>
-                                            <name>Identification Code Qualifier</name>
-                                            <usage>S</usage>
-                                            <seq>08</seq>
-                                            <valid_codes>
-                                              <code>24</code>
-                                              <code>34</code>
-                                              <code>46</code>
-                                              <code>XX</code>
-                                            </valid_codes>
+                                             <data_ele>66</data_ele>
+                                             <name>Identification Code Qualifier</name>
+                                             <usage>S</usage>
+                                             <seq>08</seq>
+                                             <valid_codes>
+                                                <code>24</code>
+                                                <code>34</code>
+                                                <code>46</code>
+                                                <code>XX</code>
+                                             </valid_codes>
                                           </element>
                                           <element xid="NM109">
-                                            <data_ele>67</data_ele>
-                                            <name>Service Provider Idenifier</name>
-                                            <usage>S</usage>
-                                            <seq>09</seq>
+                                             <data_ele>67</data_ele>
+                                             <name>Service Provider Idenifier</name>
+                                             <usage>S</usage>
+                                             <seq>09</seq>
                                           </element>
                                           <element xid="NM110">
-                                            <data_ele>706</data_ele>
-                                            <name>Entity Relationship Code</name>
-                                            <usage>N</usage>
-                                            <seq>10</seq>
+                                             <data_ele>706</data_ele>
+                                             <name>Entity Relationship Code</name>
+                                             <usage>N</usage>
+                                             <seq>10</seq>
                                           </element>
                                           <element xid="NM111">
-                                            <data_ele>98</data_ele>
-                                            <name>Entity Identifier Code</name>
-                                            <usage>N</usage>
-                                            <seq>11</seq>
+                                             <data_ele>98</data_ele>
+                                             <name>Entity Identifier Code</name>
+                                             <usage>N</usage>
+                                             <seq>11</seq>
                                           </element>
-                                        </segment>
-                                        <!--End of NM1 segment-->
-                                        <segment xid="REF">
+                                       </segment>
+                                       <!--End of NM1 segment-->
+                                       <segment xid="REF">
                                           <name>Service Provider Supplemental Identification</name>
                                           <usage>S</usage>
                                           <pos>180</pos>
                                           <max_use>7</max_use>
                                           <element xid="REF01">
-                                            <data_ele>128</data_ele>
-                                            <name>Reference Identification Qualifier</name>
-                                            <usage>R</usage>
-                                            <seq>01</seq>
-                                            <valid_codes>
-                                              <code>1G</code>
-                                              <code>1J</code>
-                                              <code>0B</code>
-                                              <code>G5</code>
-                                              <code>EI</code>
-                                              <code>N5</code>
-                                              <code>N7</code>
-                                              <code>SY</code>
-                                              <code>ZH</code>
-                                            </valid_codes>
+                                             <data_ele>128</data_ele>
+                                             <name>Reference Identification Qualifier</name>
+                                             <usage>R</usage>
+                                             <seq>01</seq>
+                                             <valid_codes>
+                                                <code>1G</code>
+                                                <code>1J</code>
+                                                <code>0B</code>
+                                                <code>G5</code>
+                                                <code>EI</code>
+                                                <code>N5</code>
+                                                <code>N7</code>
+                                                <code>SY</code>
+                                                <code>ZH</code>
+                                             </valid_codes>
                                           </element>
                                           <element xid="REF02">
-                                            <data_ele>127</data_ele>
-                                            <name>Service Provider Supplemental Identifier</name>
-                                            <usage>R</usage>
-                                            <seq>02</seq>
+                                             <data_ele>127</data_ele>
+                                             <name>Service Provider Supplemental Identifier</name>
+                                             <usage>R</usage>
+                                             <seq>02</seq>
                                           </element>
                                           <element xid="REF03">
-                                            <data_ele>352</data_ele>
-                                            <name>Description</name>
-                                            <usage>N</usage>
-                                            <seq>03</seq>
+                                             <data_ele>352</data_ele>
+                                             <name>Description</name>
+                                             <usage>N</usage>
+                                             <seq>03</seq>
                                           </element>
                                           <composite>
-                                            <data_ele>C040</data_ele>
-                                            <name>Reference Identifier</name>
-                                            <usage>N</usage>
-                                            <seq>04</seq>
+                                             <data_ele>C040</data_ele>
+                                             <name>Reference Identifier</name>
+                                             <usage>N</usage>
+                                             <seq>04</seq>
                                           </composite>
-                                        </segment>
-                                        <!--End of REF segment-->
-                                        <segment xid="N3">
+                                       </segment>
+                                       <!--End of REF segment-->
+                                       <segment xid="N3">
                                           <name>Service Provider Address</name>
                                           <usage>S</usage>
                                           <pos>200</pos>
                                           <max_use>1</max_use>
                                           <element xid="N301">
-                                            <data_ele>166</data_ele>
-                                            <name>Service Provider Address Line</name>
-                                            <usage>R</usage>
-                                            <seq>01</seq>
+                                             <data_ele>166</data_ele>
+                                             <name>Service Provider Address Line</name>
+                                             <usage>R</usage>
+                                             <seq>01</seq>
                                           </element>
                                           <element xid="N302">
-                                            <data_ele>166</data_ele>
-                                            <name>Service Provider Address Line</name>
-                                            <usage>S</usage>
-                                            <seq>02</seq>
+                                             <data_ele>166</data_ele>
+                                             <name>Service Provider Address Line</name>
+                                             <usage>S</usage>
+                                             <seq>02</seq>
                                           </element>
-                                        </segment>
-                                        <!--End of N3 segment-->
-                                        <segment xid="N4">
+                                       </segment>
+                                       <!--End of N3 segment-->
+                                       <segment xid="N4">
                                           <name>Service Provider City/State/ZIP Code</name>
                                           <usage>S</usage>
                                           <pos>210</pos>
                                           <max_use>1</max_use>
                                           <element xid="N401">
-                                            <data_ele>19</data_ele>
-                                            <name>Service Provider City Name</name>
-                                            <usage>R</usage>
-                                            <seq>01</seq>
+                                             <data_ele>19</data_ele>
+                                             <name>Service Provider City Name</name>
+                                             <usage>R</usage>
+                                             <seq>01</seq>
                                           </element>
                                           <element xid="N402">
-                                            <data_ele>156</data_ele>
-                                            <name>Service Provider State or Province Code</name>
-                                            <usage>S</usage>
-                                            <seq>02</seq>
-                                            <valid_codes external="states"/>
+                                             <data_ele>156</data_ele>
+                                             <name>Service Provider State or Province Code</name>
+                                             <usage>S</usage>
+                                             <seq>02</seq>
+                                             <valid_codes external="states" />
                                           </element>
                                           <element xid="N403">
-                                            <data_ele>116</data_ele>
-                                            <name>Service Provider Postal Zone or ZIP Code</name>
-                                            <usage>S</usage>
-                                            <seq>03</seq>
+                                             <data_ele>116</data_ele>
+                                             <name>Service Provider Postal Zone or ZIP Code</name>
+                                             <usage>S</usage>
+                                             <seq>03</seq>
                                           </element>
                                           <element xid="N404">
-                                            <data_ele>26</data_ele>
-                                            <name>Service Provider Country Code</name>
-                                            <usage>S</usage>
-                                            <seq>04</seq>
-                                            <valid_codes external="country"/>
+                                             <data_ele>26</data_ele>
+                                             <name>Service Provider Country Code</name>
+                                             <usage>S</usage>
+                                             <seq>04</seq>
+                                             <valid_codes external="country" />
                                           </element>
                                           <element xid="N405">
-                                            <data_ele>309</data_ele>
-                                            <name>Location Qualifier</name>
-                                            <usage>N</usage>
-                                            <seq>05</seq>
+                                             <data_ele>309</data_ele>
+                                             <name>Location Qualifier</name>
+                                             <usage>N</usage>
+                                             <seq>05</seq>
                                           </element>
                                           <element xid="N406">
-                                            <data_ele>310</data_ele>
-                                            <name>Location Identifier</name>
-                                            <usage>N</usage>
-                                            <seq>06</seq>
+                                             <data_ele>310</data_ele>
+                                             <name>Location Identifier</name>
+                                             <usage>N</usage>
+                                             <seq>06</seq>
                                           </element>
                                           <element xid="N406">
-                                            <data_ele>310</data_ele>
-                                            <name>Country Subdivision Code</name>
-                                            <usage>N</usage>
-                                            <seq>06</seq>
+                                             <data_ele>310</data_ele>
+                                             <name>Country Subdivision Code</name>
+                                             <usage>N</usage>
+                                             <seq>06</seq>
                                           </element>
-                                        </segment>
-                                        <!--End of N4 segment-->
-                                        <segment xid="PER">
+                                       </segment>
+                                       <!--End of N4 segment-->
+                                       <segment xid="PER">
                                           <name>Service Provider Contact Information</name>
                                           <usage>S</usage>
                                           <pos>220</pos>
                                           <max_use>1</max_use>
                                           <element xid="PER01">
-                                            <data_ele>366</data_ele>
-                                            <name>Contact Function Code</name>
-                                            <usage>R</usage>
-                                            <seq>01</seq>
-                                            <valid_codes>
-                                              <code>IC</code>
-                                            </valid_codes>
+                                             <data_ele>366</data_ele>
+                                             <name>Contact Function Code</name>
+                                             <usage>R</usage>
+                                             <seq>01</seq>
+                                             <valid_codes>
+                                                <code>IC</code>
+                                             </valid_codes>
                                           </element>
                                           <element xid="PER02">
-                                            <data_ele>93</data_ele>
-                                            <name>Service Provider Contact Name</name>
-                                            <usage>S</usage>
-                                            <seq>02</seq>
+                                             <data_ele>93</data_ele>
+                                             <name>Service Provider Contact Name</name>
+                                             <usage>S</usage>
+                                             <seq>02</seq>
                                           </element>
                                           <element xid="PER03">
-                                            <data_ele>365</data_ele>
-                                            <name>Communication Number Qualifier</name>
-                                            <usage>S</usage>
-                                            <seq>03</seq>
-                                            <valid_codes>
-                                              <code>EM</code>
-                                              <code>FX</code>
-                                              <code>TE</code>
-                                              <code>UR</code>
-                                            </valid_codes>
+                                             <data_ele>365</data_ele>
+                                             <name>Communication Number Qualifier</name>
+                                             <usage>S</usage>
+                                             <seq>03</seq>
+                                             <valid_codes>
+                                                <code>EM</code>
+                                                <code>FX</code>
+                                                <code>TE</code>
+                                                <code>UR</code>
+                                             </valid_codes>
                                           </element>
                                           <element xid="PER04">
-                                            <data_ele>364</data_ele>
-                                            <name>Service Provider Contact Communication Number</name>
-                                            <usage>S</usage>
-                                            <seq>04</seq>
+                                             <data_ele>364</data_ele>
+                                             <name>Service Provider Contact Communication Number</name>
+                                             <usage>S</usage>
+                                             <seq>04</seq>
                                           </element>
                                           <element xid="PER05">
-                                            <data_ele>365</data_ele>
-                                            <name>Communication Number Qualifier</name>
-                                            <usage>S</usage>
-                                            <seq>05</seq>
-                                            <valid_codes>
-                                              <code>EM</code>
-                                              <code>EX</code>
-                                              <code>FX</code>
-                                              <code>TE</code>
-                                              <code>UR</code>
-                                            </valid_codes>
+                                             <data_ele>365</data_ele>
+                                             <name>Communication Number Qualifier</name>
+                                             <usage>S</usage>
+                                             <seq>05</seq>
+                                             <valid_codes>
+                                                <code>EM</code>
+                                                <code>EX</code>
+                                                <code>FX</code>
+                                                <code>TE</code>
+                                                <code>UR</code>
+                                             </valid_codes>
                                           </element>
                                           <element xid="PER06">
-                                            <data_ele>364</data_ele>
-                                            <name>Service Provider Contact Communication Number</name>
-                                            <usage>S</usage>
-                                            <seq>06</seq>
+                                             <data_ele>364</data_ele>
+                                             <name>Service Provider Contact Communication Number</name>
+                                             <usage>S</usage>
+                                             <seq>06</seq>
                                           </element>
                                           <element xid="PER07">
-                                            <data_ele>365</data_ele>
-                                            <name>Communication Number Qualifier</name>
-                                            <usage>S</usage>
-                                            <seq>07</seq>
-                                            <valid_codes>
-                                              <code>EM</code>
-                                              <code>EX</code>
-                                              <code>FX</code>
-                                              <code>TE</code>
-                                              <code>UR</code>
-                                            </valid_codes>
+                                             <data_ele>365</data_ele>
+                                             <name>Communication Number Qualifier</name>
+                                             <usage>S</usage>
+                                             <seq>07</seq>
+                                             <valid_codes>
+                                                <code>EM</code>
+                                                <code>EX</code>
+                                                <code>FX</code>
+                                                <code>TE</code>
+                                                <code>UR</code>
+                                             </valid_codes>
                                           </element>
                                           <element xid="PER08">
-                                            <data_ele>364</data_ele>
-                                            <name>Service Provider Contact Communication Number</name>
-                                            <usage>S</usage>
-                                            <seq>08</seq>
+                                             <data_ele>364</data_ele>
+                                             <name>Service Provider Contact Communication Number</name>
+                                             <usage>S</usage>
+                                             <seq>08</seq>
                                           </element>
                                           <element xid="PER09">
-                                            <data_ele>443</data_ele>
-                                            <name>Contact Inquiry Reference</name>
-                                            <usage>N</usage>
-                                            <seq>09</seq>
+                                             <data_ele>443</data_ele>
+                                             <name>Contact Inquiry Reference</name>
+                                             <usage>N</usage>
+                                             <seq>09</seq>
                                           </element>
-                                        </segment>
-                                        <!--End of PER segment-->
-                                        <segment xid="PRV">
+                                       </segment>
+                                       <!--End of PER segment-->
+                                       <segment xid="PRV">
                                           <name>Service Provider Information</name>
                                           <usage>S</usage>
                                           <pos>240</pos>
                                           <max_use>1</max_use>
                                           <element xid="PRV01">
-                                            <data_ele>1221</data_ele>
-                                            <name>Provider Code</name>
-                                            <usage>R</usage>
-                                            <seq>01</seq>
-                                            <valid_codes>
-                                              <code>AS</code>
-                                              <code>OP</code>
-                                              <code>OR</code>
-                                              <code>OT</code>
-                                              <code>PC</code>
-                                              <code>PE</code>
-                                            </valid_codes>
+                                             <data_ele>1221</data_ele>
+                                             <name>Provider Code</name>
+                                             <usage>R</usage>
+                                             <seq>01</seq>
+                                             <valid_codes>
+                                                <code>AS</code>
+                                                <code>OP</code>
+                                                <code>OR</code>
+                                                <code>OT</code>
+                                                <code>PC</code>
+                                                <code>PE</code>
+                                             </valid_codes>
                                           </element>
                                           <element xid="PRV02">
-                                            <data_ele>128</data_ele>
-                                            <name>Reference Identification Qualifier</name>
-                                            <usage>R</usage>
-                                            <seq>02</seq>
-                                            <valid_codes>
-                                              <code>PXC</code>
-                                            </valid_codes>
+                                             <data_ele>128</data_ele>
+                                             <name>Reference Identification Qualifier</name>
+                                             <usage>R</usage>
+                                             <seq>02</seq>
+                                             <valid_codes>
+                                                <code>PXC</code>
+                                             </valid_codes>
                                           </element>
                                           <element xid="PRV03">
-                                            <data_ele>127</data_ele>
-                                            <name>Provider Taxonomy Code</name>
-                                            <usage>R</usage>
-                                            <seq>03</seq>
+                                             <data_ele>127</data_ele>
+                                             <name>Provider Taxonomy Code</name>
+                                             <usage>R</usage>
+                                             <seq>03</seq>
                                           </element>
                                           <element xid="PRV04">
-                                            <data_ele>156</data_ele>
-                                            <name>State or Province Code</name>
-                                            <usage>N</usage>
-                                            <seq>04</seq>
+                                             <data_ele>156</data_ele>
+                                             <name>State or Province Code</name>
+                                             <usage>N</usage>
+                                             <seq>04</seq>
                                           </element>
                                           <composite>
-                                            <data_ele>C035</data_ele>
-                                            <name>Provider Specialty Information</name>
-                                            <usage>N</usage>
-                                            <seq>05</seq>
+                                             <data_ele>C035</data_ele>
+                                             <name>Provider Specialty Information</name>
+                                             <usage>N</usage>
+                                             <seq>05</seq>
                                           </composite>
                                           <element xid="PRV06">
-                                            <data_ele>1223</data_ele>
-                                            <name>Provider Organization Code</name>
-                                            <usage>N</usage>
-                                            <seq>06</seq>
+                                             <data_ele>1223</data_ele>
+                                             <name>Provider Organization Code</name>
+                                             <usage>N</usage>
+                                             <seq>06</seq>
                                           </element>
-                                        </segment>
-                                        <!--End of PRV segment-->
-                                      </loop>
-                                      <!--End of 2010F loop-->
+                                       </segment>
+                                       <!--End of PRV segment-->
                                     </loop>
-                                    <!--End of 2000F loop-->
+                                    <!--End of 2010F loop-->
                                  </loop>
-                                 <!--End of 2010EB loop-->
+                                 <!--End of 2000F loop-->
                               </loop>
                               <!--End of 2010EA loop-->
                            </loop>

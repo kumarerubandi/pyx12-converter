@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <x12simple>
    <loop id="ISA_LOOP">
-      <seg id='ISA'>
-        <ele id='ISA01'>00</ele>
+      <seg id="ISA">
+         <ele id='ISA01'>00</ele>
         <ele id='ISA02'>          </ele>
         <ele id='ISA03'>00</ele>
         <ele id='ISA04'>          </ele>
@@ -34,9 +34,9 @@
             <seg id="ST">
                <ele id="ST01">278</ele>
                <ele id="ST02">300145997</ele>
-                <ele id="ST03">005010X217</ele>
+               <ele id="ST03">005010X217</ele>
             </seg>
-            <loop id="DETAIL">
+            <loop id="HEADER">
                <seg id="BHT">
                   <ele id="BHT01">0019</ele>
                   <ele id="BHT02">13</ele>
@@ -45,409 +45,576 @@
                   <ele id="BHT05">1439</ele>
                   <ele id="BHT06">RP</ele>
                </seg>
-            <!--Utilization Management Organization (UMO) Name Loop-->
-            <loop id="2010A">
-               <seg id="NM1">
-                  <ele id="NM101">umo_code</ele>
-                  <ele id="NM102">2</ele>
-                  <ele id="NM103">claim_json.insurer.name</ele>
-                  <ele id="NM108">umo_id</ele>
-                  <ele id="NM109">claim_json.insurer.identifier.0.value</ele>
-               </seg>
             </loop>
-            <!--Requestor Name Loop-->
-            <loop id="2010B">
-               <seg id="NM1">
-                  <ele id="NM101">requestor_entity</ele>
-                  <!--<ele id="NM102">2</ele>-->
-                  <ele id="NM103">claim_json.enterer.name.0.family</ele>
-                  <ele id="NM104">claim_json.enterer.name.0.given.0</ele>
-                  <ele id="NM108">requestor_id</ele>
-                  <ele id="NM109">claim_json.enterer.identifier.0.value</ele>
-               </seg>
-               <!--<seg id="REF">-->
-                  <!--<ele id="REF01">EI</ele>-->
-                  <!--<ele id="REF02">Requestor Supplemental Identifier</ele>-->
-               <!--</seg>-->
-                <seg id="N3">
-                  <ele id="N301">claim_json.enterer.address.0.text</ele>
-                  <!--<ele id='N302'>claim_json.enterer.address.line.1</ele>-->
-               </seg>
-               <seg id="N4">
-                  <ele id="N401">claim_json.enterer.address.0.city</ele>
-                  <ele id="N402">claim_json.enterer.address.0.state</ele>
-                  <ele id="N403">claim_json.enterer.address.0.postalCode</ele>
-                  <!--Country Subdivision Code-->
-                  <!--<ele id='N407'>claim_json.Practitioner.address</ele>-->
-               </seg>
-               <!--Requester contact information-->
-               <seg id='PER'>
-                   <!--<ele id='PER03'>TE</ele>-->
-                   <!--<ele id='PER04'>claim_json.enterer.telecom.0.value</ele>-->
-               </seg>
-               <!--Reference Identification Qualifier-->
-               <!--<seg id='PRV'>-->
-               <!--<ele id='PRV02'>PXC</ele>-->
-               <!--<ele id='PRV03'>101Y00000X</ele>-->
-               <!--</seg>-->
+            <loop id="DETAIL">
+               <loop id="2000A">
+                  <!--Utilization Management Organization (UMO) Name Loop-->
+                  <loop id="2010A">
+                     <seg id="NM1">
+                        <ele id="NM101">umo_code</ele>
+                        <ele id="NM102">2</ele>
+                        <ele id="NM103">claim_json.insurer.name</ele>
+                        <!--<ele id="NM104">claim_json.insurer.name.0.given.0</ele>-->
+                        <!--<ele id="NM105">claim_json.insurer.name.0.given.1</ele>-->
+                        <!--<ele id="NM106">claim_json.insurer.name.0.prefix</ele>-->
+                        <!--<ele id="NM107">claim_json.insurer.name.0.suffix</ele>-->
+                        <ele id="NM108">umo_id</ele>
+                        <ele id="NM109">claim_json.insurer.identifier.0.value</ele>
+                     </seg>
+                  </loop>
+                  <!--Requestor Name Loop-->
+                  <loop id="2000B">
+                     <loop id="2010B">
+                        <seg id="NM1">
+                           <ele id="NM101">requestor_entity</ele>
+                           <ele id="NM102">1</ele>
+                           <ele id="NM103">claim_json.enterer.name.0.family</ele>
+                           <ele id="NM104">claim_json.enterer.name.0.given.0</ele>
+                           <ele id="NM105">claim_json.enterer.name.0.given.1</ele>
+                           <ele id="NM106">claim_json.enterer.name.0.prefix</ele>
+                           <ele id="NM107">claim_json.enterer.name.0.suffix</ele>
+                           <ele id="NM108">requestor_id</ele>
+                           <ele id="NM109">claim_json.enterer.identifier.0.value</ele>
+                        </seg>
+                        <!--<seg id="REF">-->
+                        <!--<ele id="REF01">EI</ele>-->
+                        <!--<ele id="REF02">Requestor Supplemental Identifier</ele>-->
+                        <!--</seg>-->
+                        <seg id="N3">
+                           <ele id="N301">claim_json.enterer.address.0.line.0</ele>
+                           <ele id="N302">claim_json.enterer.address.0.line.1</ele>
+                        </seg>
+                        <seg id="N4">
+                           <ele id="N401">claim_json.enterer.address.0.city</ele>
+                           <ele id="N402">claim_json.enterer.address.0.state</ele>
+                           <ele id="N403">claim_json.enterer.address.0.postalCode</ele>
+                           <ele id="N404">claim_json.enterer.address.0.country</ele>
+                           <!--Location Qualifier-->
+                           <!--<ele id="N405">claim_json.enterer.address.0</ele>-->
+                           <!--Location Identifier-->
+                           <!--<ele id="N406">claim_json.enterer.address.0</ele> -->
+                           <!--Country Subdivision Code-->
+                           <!--<ele id='N407'>claim_json.Practitioner.address</ele>-->
+                        </seg>
+                        <!--Requester contact information-->
+                        <seg id="PER">
+                           <ele id="PER01">IC</ele>
+                           <!--Requester Contact Name-->
+                           <!--<ele id='PER02'>IC</ele>-->
+                           <!--<ele id='PER03'>TE</ele>-->
+                           <!--<ele id='PER04'>claim_json.enterer.telecom.0.value</ele>-->
+                        </seg>
+                        <!--Requester Provider Information-->
+                        <!--<seg id='PRV'>-->
+                        <!--<ele id='PRV01'>PXC</ele>-->
+                        <!--<ele id='PRV02'>101Y00000X</ele>-->
+                        <!--<ele id='PRV03'>PXC</ele>-->
+                        <!--<ele id='PRV04'>101Y00000X</ele>-->
+                        <!--<ele id='PRV05'>PXC</ele>-->
+                        <!--<ele id='PRV06'>101Y00000X</ele>-->
+                        <!--</seg>-->
+                     </loop>
+                     <!--Subscriber Name Loop-->
+                     <loop id="2000C">
+                        <loop id="2010C">
+                           <seg id="NM1">
+                              <ele id="NM101">IL</ele>
+                              <ele id="NM102">1</ele>
+                              <ele id="NM103">claim_json.Patient.name.0.family</ele>
+                              <ele id="NM104">claim_json.Patient.name.0.given.0</ele>
+                              <ele id="NM105">claim_json.Patient.name.0.given.1</ele>
+                              <ele id="NM106">claim_json.Patient.name.0.prefix</ele>
+                              <ele id="NM107">claim_json.Patient.name.0.suffix</ele>
+                              <ele id="NM108">MI</ele>
+                              <ele id="NM109">claim_json.Patient.identifier.0.value</ele>
+                           </seg>
+                           <!--Subscriber Supplemental Identification-->
+                           <!--<seg id='REF'>-->
+                           <!--<ele id='REF01'>1D</ele>-->
+                           <!--<ele id='REF02'>1705555</ele>-->
+                           <!--</seg>-->
+                           <seg id="N3">
+                              <ele id="N301">claim_json.Patient.address.0.line.0</ele>
+                              <ele id="N302">claim_json.Patient.address.0.line.1</ele>
+                           </seg>
+                           <seg id="N4">
+                              <ele id="N401">claim_json.Patient.address.0.city</ele>
+                              <ele id="N402">claim_json.Patient.address.0.state</ele>
+                              <ele id="N403">claim_json.Patient.address.0.postalCode</ele>
+                              <ele id="N404">claim_json.Patient.address.0.country</ele>
+                              <!--Location Qualifier-->
+                              <!--<ele id="N405">claim_json.enterer.address.0</ele>-->
+                              <!--Location Identifier-->
+                              <!--<ele id="N406">claim_json.enterer.address.0</ele> -->
+                              <!--Country Subdivision Code-->
+                              <!--<ele id='N407'>claim_json.Practitioner.address</ele>-->
+                           </seg>
+                           <seg id="DMG">
+                              <ele id="DMG01">D8</ele>
+                              <ele id="DMG02">claim_json.Patient.birthDate</ele>
+                              <ele id="DMG03">claim_json.Patient.gender</ele>
+                              <!--<ele id="DMG04">claim_json.Patient.maritalStatus</ele>-->
+                              <!--Race or Ethnicity Code-->
+                              <!--<ele id="DMG05">claim_json.Patient</ele>-->
+                              <!--Citizenship Status Code-->
+                              <!--<ele id="DMG06">claim_json.Patient</ele>-->
+                              <!--Country Code-->
+                              <!--<ele id="DMG07">claim_json.Patient</ele>-->
+                              <!--Basis of Verification Code-->
+                              <!--<ele id="DMG08">claim_json.Patient</ele>-->
+                              <!--<ele id="DMG09">claim_json.Patient</ele>-->
+                           </seg>
+                           <!--<seg id='PER'>-->
+                           <!--<ele id='PER03'>TE</ele>-->
+                           <!--<ele id='PER04'>claim_json.Patient.telecom.0.value</ele>-->
+                           <!--</seg>-->
+                           <!--Subscriber Relationship-->
+                           <!--<seg id='INS'>-->
+                           <!--<ele id='INS01'>Y</ele>-->
+                           <!--<ele id='INS02'>1</ele>-->
+                           <!--<ele id='INS08'>22</ele>-->
+                           <!--</seg>-->
+                        </loop>
+                        <!--Dependent Name Loop-->
+                        <loop id="2000D">
+                           <loop id="2010D">
+                              <seg id="NM1">
+                                 <ele id="NM101">IL</ele>
+                                 <ele id="NM102">1</ele>
+                                 <ele id="NM103">claim_json.payee.name.0.family</ele>
+                                 <ele id="NM104">claim_json.payee.name.0.given.0</ele>
+                                 <ele id="NM105">claim_json.payee.name.0.given.1</ele>
+                                 <ele id="NM106">claim_json.payee.name.0.prefix</ele>
+                                 <ele id="NM107">claim_json.payee.name.0.suffix</ele>
+                                 <!--<ele id="NM108">MI</ele>-->
+                                 <!--<ele id="NM109">claim_json.payee.identifier.0.value</ele>-->
+                              </seg>
+                              <seg id="N3">
+                                 <ele id="N301">claim_json.payee.address.0.line.0</ele>
+                                 <ele id="N302">claim_json.payee.address.0.line.1</ele>
+                              </seg>
+                              <seg id="N4">
+                                 <ele id="N401">claim_json.payee.address.0.city</ele>
+                                 <ele id="N402">claim_json.payee.address.0.state</ele>
+                                 <ele id="N403">claim_json.payee.address.0.postalCode</ele>
+                                 <ele id="N404">claim_json.payee.address.0.country</ele>
+                              </seg>
+                              <seg id="DMG">
+                                 <ele id="DMG01">D8</ele>
+                                 <ele id="DMG02">claim_json.payee.birthDate</ele>
+                                 <ele id="DMG03">claim_json.payee.gender</ele>
+                              </seg>
+                              <!--Subscriber Relationship-->
+                              <!--<seg id='INS'>-->
+                              <!--<ele id='INS01'>Y</ele>-->
+                              <!--<ele id='INS02'>1</ele>-->
+                              <!--<ele id='INS08'>22</ele>-->
+                              <!--</seg>-->
+                              <!--<seg id='PER'>-->
+                              <!--<ele id='PER03'>TE</ele>-->
+                              <!--<ele id='PER04'>claim_json.payee.telecom.0.value</ele>-->
+                              <!--</seg>-->
+                           </loop>
+                           <!--Patient Event Level Loop-->
+                           <loop id="2000E">
+                              <!--Patient Event Level-->
+                              <!--<seg id='HL'>-->
+                              <!--<ele id='HL01'>Hierarchical ID Number</ele>-->
+                              <!--<ele id='HL02'>Hierarchical Parent ID Number</ele>-->
+                              <!--<ele id='HL03'>Hierarchical Level Code</ele>-->
+                              <!--<ele id='HL04'>Hierarchical Child Code</ele>-->
+                              <!--</seg>-->
+                              <!--&lt;!&ndash;Patient Event Tracking Number&ndash;&gt;-->
+                              <!--<seg id='TRN'>-->
+                              <!--<ele id='TRN02'>Reference Identification</ele>-->
+                              <!--<ele id='TRN04'>Reference Identification</ele>-->
+                              <!--</seg>-->
+                              <seg id="UM">
+                                 <ele id="UM01">IN</ele>
+                                 <ele id="UM02">I</ele>
+                                 <ele id="UM03">claim_json.healthCareService.code</ele>
+                                 <!--Health Care Service Location Information-->
+                                 <comp id="UM04">
+                                    <subele id="UM04-01">claim_json.facility.type</subele>
+                                    <!--<ele id='UM04-02'>claim_json.facility</ele>-->
+                                    <!--<ele id='UM04-03'>claim_json.facility</ele>-->
+                                 </comp>
+                                 <!--Related Causes Information-->
+                                 <!--<comp id='UM05'>-->
+                                 <!--<ele id='UM05-01'></ele>-->
+                                 <!--<ele id='UM05-02'></ele>-->
+                                 <!--<ele id='UM05-03'></ele>-->
+                                 <!--<ele id='UM05-04'></ele>-->
+                                 <!--<ele id='UM05-05'></ele>-->
+                                 <!--</comp>-->
+                                 <!--Level of Service Code-->
+                                 <ele id="UM06">claim_json.priority</ele>
+                                 <!--<ele id='UM07'>claim_json</ele>-->
+                                 <!--<ele id='UM08'>claim_json.priority</ele>-->
+                                 <ele id="UM09">Y</ele>
+                                 <!--<ele id='UM10'>Y</ele>-->
+                              </seg>
+                              <!--Previous Review Authorization Number-->
+                              <!--<seg id="REF">-->
+                              <!--<ele id="REF02">N</ele>-->
+                              <!--</seg>-->
+                              <!--Previous Review Administrative Reference Number-->
+                              <!--<seg id="REF">-->
+                              <!--<ele id="REF01">NT</ele>-->
+                              <!--Reference Identification Qualifier-->
+                              <!--<ele id="REF02">N</ele>-->
+                              <!--</seg>-->
+                              <!--Accident date-->
+                              <seg id="DTP">
+                                 <ele id="DTP01">439</ele>
+                                 <ele id="DTP02">D8</ele>
+                                 <ele id="DTP03">claim_json.accident.date</ele>
+                              </seg>
+                              <!--Last Menstrual Period Date-->
+                              <!--<seg id='DTP'>-->
+                              <!--<ele id='DTP01'>484</ele>-->
+                              <!--<ele id='DTP02'>DT</ele>-->
+                              <!--<ele id='DTP03'>200312130800</ele>-->
+                              <!--</seg>-->
+                              <!--Estimated Date of Birth-->
+                              <!--<seg id='DTP'>-->
+                              <!--<ele id='DTP01'>ABC</ele>-->
+                              <!--<ele id='DTP02'>D8</ele>-->
+                              <!--<ele id='DTP03'>claim_json.accident.date</ele>-->
+                              <!--</seg>-->
+                              <!--Onset of Current Symptoms or Illness Date-->
+                              <!--<seg id='DTP'>-->
+                              <!--<ele id='DTP01'>431</ele>-->
+                              <!--<ele id='DTP02'>D8</ele>-->
+                              <!--<ele id='DTP03'>claim_json.accident.date</ele>-->
+                              <!--</seg>-->
+                              <!--Event Date-->
+                              <!--<seg id='DTP'>-->
+                              <!--<ele id='DTP01'>AAH</ele>-->
+                              <!--<ele id='DTP02'>D8</ele>-->
+                              <!--<ele id='DTP03'>claim_json.accident.date</ele>-->
+                              <!--</seg>-->
+                              <!--Admission date-->
+                              <!--<seg id='DTP'>-->
+                              <!--<ele id='DTP01'>435</ele>-->
+                              <!--<ele id='DTP02'>D8</ele>-->
+                              <!--<ele id='DTP03'>claim_json.accident.date</ele>-->
+                              <!--</seg>-->
+                              <!--Discharge date-->
+                              <!--<seg id='DTP'>-->
+                              <!--<ele id='DTP01'>096</ele>-->
+                              <!--<ele id='DTP02'>D8</ele>-->
+                              <!--<ele id='DTP03'>claim_json.accident.date</ele>-->
+                              <!--</seg>-->
+                              <!--Patient Diagnosis-->
+                              <seg id="HI">
+                                 <!--<comp id="HI">-->
+                                 <!--<subele id='HI01-01'>ABF</subele>-->
+                                 <!--<subele id='HI01-02'>claim_json.Condition.code.coding.0.code</subele>-->
+                                 <!--<subele id='HI01-03'>D8</subele>-->
+                                 <!--<subele id='HI01-04'>claim_json.Condition.onsetDateTime</subele>-->
+                                 <!--</comp>-->
+                              </seg>
+                              <!--Health Care Services Delivery-->
+                              <!--<seg id='HSD'>-->
+                              <!--</seg>-->
+                              <!--Services Information-->
+                              <!--Patient Condition Information-->
+                              <!--Ambulance Certification Information-->
+                              <!--Chiropractic Certification Information-->
+                              <!--Durable Medical Equipment Information-->
+                              <!--Oxygen Therapy Certification Information-->
+                              <!--Functional Limitations Information-->
+                              <!--Activities Permitted Information-->
+                              <!--Mental Status Information-->
+                              <!--<seg id='CRC'>-->
+                              <!--<ele id='CRC01'>71</ele>-->
+                              <!--<ele id='CRC02'>1</ele>-->
+                              <!--<ele id='CRC03'>EXTERNAL</ele>-->
+                              <!--<ele id='CRC04'>PROVIDER</ele>-->
+                              <!--<ele id='CRC05'>C</ele>-->
+                              <!--<ele id='CRC06'>34</ele>-->
+                              <!--<ele id='CRC07'>999999999</ele>-->
+                              <!--</seg>-->
+                              <!--Institutional Claim Code-->
+                              <!--<seg id='CL1'>-->
+                              <!--<ele id='CL101'>71</ele>-->
+                              <!--<ele id='CL102'>1</ele>-->
+                              <!--<ele id='CL103'>EXTERNAL</ele>-->
+                              <!--<ele id='CL104'>PROVIDER</ele>-->
+                              <!--<ele id='CL105'>C</ele>-->
+                              <!--<ele id='CL106'>34</ele>-->
+                              <!--<ele id='CL107'>999999999</ele>-->
+                              <!--</seg>-->
+                              <!--Ambulance Transport Information-->
+                              <!--<seg id='CR1'>-->
+                              <!--<ele id='CR101'>71</ele>-->
+                              <!--<ele id='CR102'>1</ele>-->
+                              <!--<ele id='CR103'>EXTERNAL</ele>-->
+                              <!--<ele id='CR104'>PROVIDER</ele>-->
+                              <!--<ele id='CR105'>C</ele>-->
+                              <!--<ele id='CR106'>34</ele>-->
+                              <!--<ele id='CR107'>999999999</ele>-->
+                              <!--</seg>-->
+                              <!--Spinal Manipulation Service Information-CR2-->
+                              <!--Home Oxygen Therapy Information-CR5-->
+                              <!--Home Health Care Information-CR6-->
+                              <!--Additional Patient Information-->
+                              <!--<seg id='PWK'>-->
+                              <!--&lt;!&ndash;Report Type Code&ndash;&gt;-->
+                              <!--<ele id='PWK01'>P6</ele>-->
+                              <!--&lt;!&ndash;Report Transmission Code&ndash;&gt;-->
+                              <!--<ele id='PWK02'>AA</ele>-->
+                              <!--&lt;!&ndash;Identification Code Qualifier&ndash;&gt;-->
+                              <!--<ele id='PWK05'>Att</ele>-->
+                              <!--&lt;!&ndash;Attachment Control Number&ndash;&gt;-->
+                              <!--<ele id='PWK06'>20040709</ele>-->
+                              <!--&lt;!&ndash;Description&ndash;&gt;-->
+                              <!--<ele id='PWK07'>1</ele>-->
+                              <!--</seg>-->
+                              <!--<seg id="MSG"></seg>-->
+                              <!--Patient Event Provider Name-->
+                              <loop id="2010EA">
+                                 <seg id="NM1">
+                                    <ele id="NM101">71</ele>
+                                    <ele id="NM102">1</ele>
+                                    <ele id="NM103">claim_json.provider.name.0.family</ele>
+                                    <ele id="NM104">claim_json.provider.name.0.given.0</ele>
+                                    <ele id="NM105">claim_json.provider.name.0.given.1</ele>
+                                    <ele id="NM106">claim_json.provider.name.0.prefix</ele>
+                                    <ele id="NM107">claim_json.provider.name.0.suffix</ele>
+                                    <!--<ele id="NM108">MI</ele>-->
+                                    <!--<ele id="NM109">claim_json.Practitioner.identifier.0.value</ele>-->
+                                 </seg>
+                                 <seg id="N3">
+                                    <ele id="N301">claim_json.provider.address.0.line.0</ele>
+                                    <ele id="N302">claim_json.provider.address.0.line.1</ele>
+                                 </seg>
+                                 <seg id="N4">
+                                    <ele id="N401">claim_json.provider.address.0.city</ele>
+                                    <ele id="N402">claim_json.provider.address.0.state</ele>
+                                    <ele id="N403">claim_json.provider.address.0.postalCode</ele>
+                                    <ele id="N404">claim_json.provider.address.0.country</ele>
+                                 </seg>
+                                 <!--Provider contact information-->
+                                 <seg id="PER">
+                                    <ele id="PER01">IC</ele>
+                                    <!--<ele id='PER02'>Contact name</ele>-->
+                                    <!--<ele id='PER03'>TE</ele>-->
+                                    <!--<ele id='PER04'>HELPDESK</ele>-->
+                                    <!--<ele id='PER05'>EM</ele>-->
+                                    <!--<ele id='PER07'>ADMIN@NULL.NULL</ele>-->
+                                    <!--<ele id='PER06'>TE</ele>-->
+                                    <!--<ele id='PER08'>8005557444</ele>-->
+                                 </seg>
+                                 <!--Patient Event Provider Information-->
+                                 <!--<seg id='PRV'>-->
+                                 <!--<ele id='PRV02'>PXC</ele>-->
+                                 <!--<ele id='PRV03'>101Y00000X</ele>-->
+                                 <!--</seg>-->
+                                 <!--Patient Event Transport Information-->
+                                 <!--<loop id="2010EB">-->
+                                 <!--<seg id="NM1">-->
+                                 <!--<ele id="NM101"></ele>-->
+                                 <!--<ele id="NM103"></ele>-->
+                                 <!--<ele id="NM104"></ele>-->
+                                 <!--&lt;!&ndash;<ele id="NM106">46</ele>&ndash;&gt;-->
+                                 <!--</seg>-->
+                                 <!--<seg id="REF">-->
+                                 <!--<ele id="REF01">1G</ele>-->
+                                 <!--<ele id="REF02"></ele>-->
+                                 <!--&lt;!&ndash;<ele id="REF03">Description</ele>&ndash;&gt;-->
+                                 <!--</seg>-->
+                                 <!--<seg id="N4">-->
+                                 <!--<ele id="N401"></ele>-->
+                                 <!--<ele id="N402"></ele>-->
+                                 <!--<ele id="N403"></ele>-->
+                                 <!--&lt;!&ndash;Country Subdivision Code&ndash;&gt;-->
+                                 <!--&lt;!&ndash;<ele id='N407'>claim_json.Practitioner.address</ele>&ndash;&gt;-->
+                                 <!--</seg>-->
+                                 <!--</loop>-->
+                                 <!--Patient Event Other UMO Name-Required when Health Care Services Review has been denied by another UMO-->
+                                 <!--<loop id="2010EC">-->
+                                 <!--<seg id="NM1">-->
+                                 <!--<ele id="NM101"></ele>-->
+                                 <!--<ele id="NM103"></ele>-->
+                                 <!--<ele id="NM104"></ele>-->
+                                 <!--&lt;!&ndash;<ele id="NM106">46</ele>&ndash;&gt;-->
+                                 <!--</seg>-->
+                                 <!--<seg id="REF">-->
+                                 <!--<ele id="REF01">1G</ele>-->
+                                 <!--<ele id="REF02"></ele>-->
+                                 <!--&lt;!&ndash;<ele id="REF03">Description</ele>&ndash;&gt;-->
+                                 <!--</seg>-->
+                                 <!--<seg id="N4">-->
+                                 <!--<ele id="N401"></ele>-->
+                                 <!--<ele id="N402"></ele>-->
+                                 <!--<ele id="N403"></ele>-->
+                                 <!--&lt;!&ndash;Country Subdivision Code&ndash;&gt;-->
+                                 <!--&lt;!&ndash;<ele id='N407'>claim_json.Practitioner.address</ele>&ndash;&gt;-->
+                                 <!--</seg>-->
+                                 <!--</loop>-->
+                              </loop>
+                              <!--Service Level-->
+                              <loop id="2000F">
+                                 <!--Hierarchical ID Number-->
+                                 <!--<seg id='HL'>-->
+                                 <!--<ele id='HL01'>IN</ele>-->
+                                 <!--<ele id='HL02'>I</ele>-->
+                                 <!--</seg>-->
+                                 <!--Service Trace Number-->
+                                 <!--<seg id='TRN'>-->
+                                 <!--<ele id='TRN02'>IN</ele>-->
+                                 <!--<ele id='TRN03'>I</ele>-->
+                                 <!--</seg>-->
+                                 <!--Health Care Services Review Information-->
+                                 <seg id="UM" name="Procedure">
+                                    <!--Request Category Code-->
+                                    <ele id="UM01">HS</ele>
+                                    <!--Certification Type Code-->
+                                    <!--<ele id='UM02'>Certification_type_code</ele>-->
+                                    <ele id="UM02">I</ele>
+                                    <ele id="UM03">claim_json.healthCareService.code</ele>
+                                    <comp id="UM04">
+                                       <subele id="UM04-01">claim_json.facility.type</subele>
+                                       <!--<ele id='UM04-02'>claim_json.facility</ele>-->
+                                       <!--<ele id='UM04-03'>claim_json.facility</ele>-->
+                                    </comp>
+                                 </seg>
+                                 <!--Previous Review Authorization -->
+                                 <!--<seg id="REF">-->
+                                 <!--&lt;!&ndash;Previous Review Authorization Number&ndash;&gt;-->
+                                 <!--<ele id="REF02">claim_json.insurance.preAuthRef</ele>-->
+                                 <!--</seg>-->
+                                 <!--Previous Review Administrative Reference Number-->
+                                 <!--<seg id="REF">-->
+                                 <!--<ele id="REF01">1G</ele>-->
+                                 <!--<ele id="REF02">claim_json.Practitioner.identifier.0.value</ele>-->
+                                 <!--</seg>-->
+                                 <!--Service date-->
+                                 <seg id="DTP">
+                                    <ele id="DTP01">434</ele>
+                                    <ele id="DTP02">RD8</ele>
+                                    <ele id="DTP03">claim_json.item.servicedDate</ele>
+                                 </seg>
+                                 <!--Professional Service-->
+                                 <seg id="SV1">
+                                    <comp id="SV101">
+                                       <subele id="SV101-01">HC</subele>
+                                       <subele id="SV101-02">claim_json.item.procedureSequence.procedureCodeableConcept.coding.0.code</subele>
+                                       <subele id='SV101-03'>claim_json.item.modifier.0.coding.0.code</subele>
+                                       <subele id='SV101-04'>claim_json.item.modifier.1.coding.0.code</subele>
+                                       <subele id='SV101-05'>claim_json.item.modifier.2.coding.0.code</subele>
+                                       <subele id='SV101-06'>claim_json.item.modifier.3.coding.0.code</subele>
+                                       <subele id="SV101-07">claim_json.item.procedureSequence.procedureCodeableConcept.text</subele>
+                                       <subele id="SV101-08">claim_json.item.productOrService.coding.0.code</subele>
+                                    </comp>
+                                    <!--Service Line Amount-->
+                                    <!--<ele id="SV102">claim_json.item.</ele>-->
+                                    <!--Unit or Basis for Measurement Code-->
+                                    <ele id="SV103">UN</ele>
+                                    <!--Service Unit Count-->
+                                    <ele id="SV104">claim_json.item.quantity.value</ele>
+                                    <!--Composite Diagnosis Code Pointer-->
+                                   <comp id="SV107">
+                                      <!--<subele id="SV107-01">claim_json.item.diagnosisSequence.0</subele>-->
+                                      <!--<subele id="SV107-02">claim_json.item.diagnosisSequence.1</subele>-->
+                                      <!--<subele id="SV107-03">claim_json.item.diagnosisSequence.2</subele>-->
+                                      <!--<subele id="SV107-04">claim_json.item.diagnosisSequence.3</subele>-->
+                                   </comp>
+                                 </seg>
+                                 <!--Institutional Service-->
+                                 <seg id="SV2">
+                                    <ele id="SV201">claim_json.item.revenue.coding.0.code</ele>
+                                    <comp id="SV202">
+                                       <subele id="SV202-01">HC</subele>
+                                       <subele id="SV202-02">claim_json.item.procedureSequence.procedureCodeableConcept.coding.0.code</subele>
+                                       <subele id='SV202-03'>claim_json.item.modifier.0.coding.0.code</subele>
+                                       <subele id='SV202-04'>claim_json.item.modifier.1.coding.0.code</subele>
+                                       <subele id='SV202-05'>claim_json.item.modifier.2.coding.0.code</subele>
+                                       <subele id='SV202-06'>claim_json.item.modifier.3.coding.0.code</subele>
+                                       <subele id="SV202-07">claim_json.item.procedureSequence.procedureCodeableConcept.text</subele>
+                                       <subele id="SV202-08">claim_json.item.productOrService.coding.0.code</subele>
+                                    </comp>
+                                    <!--Line Item Charge Amount-->
+                                    <ele id="SV203">claim_json.item.unitPrice.value</ele>
+                                    <!--Unit or Basis for Measurement Code-->
+                                    <ele id="SV204">UN</ele>
+                                    <!--Service Unit Count-->
+                                    <ele id="SV205">claim_json.item.quantity.value</ele>
+                                    <!--Service line Rate-->
+                                    <!--<ele id="SV206"></ele>-->
+                                 </seg>
+                                 <!--Dental Service-->
+                                 <!--<seg id="SV3"></seg>-->
+                                 <!--Additional Patient Information-->
+                                 <!--<seg id='PWK'>-->
+                                 <!--&lt;!&ndash;Report Type Code&ndash;&gt;-->
+                                 <!--<ele id='PWK01'>P6</ele>-->
+                                 <!--&lt;!&ndash;Report Transmission Code&ndash;&gt;-->
+                                 <!--<ele id='PWK02'>AA</ele>-->
+                                 <!--&lt;!&ndash;Identification Code Qualifier&ndash;&gt;-->
+                                 <!--<ele id='PWK05'>Att</ele>-->
+                                 <!--&lt;!&ndash;Attachment Control Number&ndash;&gt;-->
+                                 <!--<ele id='PWK06'>20040709</ele>-->
+                                 <!--&lt;!&ndash;Description&ndash;&gt;-->
+                                 <!--<ele id='PWK07'>1</ele>-->
+                                 <!--</seg>-->
+                                 <!--Service Provider Name-->
+                                 <loop id="2010F">
+                                    <!--<seg id="NM1">-->
+                                    <!--<ele id="NM101">P3</ele>-->
+                                    <!--<ele id="NM103">claim_json.provider.name.0.family</ele>-->
+                                    <!--<ele id="NM104">claim_json.provider.name.0.given.0</ele>-->
+                                    <!--&lt;!&ndash;<ele id="NM106">claim_json.provider.name.0.prefix</ele>&ndash;&gt;-->
+                                    <!--&lt;!&ndash;<ele id="NM107">claim_json.provider.name.0.suffix</ele>&ndash;&gt;-->
+                                    <!--<ele id="NM108">XX</ele>-->
+                                    <!--<ele id="NM109">claim_json.provider.identifier.0.value</ele>-->
+                                    <!--</seg>-->
+                                    <!--<seg id="REF">-->
+                                    <!--<ele id="REF01">EI</ele>-->
+                                    <!--<ele id="REF02">Service Provider Supplemental Identifier</ele>-->
+                                    <!--</seg>-->
+                                    <!--<seg id="N4">-->
+                                    <!--<ele id="N401">claim_json.provider.address.0.city</ele>-->
+                                    <!--<ele id="N402">claim_json.provider.address.0.state</ele>-->
+                                    <!--<ele id="N403">claim_json.provider.address.0.postalCode</ele>-->
+                                    <!--&lt;!&ndash;Country Subdivision Code&ndash;&gt;-->
+                                    <!--&lt;!&ndash;<ele id='N407'>claim_json.careTeam.provider.address</ele>&ndash;&gt;-->
+                                    <!--</seg>-->
+                                    <!--&lt;!&ndash;Service Provider contact information&ndash;&gt;-->
+                                    <!--<seg id='PER'>-->
+                                    <!--<ele id='PER03'>TE</ele>-->
+                                    <!--<ele id='PER04'>claim_json.provider.telecom.0.value</ele>-->
+                                    <!--</seg>-->
+                                    <!--&lt;!&ndash;Reference Identification Qualifier&ndash;&gt;-->
+                                    <!--&lt;!&ndash;<seg id='PRV'>&ndash;&gt;-->
+                                    <!--&lt;!&ndash;<ele id='PRV02'>PXC</ele>&ndash;&gt;-->
+                                    <!--&lt;!&ndash;<ele id='PRV03'>101Y00000X</ele>&ndash;&gt;-->
+                                    <!--&lt;!&ndash;</seg>&ndash;&gt;-->
+                                 </loop>
+                              </loop>
+                           </loop>
+                        </loop>
+                     </loop>
+                  </loop>
+               </loop>
             </loop>
-            <!--Subscriber Name Loop-->
-            <loop id="2010C">
-               <seg id="NM1">
-                  <ele id="NM101">IL</ele>
-                  <ele id="NM102">1</ele>
-                  <ele id="NM103">claim_json.Patient.name.0.family</ele>
-                  <ele id="NM104">claim_json.Patient.name.0.given.0</ele>
-                  <ele id="NM108">MI</ele>
-                  <ele id="NM109">claim_json.Patient.identifier.0.value</ele>
-               </seg>
-               <!--Subscriber Supplemental Identification-->
-               <!--<seg id='REF'>-->
-                   <!--<ele id='REF01'>1D</ele>-->
-                   <!--<ele id='REF02'>1705555</ele>-->
-               <!--</seg>-->
-               <seg id="N3">
-                  <ele id="N301">claim_json.Patient.address.0.text</ele>
-                  <!--<ele id='N302'>claim_json.Patient.address.line.1</ele>-->
-               </seg>
-               <seg id="N4">
-                  <ele id="N401">claim_json.Patient.address.0.city</ele>
-                  <!--<ele id="N402">claim_json.Patient.address.0.state</ele>-->
-                  <ele id="N403">claim_json.Patient.address.0.postalCode</ele>
-                  <!--Country code-->
-                  <!--<ele id='N404'>claim_json.Patient.address</ele>-->
-                  <!--Country Subdivision Code-->
-                  <!--<ele id='N407'>claim_json</ele>-->
-               </seg>
-                <seg id='PER'>
-                   <!--<ele id='PER03'>TE</ele>-->
-                   <!--<ele id='PER04'>claim_json.Patient.telecom.0.value</ele>-->
-               </seg>
-               <seg id="DMG">
-                  <ele id="DMG01">D8</ele>
-                  <ele id="DMG02">claim_json.Patient.birthDate</ele>
-                  <ele id="DMG03">claim_json.Patient.gender</ele>
-               </seg>
-               <!--Subscriber Relationship-->
-               <!--<seg id='INS'>-->
-               <!--<ele id='INS01'>2</ele>-->
-               <!--<ele id='INS02'>1</ele>-->
-               <!--<ele id='INS08'>22</ele>-->
-               <!--</seg>-->
-            </loop>
-           <!--Dependent Name Loop-->
-           <loop id="2010D">
-               <seg id="NM1">
-                  <ele id="NM103">claim_json.payee.name.0.family</ele>
-                  <ele id="NM104">claim_json.payee.name.0.given.0</ele>
-                  <ele id="NM108">MI</ele>
-                  <ele id="NM109">claim_json.payee.identifier.0.value</ele>
-               </seg>
-               <seg id="N3">
-                  <ele id="N301">claim_json.payee.address.0.line.0</ele>
-                  <!--<ele id='N302'>claim_json.Patient.address.line.1</ele>-->
-               </seg>
-               <seg id="N4">
-                  <ele id="N401">claim_json.payee.address.0.city</ele>
-                  <!--<ele id="N402">claim_json.Patient.address.0.state</ele>-->
-                  <ele id="N403">claim_json.payee.address.0.postalCode</ele>
-               </seg>
-               <seg id='PER'>
-                   <!--<ele id='PER03'>TE</ele>-->
-                   <!--<ele id='PER04'>claim_json.payee.telecom.0.value</ele>-->
-               </seg>
-               <seg id="DMG">
-                  <ele id="DMG01">D8</ele>
-                  <ele id="DMG02">claim_json.payee.birthDate</ele>
-                  <ele id="DMG03">claim_json.payee.gender</ele>
-               </seg>
-
-            </loop>
-           <!--Patient Event Level Loop-->
-           <loop id="2000E">
-             <!--Patient Event Level-->
-            <!--<seg id='HL'>-->
-              <!--<ele id='HL01'>Hierarchical ID Number</ele>-->
-              <!--<ele id='HL02'>Hierarchical Parent ID Number</ele>-->
-              <!--<ele id='HL03'>Hierarchical Level Code</ele>-->
-              <!--<ele id='HL04'>Hierarchical Child Code</ele>-->
-            <!--</seg>-->
-             <!--&lt;!&ndash;Patient Event Tracking Number&ndash;&gt;-->
-             <!--<seg id='TRN'>-->
-              <!--<ele id='TRN02'>Reference Identification</ele>-->
-              <!--<ele id='TRN04'>Reference Identification</ele>-->
-             <!--</seg>-->
-             <seg id='UM' name="Procedure">
-                <ele id='UM01'>IN</ele>
-                <ele id='UM02'>I</ele>
-                <ele id='UM03'>claim_json.procedure.procedureCodeableConcept.coding.0.code</ele>
-                 <!--Health Care Service Location Information-->
-                <!--<ele id='UM04'>20040709</ele>-->
-                <ele id='UM06'>1</ele>
-                <ele id='UM09'>Y</ele>
-              </seg>
-             <!--Previous Review Authorization Number-->
-             <!--<seg id="REF">-->
-                <!--<ele id="REF02">N</ele>-->
-             <!--</seg>-->
-             <!--&lt;!&ndash;Previous Review Administrative Reference Number&ndash;&gt;-->
-             <!--<seg id="REF">-->
-                <!--<ele id="REF01">NT</ele>-->
-               <!--&lt;!&ndash;Reference Identification Qualifier&ndash;&gt;-->
-                <!--<ele id="REF02">N</ele>-->
-             <!--</seg>-->
-             <!--Event date-->
-             <!--<seg id='DTP'>-->
-              <!--<ele id='DTP01'>434</ele>-->
-              <!--<ele id='DTP02'>RD8</ele>-->
-              <!--<ele id='DTP03'>20031213-20031218</ele>-->
-            <!--</seg>-->
-            <!--<seg id='DTP'>-->
-              <!--<ele id='DTP01'>435</ele>-->
-              <!--<ele id='DTP02'>DT</ele>-->
-              <!--<ele id='DTP03'>200312130800</ele>-->
-            <!--</seg>-->
-             <!--Patient Diagnosis-->
-             <seg id='HI' name="Condition">
-               <comp id='HI'>
-                <!--<subele id='HI01-01'>ABF</subele>-->
-                <!--<subele id='HI01-02'>claim_json.Condition.code.coding.0.code</subele>-->
-                <!--<subele id='HI01-03'>D8</subele>-->
-                <!--<subele id='HI01-04'>claim_json.Condition.onsetDateTime</subele>-->
-               </comp>
-             </seg>
-             <!--Services Information-->
-              <!--<seg id='CRC'>-->
-                <!--<ele id='CRC01'>71</ele>-->
-                <!--<ele id='CRC02'>1</ele>-->
-                <!--<ele id='CRC03'>EXTERNAL</ele>-->
-                <!--<ele id='CRC04'>PROVIDER</ele>-->
-                <!--<ele id='CRC05'>C</ele>-->
-                <!--<ele id='CRC06'>34</ele>-->
-                <!--<ele id='CRC07'>999999999</ele>-->
-              <!--</seg>-->
-             <!--Additional Patient Information-->
-             <!--<seg id='PWK'>-->
-               <!--&lt;!&ndash;Report Type Code&ndash;&gt;-->
-              <!--<ele id='PWK01'>P6</ele>-->
-               <!--&lt;!&ndash;Report Transmission Code&ndash;&gt;-->
-              <!--<ele id='PWK02'>AA</ele>-->
-               <!--&lt;!&ndash;Identification Code Qualifier&ndash;&gt;-->
-              <!--<ele id='PWK05'>Att</ele>-->
-               <!--&lt;!&ndash;Attachment Control Number&ndash;&gt;-->
-              <!--<ele id='PWK06'>20040709</ele>-->
-               <!--&lt;!&ndash;Description&ndash;&gt;-->
-              <!--<ele id='PWK07'>1</ele>-->
-            <!--</seg>-->
-           </loop>
-           <!--Patient Event Provider Name-->
-           <loop id="2010EA">
-               <seg id="NM1">
-                  <ele id="NM101">71</ele>
-                  <ele id="NM103">claim_json.Practitioner.name.0.family</ele>
-                  <ele id="NM104">claim_json.Practitioner.name.0.given.0</ele>
-               </seg>
-              <!--<seg id="REF">-->
-                  <!--<ele id="REF01">1G</ele>-->
-                  <!--<ele id="REF02">claim_json.Practitioner.identifier.0.value</ele>-->
-                  <!--&lt;!&ndash;<ele id="REF03">Description</ele>&ndash;&gt;-->
-               <!--</seg>-->
-               <seg id="N4">
-                  <ele id="N401">claim_json.Practitioner.address.0.city</ele>
-                  <ele id="N402">claim_json.Practitioner.address.0.state</ele>
-                  <ele id="N403">claim_json.Practitioner.address.0.postalCode</ele>
-                  <!--Country Subdivision Code-->
-                  <!--<ele id='N407'>claim_json.Practitioner.address</ele>-->
-               </seg>
-              <!--Provider contact information-->
-               <seg id='PER'>
-               <!--<ele id='PER03'>TE</ele>-->
-               <!--<ele id='PER04'>HELPDESK</ele>-->
-               <!--<ele id='PER05'>EM</ele>-->
-               <!--<ele id='PER07'>ADMIN@NULL.NULL</ele>-->
-               <!--<ele id='PER06'>TE</ele>-->
-               <!--<ele id='PER08'>8005557444</ele>-->
-               </seg>
-               <!--Patient Event Provider Information-->
-               <!--<seg id='PRV'>-->
-               <!--<ele id='PRV02'>PXC</ele>-->
-               <!--<ele id='PRV03'>101Y00000X</ele>-->
-               <!--</seg>-->
-            </loop>
-           <!--Patient Event Transport Information-->
-           <!--<loop id="2010EB">-->
-               <!--<seg id="NM1">-->
-                  <!--<ele id="NM101"></ele>-->
-                  <!--<ele id="NM103"></ele>-->
-                  <!--<ele id="NM104"></ele>-->
-                  <!--&lt;!&ndash;<ele id="NM106">46</ele>&ndash;&gt;-->
-               <!--</seg>-->
-              <!--<seg id="REF">-->
-                  <!--<ele id="REF01">1G</ele>-->
-                  <!--<ele id="REF02"></ele>-->
-                  <!--&lt;!&ndash;<ele id="REF03">Description</ele>&ndash;&gt;-->
-               <!--</seg>-->
-               <!--<seg id="N4">-->
-                  <!--<ele id="N401"></ele>-->
-                  <!--<ele id="N402"></ele>-->
-                  <!--<ele id="N403"></ele>-->
-                  <!--&lt;!&ndash;Country Subdivision Code&ndash;&gt;-->
-                  <!--&lt;!&ndash;<ele id='N407'>claim_json.Practitioner.address</ele>&ndash;&gt;-->
-               <!--</seg>-->
-           <!--</loop>-->
-           <!--Patient Event Other UMO Name-Required when Health Care Services Review has been denied by another UMO-->
-           <!--<loop id="2010EC">-->
-               <!--<seg id="NM1">-->
-                  <!--<ele id="NM101"></ele>-->
-                  <!--<ele id="NM103"></ele>-->
-                  <!--<ele id="NM104"></ele>-->
-                  <!--&lt;!&ndash;<ele id="NM106">46</ele>&ndash;&gt;-->
-               <!--</seg>-->
-              <!--<seg id="REF">-->
-                  <!--<ele id="REF01">1G</ele>-->
-                  <!--<ele id="REF02"></ele>-->
-                  <!--&lt;!&ndash;<ele id="REF03">Description</ele>&ndash;&gt;-->
-               <!--</seg>-->
-               <!--<seg id="N4">-->
-                  <!--<ele id="N401"></ele>-->
-                  <!--<ele id="N402"></ele>-->
-                  <!--<ele id="N403"></ele>-->
-                  <!--&lt;!&ndash;Country Subdivision Code&ndash;&gt;-->
-                  <!--&lt;!&ndash;<ele id='N407'>claim_json.Practitioner.address</ele>&ndash;&gt;-->
-               <!--</seg>-->
-           <!--</loop>-->
-           <!--Service Level-->
-           <loop id="2000F">
-               <!--Hierarchical ID Number-->
-             <!--<seg id='HL'>-->
-              <!--<ele id='HL01'>IN</ele>-->
-              <!--<ele id='HL02'>I</ele>-->
-             <!--</seg>-->
-             <!--Service Trace Number-->
-             <!--<seg id='TRN'>-->
-              <!--<ele id='TRN02'>IN</ele>-->
-              <!--<ele id='TRN03'>I</ele>-->
-             <!--</seg>-->
-             <!--Health Care Services Review Information-->
-             <seg id='UM' name="Procedure">
-                 <!--Request Category Code-->
-                <ele id='UM01'>HS</ele>
-                 <!--Certification Type Code-->
-                <!--<ele id='UM02'>service_type_code</ele>-->
-                 <ele id='UM02'>I</ele>
-                <ele id='UM03'>claim_json.healthCareService.code</ele>
-                 <!--<ele id='UM04'>claim_json.facility.name</ele>-->
-              </seg>
-              <!--Previous Review Authorization -->
-              <!--<seg id="REF">-->
-                  <!--&lt;!&ndash;Previous Review Authorization Number&ndash;&gt;-->
-                  <!--<ele id="REF02">claim_json.insurance.preAuthRef</ele>-->
-               <!--</seg>-->
-               <!--Previous Review Administrative Reference Number-->
-               <!--<seg id="REF">-->
-                  <!--<ele id="REF01">1G</ele>-->
-                  <!--<ele id="REF02">claim_json.Practitioner.identifier.0.value</ele>-->
-               <!--</seg>-->
-               <!--Service date-->
-             <!--<seg id='DTP'>-->
-              <!--<ele id='DTP01'>434</ele>-->
-              <!--<ele id='DTP02'>RD8</ele>-->
-              <!--<ele id='DTP03'>20031213-20031218</ele>-->
-            <!--</seg>-->
-              <!--Professional Service-->
-             <seg id="SV1">
-               <!--Health Care Service Location Information-->
-                 <!--<ele id='SV101'>HC</ele>-->
-                <ele id='SV101-01'>HC</ele>
-                <ele id='SV101-02'>claim_json.Procedure.0.procedureCodeableConcept.coding.0.code</ele>
-                <!--<ele id='SV101-03'>claim_json.Procedure.1.procedureCodeableConcept.coding.0.code</ele>-->
-                <!--<ele id='SV101-04'>claim_json.Procedure.2.procedureCodeableConcept.coding.0.code</ele>-->
-                <!--<ele id='SV101-05'>claim_json.Procedure.3.procedureCodeableConcept.coding.0.code</ele>-->
-                <!--<ele id='SV101-06'>claim_json.Procedure.4.procedureCodeableConcept.coding.0.code</ele>-->
-                <ele id='SV101-07'>claim_json.Procedure.procedureCodeableConcept.text</ele>
-                <!--<ele id='SV101-08'>claim_json.Procedure.5.procedureCodeableConcept.coding.0.code</ele>-->
-              </seg>
-             <!--Service Line Amount-->
-             <!--<seg id="SV2">-->
-               <!--<ele id="SV102"></ele>-->
-             <!--</seg>-->
-             <!--Unit or Basis for Measurement Code-->
-             <!--<seg id="SV103">-->
-               <!--<ele id="SV103"></ele>-->
-             <!--</seg>-->
-             <!--Service Unit Count-->
-             <!--<seg id="SV104">-->
-               <!--<ele id="SV104"></ele>-->
-             <!--</seg>-->
-             <!--Composite Diagnosis Code Pointer-->
-             <!--<seg id="SV107">-->
-             <!--Diagnosis Code Pointers-->
-               <!--<ele id="SV107-01">1</ele>-->
-               <!--<ele id="SV107-02"></ele>-->
-               <!--<ele id="SV107-03"></ele>-->
-               <!--<ele id="SV107-04"></ele>-->
-             <!--</seg>-->
-               <!--Institutional Service-->
-               <seg id="SV2">
-               <!--Health Care Service Location Information-->
-                 <!--<ele id='SV101'>HC</ele>-->
-                <ele id='SV201-01'>HC</ele>
-                <ele id='SV201-02'>claim_json.Procedure.0.procedureCodeableConcept.coding.0.code</ele>
-                <!--<ele id='SV201-03'>claim_json.Procedure.1.procedureCodeableConcept.coding.0.code</ele>-->
-                <!--<ele id='SV201-04'>claim_json.Procedure.2.procedureCodeableConcept.coding.0.code</ele>-->
-                <!--<ele id='SV201-05'>claim_json.Procedure.3.procedureCodeableConcept.coding.0.code</ele>-->
-                <!--<ele id='SV201-06'>claim_json.Procedure.4.procedureCodeableConcept.coding.0.code</ele>-->
-                <ele id='SV201-07'>claim_json.Procedure.procedureCodeableConcept.text</ele>
-                <!--<ele id='SV201-08'>claim_json.Procedure.5.procedureCodeableConcept.coding.0.code</ele>-->
-              </seg>
-           </loop>
-           <!--Service Provider Name-->
-           <loop id="2010F">
-                <!--<seg id="NM1">-->
-                  <!--<ele id="NM101">P3</ele>-->
-                  <!--<ele id="NM103">claim_json.provider.name.0.family</ele>-->
-                  <!--<ele id="NM104">claim_json.provider.name.0.given.0</ele>-->
-                  <!--&lt;!&ndash;<ele id="NM106">claim_json.provider.name.0.prefix</ele>&ndash;&gt;-->
-                  <!--&lt;!&ndash;<ele id="NM107">claim_json.provider.name.0.suffix</ele>&ndash;&gt;-->
-                  <!--<ele id="NM108">XX</ele>-->
-                  <!--<ele id="NM109">claim_json.provider.identifier.0.value</ele>-->
-               <!--</seg>-->
-               <!--<seg id="REF">-->
-                  <!--<ele id="REF01">EI</ele>-->
-                  <!--<ele id="REF02">Service Provider Supplemental Identifier</ele>-->
-               <!--</seg>-->
-               <!--<seg id="N4">-->
-                  <!--<ele id="N401">claim_json.provider.address.0.city</ele>-->
-                  <!--<ele id="N402">claim_json.provider.address.0.state</ele>-->
-                  <!--<ele id="N403">claim_json.provider.address.0.postalCode</ele>-->
-                  <!--&lt;!&ndash;Country Subdivision Code&ndash;&gt;-->
-                  <!--&lt;!&ndash;<ele id='N407'>claim_json.careTeam.provider.address</ele>&ndash;&gt;-->
-               <!--</seg>-->
-               <!--&lt;!&ndash;Service Provider contact information&ndash;&gt;-->
-               <!--<seg id='PER'>-->
-                   <!--<ele id='PER03'>TE</ele>-->
-                   <!--<ele id='PER04'>claim_json.provider.telecom.0.value</ele>-->
-               <!--</seg>-->
-               <!--&lt;!&ndash;Reference Identification Qualifier&ndash;&gt;-->
-               <!--&lt;!&ndash;<seg id='PRV'>&ndash;&gt;-->
-               <!--&lt;!&ndash;<ele id='PRV02'>PXC</ele>&ndash;&gt;-->
-               <!--&lt;!&ndash;<ele id='PRV03'>101Y00000X</ele>&ndash;&gt;-->
-               <!--&lt;!&ndash;</seg>&ndash;&gt;-->
-           </loop>
-         </loop>
-             <seg id="SE">
-               <ele id="SE01">63</ele>
+            <!--<loop xid="FOOTER"></loop>-->
+            <seg id="SE">
+               <ele id="SE01">segment_count</ele>
                <ele id="SE02">300145997</ele>
             </seg>
          </loop>
-          <seg id="GE">
+         <seg id="GE">
             <ele id="GE01">1</ele>
             <ele id="GE02">1</ele>
          </seg>
       </loop>
-       <seg id="IEA">
+      <seg id="IEA">
          <ele id="IEA01">1</ele>
          <ele id="IEA02">000484889</ele>
       </seg>
    </loop>
 </x12simple>
+
