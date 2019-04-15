@@ -38,12 +38,12 @@ def get_json():
 
 @app.route('/xmlx12', methods=['POST','GET'])
 def convertToX12():
-    # req_json = json.loads(request.data)
-    # if 'claim_json' in req_json:
-    #     claim_json = req_json['claim_json']
+    req_json = json.loads(request.data)
+    if 'claim_json' in req_json:
+        claim_json = req_json['claim_json']
 
     standard_278 = ET.parse("standard_278.xml")
-    claim_json = json.loads(get_json())
+    # claim_json = json.loads(get_json())
     pa_xml = standard_278.getroot()
     loop_elems = [element for element in pa_xml.getiterator() if element.tag=='loop']
     response= {"x12_response":""}
@@ -129,7 +129,7 @@ def convertToX12():
     seg_num = 0
     for s in total_seg:
         seg_num =seg_num+1
-    st_elem[0].text = str(seg_num)
+    st_elem[0].text = str(int(seg_num-4))
     print "final----------", ET.tostring(pa_xml)
     if response['x12_response'] == '':
         output_x12 = converter.convertXMLToX12(ET.tostring(pa_xml))

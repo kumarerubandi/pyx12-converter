@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d4facb67-f234-45cc-a133-d27032f1a477" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/converter/Payer/payer_common.py" afterPath="$PROJECT_DIR$/converter/Payer/payer_common.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/converter/Payer/standard_278.xml" afterPath="$PROJECT_DIR$/converter/Payer/standard_278.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyx12/map/278.5010.X217.A1.xml" afterPath="$PROJECT_DIR$/pyx12/map/278.5010.X217.A1.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,11 +17,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="payer_common.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="payer_common.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/converter/Payer/payer_common.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
-              <caret line="360" column="8" lean-forward="true" selection-start-line="360" selection-start-column="8" selection-end-line="360" selection-end-column="8" />
+            <state relative-caret-position="216">
+              <caret line="45" column="10" lean-forward="false" selection-start-line="45" selection-start-column="10" selection-end-line="45" selection-end-column="10" />
               <folding>
                 <element signature="e#0#67#0" expanded="true" />
               </folding>
@@ -28,12 +29,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="standard_278.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="standard_278.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/converter/Payer/standard_278.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="47" column="19" lean-forward="false" selection-start-line="47" selection-start-column="19" selection-end-line="47" selection-end-column="19" />
+            <state relative-caret-position="288">
+              <caret line="55" column="69" lean-forward="true" selection-start-line="55" selection-start-column="69" selection-end-line="55" selection-end-column="69" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="278.4010.X094.A1.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pyx12/map/278.4010.X094.A1.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="183">
+              <caret line="1841" column="22" lean-forward="false" selection-start-line="1841" selection-start-column="16" selection-end-line="1841" selection-end-column="22" />
+              <folding>
+                <element signature="n#loop#0;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+                <element signature="n#loop#0;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+                <element signature="n#loop#0;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+                <element signature="n#loop#0;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+                <element signature="n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+                <element signature="n#segment#0;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+                <element signature="n#segment#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+                <element signature="n#segment#2;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+                <element signature="n#segment#3;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+                <element signature="n#segment#4;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+                <element signature="n#segment#5;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+                <element signature="n#segment#6;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+                <element signature="n#segment#7;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+                <element signature="n#loop#0;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+                <element signature="n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+                <element signature="n#loop#0;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+                <element signature="n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+                <element signature="n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -41,8 +71,20 @@
       <file leaf-file-name="278.5010.X217.A1.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pyx12/map/278.5010.X217.A1.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="270" column="22" lean-forward="true" selection-start-line="270" selection-start-column="22" selection-end-line="270" selection-end-column="22" />
+            <state relative-caret-position="80">
+              <caret line="273" column="34" lean-forward="true" selection-start-line="273" selection-start-column="34" selection-end-line="273" selection-end-column="34" />
+              <folding>
+                <element signature="n#loop#0;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="map_walker.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pyx12/map_walker.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="310">
+              <caret line="331" column="55" lean-forward="false" selection-start-line="331" selection-start-column="55" selection-end-line="331" selection-end-column="55" />
               <folding />
             </state>
           </provider>
@@ -51,8 +93,8 @@
       <file leaf-file-name="claim.json" pinned="false" current-in-tab="false">
         <entry file="file:///var/www/html/claim.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="348" column="28" lean-forward="true" selection-start-line="348" selection-start-column="28" selection-end-line="348" selection-end-column="28" />
+            <state relative-caret-position="6264">
+              <caret line="348" column="28" lean-forward="false" selection-start-line="348" selection-start-column="28" selection-end-line="348" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -61,8 +103,8 @@
       <file leaf-file-name="sample_xml.xml" pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/sample_xml.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="47" column="19" lean-forward="true" selection-start-line="47" selection-start-column="19" selection-end-line="47" selection-end-column="19" />
+            <state relative-caret-position="113">
+              <caret line="261" column="14" lean-forward="false" selection-start-line="261" selection-start-column="14" selection-end-line="261" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -82,18 +124,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>2010f</find>
-      <find>2000E</find>
-      <find>s</find>
-      <find>sv</find>
-      <find>sv1</find>
-      <find>2000f</find>
-      <find>item</find>
-      <find>um04</find>
-      <find>2000e</find>
-      <find>UM03</find>
-      <find>modifi</find>
-      <find>loop2000F</find>
       <find>inst</find>
       <find>add_procedures_professional</find>
       <find>element_child</find>
@@ -112,6 +142,18 @@
       <find>hi</find>
       <find>profe</find>
       <find>31</find>
+      <find>um01</find>
+      <find>service trac</find>
+      <find>diagnosis ty</find>
+      <find>Mandatory loop</find>
+      <find>loop_node</find>
+      <find>2000d</find>
+      <find>2010d</find>
+      <find>&lt;loop xid=&quot;2000f</find>
+      <find>&lt;loop xid=&quot;2000e&quot;</find>
+      <find>&lt;loop id=&quot;2010ea</find>
+      <find>&lt;loop xid=&quot;</find>
+      <find>&lt;loop</find>
     </findStrings>
     <replaceStrings>
       <replace>SV2</replace>
@@ -135,12 +177,13 @@
         <option value="$PROJECT_DIR$/pyx12/x12n_document.py" />
         <option value="$PROJECT_DIR$/pyx12/map_index.py" />
         <option value="$PROJECT_DIR$/requirements.dev.txt" />
-        <option value="$PROJECT_DIR$/converter/Payer/payer_common.py" />
         <option value="/var/www/html/claim.json" />
         <option value="$PROJECT_DIR$/converter/Payer/standard_278.xml" />
-        <option value="$USER_HOME$/sample_xml.xml" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_14.xml" />
+        <option value="$USER_HOME$/sample_xml.xml" />
+        <option value="$PROJECT_DIR$/pyx12/map/837.4010.X096.A1.xml" />
         <option value="$PROJECT_DIR$/pyx12/map/278.5010.X217.A1.xml" />
+        <option value="$PROJECT_DIR$/converter/Payer/payer_common.py" />
       </list>
     </option>
   </component>
@@ -166,6 +209,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -244,8 +289,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -395,16 +438,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/converter/Payer/payer_common.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3294">
-          <caret line="188" column="40" lean-forward="false" selection-start-line="188" selection-start-column="40" selection-end-line="188" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#67#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/converter/Payer/standard_278.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1746">
@@ -417,7 +450,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="13032">
           <caret line="724" column="28" lean-forward="false" selection-start-line="719" selection-start-column="18" selection-end-line="724" selection-end-column="28" />
-          <folding />
+          <folding>
+            <element signature="n#loop#0;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -451,7 +486,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="13032">
           <caret line="724" column="28" lean-forward="true" selection-start-line="719" selection-start-column="18" selection-end-line="724" selection-end-column="28" />
-          <folding />
+          <folding>
+            <element signature="n#loop#0;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -477,7 +514,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1980">
           <caret line="110" column="32" lean-forward="false" selection-start-line="110" selection-start-column="32" selection-end-line="110" selection-end-column="32" />
-          <folding />
+          <folding>
+            <element signature="n#loop#0;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -485,7 +524,26 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1800">
           <caret line="100" column="19" lean-forward="true" selection-start-line="100" selection-start-column="19" selection-end-line="100" selection-end-column="19" />
-          <folding />
+          <folding>
+            <element signature="n#loop#0;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#loop#0;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#loop#0;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#loop#0;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#0;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#2;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#3;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#4;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#5;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#6;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#7;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#loop#0;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#loop#0;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -532,7 +590,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4140">
           <caret line="230" column="23" lean-forward="false" selection-start-line="230" selection-start-column="23" selection-end-line="230" selection-end-column="23" />
-          <folding />
+          <folding>
+            <element signature="n#loop#0;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -564,7 +624,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4140">
           <caret line="230" column="23" lean-forward="false" selection-start-line="230" selection-start-column="23" selection-end-line="230" selection-end-column="23" />
-          <folding />
+          <folding>
+            <element signature="n#loop#0;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -645,14 +707,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pyx12/map/278.4010.X094.27.A1.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pyx12/map/277U.4010.X070.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="183">
@@ -691,7 +745,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="38" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="424" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -707,7 +760,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="202">
           <caret line="1119" column="4" lean-forward="false" selection-start-line="1119" selection-start-column="4" selection-end-line="1119" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -715,9 +767,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#23#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -733,40 +782,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="202">
           <caret line="225" column="94" lean-forward="false" selection-start-line="225" selection-start-column="94" selection-end-line="225" selection-end-column="94" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pyx12/map/278.4010.X094.A1.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="3782" column="24" lean-forward="false" selection-start-line="3782" selection-start-column="24" selection-end-line="3782" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file:///var/www/html/claim.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="348" column="28" lean-forward="true" selection-start-line="348" selection-start-column="28" selection-end-line="348" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/converter/Payer/payer_common.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="360" column="8" lean-forward="true" selection-start-line="360" selection-start-column="8" selection-end-line="360" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#67#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/sample_xml.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="47" column="19" lean-forward="true" selection-start-line="47" selection-start-column="19" selection-end-line="47" selection-end-column="19" />
+        <state relative-caret-position="6264">
+          <caret line="348" column="28" lean-forward="false" selection-start-line="348" selection-start-column="28" selection-end-line="348" selection-end-column="28" />
           <folding />
         </state>
       </provider>
@@ -779,19 +801,90 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pyx12/map/278.5010.X217.A1.xml">
+    <entry file="file://$USER_HOME$/sample_xml.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="261" column="14" lean-forward="false" selection-start-line="261" selection-start-column="14" selection-end-line="261" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pyx12/map_walker.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="331" column="55" lean-forward="false" selection-start-line="331" selection-start-column="55" selection-end-line="331" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pyx12/map/278.4010.X094.27.A1.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pyx12/map/837.4010.X096.A1.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
-          <caret line="270" column="22" lean-forward="true" selection-start-line="270" selection-start-column="22" selection-end-line="270" selection-end-column="22" />
+          <caret line="435" column="53" lean-forward="true" selection-start-line="435" selection-start-column="53" selection-end-line="435" selection-end-column="53" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pyx12/map/278.5010.X217.A1.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="273" column="34" lean-forward="true" selection-start-line="273" selection-start-column="34" selection-end-line="273" selection-end-column="34" />
+          <folding>
+            <element signature="n#loop#0;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pyx12/map/278.4010.X094.A1.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="1841" column="22" lean-forward="false" selection-start-line="1841" selection-start-column="16" selection-end-line="1841" selection-end-column="22" />
+          <folding>
+            <element signature="n#loop#0;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#loop#0;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#loop#0;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#loop#0;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#0;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#2;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#3;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#4;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#5;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#6;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#7;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#loop#0;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#loop#0;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/converter/Payer/standard_278.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="47" column="19" lean-forward="false" selection-start-line="47" selection-start-column="19" selection-end-line="47" selection-end-column="19" />
+        <state relative-caret-position="288">
+          <caret line="55" column="69" lean-forward="true" selection-start-line="55" selection-start-column="69" selection-end-line="55" selection-end-column="69" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/converter/Payer/payer_common.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="45" column="10" lean-forward="false" selection-start-line="45" selection-start-column="10" selection-end-line="45" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#67#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
