@@ -113,6 +113,8 @@ def convertToX12():
 
                 else:
                     response['x12_response'] += "The Service Level Procedure Information is missing."
+            else:
+                response['x12_response'] += "The Service Level Information is missing."
         # Service Provider
         elif loop_elem.attrib['id'] == '2010F':
             if 'item' in claim_json:
@@ -120,8 +122,8 @@ def convertToX12():
                     loop2010F(claim_json, pa_xml,claim_json['item'][0]['careTeamSequence'])
                 else:
                     response['x12_response'] += "The Care Team Information is missing."
-            else:
-                response['x12_response'] += "The Care Team Information is missing."
+            # else:
+            #     response['x12_response'] += "The Care Team Information is missing."
     st_elem = [element for element in pa_xml.getiterator() if
                element.text == 'segment_count']
     total_seg = [element for element in pa_xml.getiterator() if
