@@ -43,11 +43,16 @@
                   <ele id="BHT03">300145997</ele>
                   <ele id="BHT04">20040709</ele>
                   <ele id="BHT05">1439</ele>
-                  <ele id="BHT06">RP</ele>
+                  <ele id="BHT06">RU</ele>
                </seg>
             </loop>
             <loop id="DETAIL">
                <loop id="2000A">
+                  <seg id='HL'>
+                    <ele id='HL01'>1</ele>
+                    <ele id='HL03'>20</ele>
+                    <ele id='HL04'>1</ele>
+                  </seg>
                   <!--Utilization Management Organization (UMO) Name Loop-->
                   <loop id="2010A">
                      <seg id="NM1">
@@ -64,6 +69,12 @@
                   </loop>
                   <!--Requestor Name Loop-->
                   <loop id="2000B">
+                     <seg id='HL'>
+                      <ele id='HL01'>2</ele>
+                      <ele id='HL02'>1</ele>
+                      <ele id='HL03'>21</ele>
+                      <ele id='HL04'>1</ele>
+                    </seg>
                      <loop id="2010B">
                         <seg id="NM1">
                            <ele id="NM101">requestor_entity</ele>
@@ -116,6 +127,12 @@
                      </loop>
                      <!--Subscriber Name Loop-->
                      <loop id="2000C">
+                        <seg id='HL'>
+                         <ele id='HL01'>3</ele>
+                         <ele id='HL02'>2</ele>
+                         <ele id='HL03'>22</ele>
+                         <ele id='HL04'>1</ele>
+                       </seg>
                         <loop id="2010C">
                            <seg id="NM1">
                               <ele id="NM101">IL</ele>
@@ -177,9 +194,15 @@
                         </loop>
                         <!--Dependent Name Loop-->
                         <loop id="2000D">
+                           <seg id='HL'>
+                            <ele id='HL01'>4</ele>
+                            <ele id='HL02'>3</ele>
+                            <ele id='HL03'>23</ele>
+                            <ele id='HL04'>1</ele>
+                          </seg>
                            <loop id="2010D">
                               <seg id="NM1">
-                                 <ele id="NM101">IL</ele>
+                                 <ele id="NM101">QC</ele>
                                  <ele id="NM102">1</ele>
                                  <ele id="NM103">claim_json.payee.name.0.family</ele>
                                  <ele id="NM104">claim_json.payee.name.0.given.0</ele>
@@ -218,12 +241,12 @@
                            <!--Patient Event Level Loop-->
                            <loop id="2000E">
                               <!--Patient Event Level-->
-                              <!--<seg id='HL'>-->
-                              <!--<ele id='HL01'>Hierarchical ID Number</ele>-->
-                              <!--<ele id='HL02'>Hierarchical Parent ID Number</ele>-->
-                              <!--<ele id='HL03'>Hierarchical Level Code</ele>-->
-                              <!--<ele id='HL04'>Hierarchical Child Code</ele>-->
-                              <!--</seg>-->
+                              <seg id='HL'>
+                               <ele id='HL01'>5</ele>
+                               <ele id='HL02'>4</ele>
+                               <ele id='HL03'>24</ele>
+                               <ele id='HL04'>1</ele>
+                             </seg>
                               <!--&lt;!&ndash;Patient Event Tracking Number&ndash;&gt;-->
                               <!--<seg id='TRN'>-->
                               <!--<ele id='TRN02'>Reference Identification</ele>-->
@@ -458,10 +481,12 @@
                               <!--Service Level-->
                               <loop id="2000F">
                                  <!--Hierarchical ID Number-->
-                                 <!--<seg id='HL'>-->
-                                 <!--<ele id='HL01'>IN</ele>-->
-                                 <!--<ele id='HL02'>I</ele>-->
-                                 <!--</seg>-->
+                                 <seg id='HL'>
+                                  <ele id='HL01'>6</ele>
+                                  <ele id='HL02'>5</ele>
+                                  <ele id='HL03'>25</ele>
+                                  <ele id='HL04'>0</ele>
+                                </seg>
                                  <!--Service Trace Number-->
                                  <!--<seg id='TRN'>-->
                                  <!--<ele id='TRN02'>IN</ele>-->
@@ -493,7 +518,7 @@
                                  <!--</seg>-->
                                  <!--Service date-->
                                  <seg id="DTP">
-                                    <ele id="DTP01">434</ele>
+                                    <ele id="DTP01">472</ele>
                                     <ele id="DTP02">RD8</ele>
                                     <ele id="DTP03">claim_json.item.servicedDate</ele>
                                  </seg>
@@ -510,7 +535,7 @@
                                        <subele id="SV101-08">claim_json.item.productOrService.coding.0.code</subele>
                                     </comp>
                                     <!--Service Line Amount-->
-                                    <!--<ele id="SV102">claim_json.item.</ele>-->
+                                    <ele id="SV102">claim_json.item.net.value</ele>
                                     <!--Unit or Basis for Measurement Code-->
                                     <ele id="SV103">UN</ele>
                                     <!--Service Unit Count-->
@@ -543,7 +568,7 @@
                                     <!--Service Unit Count-->
                                     <ele id="SV205">claim_json.item.quantity.value</ele>
                                     <!--Service line Rate-->
-                                    <!--<ele id="SV206"></ele>-->
+                                    <ele id="SV206">claim_json.item.net.value</ele>
                                  </seg>
                                  <!--Dental Service-->
                                  <!--<seg id="SV3"></seg>-->

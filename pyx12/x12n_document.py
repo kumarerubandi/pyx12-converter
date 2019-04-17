@@ -77,7 +77,7 @@ def x12n_document(param, src_file, fd_997, fd_html,
     logger.debug('X12 control file: %s' % (map_file))
     control_map = pyx12.map_if.load_map_file(map_file, param, map_path)
     map_index_if = pyx12.map_index.map_index(map_path)
-    print "map index if",map_index_if
+    # print "map index if",map_index_if
     node = control_map.getnodebypath('/ISA_LOOP/ISA')
     walker = walk_tree()
     icvn = fic = vriic = tspc = None

@@ -16,7 +16,7 @@
       <name>Interchange Control Header</name>
       <usage>R</usage>
       <pos>001</pos>
-      <repeat>>1</repeat>
+      <repeat>&gt;1</repeat>
       <segment xid="ISA">
          <name>Interchange Control Header</name>
          <usage>R</usage>
@@ -167,7 +167,7 @@
          <name>Functional Group Header</name>
          <usage>R</usage>
          <pos>020</pos>
-         <repeat>>1</repeat>
+         <repeat>&gt;1</repeat>
          <segment xid="GS">
             <name>Functional Group Header</name>
             <usage>R</usage>
@@ -238,7 +238,7 @@
             <name>Transaction Set Header</name>
             <usage>R</usage>
             <pos>020</pos>
-            <repeat>>1</repeat>
+            <repeat>&gt;1</repeat>
             <segment xid="ST">
                <name>Transaction Set Header</name>
                <usage>R</usage>
@@ -287,6 +287,7 @@
                      <seq>01</seq>
                      <valid_codes>
                         <code>0007</code>
+                        <code>0019</code>
                      </valid_codes>
                   </element>
                   <element xid="BHT02">
@@ -322,7 +323,7 @@
                   <element xid="BHT06">
                      <data_ele>640</data_ele>
                      <name>Transaction Type Code</name>
-                     <usage>N</usage>
+                     <usage>S</usage>
                      <seq>06</seq>
                      <valid_codes>
                         <code>RU</code>
@@ -336,48 +337,48 @@
                <name>Table 2 - Detail</name>
                <usage>S</usage>
                <pos>020</pos>
-               <repeat>>1</repeat>
+               <repeat>&gt;1</repeat>
                <loop xid="2000A">
                   <name>Utilization Management Organization (UMO) Level</name>
                   <usage>R</usage>
                   <pos>010</pos>
                   <repeat>1</repeat>
-                  <!--<segment xid="HL">-->
-                  <!--<name>Utilization Management Organization (UMO) Level</name>-->
-                  <!--<usage>R</usage>-->
-                  <!--<pos>010</pos>-->
-                  <!--<max_use>1</max_use>-->
-                  <!--<element xid="HL01">-->
-                  <!--<data_ele>628</data_ele>-->
-                  <!--<name>Hierarchical ID Number</name>-->
-                  <!--<usage>R</usage>-->
-                  <!--<seq>01</seq>-->
-                  <!--</element>-->
-                  <!--<element xid="HL02">-->
-                  <!--<data_ele>734</data_ele>-->
-                  <!--<name>Hierarchical Parent ID Number</name>-->
-                  <!--<usage>N</usage>-->
-                  <!--<seq>02</seq>-->
-                  <!--</element>-->
-                  <!--<element xid="HL03">-->
-                  <!--<data_ele>735</data_ele>-->
-                  <!--<name>Hierarchical Level Code</name>-->
-                  <!--<usage>R</usage>-->
-                  <!--<seq>03</seq>-->
-                  <!--<valid_codes>-->
-                  <!--<code>20</code>-->
-                  <!--</valid_codes>-->
-                  <!--</element>-->
-                  <!--<element xid="HL04">-->
-                  <!--<data_ele>736</data_ele>-->
-                  <!--<name>Hierarchical Child Code</name>-->
-                  <!--<usage>R</usage>-->
-                  <!--<seq>04</seq>-->
-                  <!--<valid_codes>-->
-                  <!--<code>1</code>-->
-                  <!--</valid_codes>-->
-                  <!--</element>-->
-                  <!--</segment>-->
+                  <segment xid="HL">
+                     <name>Utilization Management Organization (UMO) Level</name>
+                     <usage>R</usage>
+                     <pos>010</pos>
+                     <max_use>1</max_use>
+                     <element xid="HL01">
+                        <data_ele>628</data_ele>
+                        <name>Hierarchical ID Number</name>
+                        <usage>R</usage>
+                        <seq>01</seq>
+                     </element>
+                     <element xid="HL02">
+                        <data_ele>734</data_ele>
+                        <name>Hierarchical Parent ID Number</name>
+                        <usage>N</usage>
+                        <seq>02</seq>
+                     </element>
+                     <element xid="HL03">
+                        <data_ele>735</data_ele>
+                        <name>Hierarchical Level Code</name>
+                        <usage>R</usage>
+                        <seq>03</seq>
+                        <valid_codes>
+                           <code>20</code>
+                        </valid_codes>
+                     </element>
+                     <element xid="HL04">
+                        <data_ele>736</data_ele>
+                        <name>Hierarchical Child Code</name>
+                        <usage>R</usage>
+                        <seq>04</seq>
+                        <valid_codes>
+                           <code>1</code>
+                        </valid_codes>
+                     </element>
+                  </segment>
                   <!--End of HL segment-->
                   <loop xid="2010A">
                      <name>Utilization Management Organizational (UMO) Name</name>
@@ -481,42 +482,42 @@
                      <usage>R</usage>
                      <pos>180</pos>
                      <repeat>1</repeat>
-                     <!--<segment xid="HL">-->
-                     <!--<name>Requester Level</name>-->
-                     <!--<usage>R</usage>-->
-                     <!--<pos>010</pos>-->
-                     <!--<max_use>1</max_use>-->
-                     <!--<element xid="HL01">-->
-                     <!--<data_ele>628</data_ele>-->
-                     <!--<name>Hierarchical ID Number</name>-->
-                     <!--<usage>R</usage>-->
-                     <!--<seq>01</seq>-->
-                     <!--</element>-->
-                     <!--<element xid="HL02">-->
-                     <!--<data_ele>734</data_ele>-->
-                     <!--<name>Hierarchical Parent ID Number</name>-->
-                     <!--<usage>R</usage>-->
-                     <!--<seq>02</seq>-->
-                     <!--</element>-->
-                     <!--<element xid="HL03">-->
-                     <!--<data_ele>735</data_ele>-->
-                     <!--<name>Hierarchical Level Code</name>-->
-                     <!--<usage>R</usage>-->
-                     <!--<seq>03</seq>-->
-                     <!--<valid_codes>-->
-                     <!--<code>21</code>-->
-                     <!--</valid_codes>-->
-                     <!--</element>-->
-                     <!--<element xid="HL04">-->
-                     <!--<data_ele>736</data_ele>-->
-                     <!--<name>Hierarchical Child Code</name>-->
-                     <!--<usage>R</usage>-->
-                     <!--<seq>04</seq>-->
-                     <!--<valid_codes>-->
-                     <!--<code>1</code>-->
-                     <!--</valid_codes>-->
-                     <!--</element>-->
-                     <!--</segment>-->
+                     <segment xid="HL">
+                        <name>Requester Level</name>
+                        <usage>R</usage>
+                        <pos>010</pos>
+                        <max_use>1</max_use>
+                        <element xid="HL01">
+                           <data_ele>628</data_ele>
+                           <name>Hierarchical ID Number</name>
+                           <usage>R</usage>
+                           <seq>01</seq>
+                        </element>
+                        <element xid="HL02">
+                           <data_ele>734</data_ele>
+                           <name>Hierarchical Parent ID Number</name>
+                           <usage>R</usage>
+                           <seq>02</seq>
+                        </element>
+                        <element xid="HL03">
+                           <data_ele>735</data_ele>
+                           <name>Hierarchical Level Code</name>
+                           <usage>R</usage>
+                           <seq>03</seq>
+                           <valid_codes>
+                              <code>21</code>
+                           </valid_codes>
+                        </element>
+                        <element xid="HL04">
+                           <data_ele>736</data_ele>
+                           <name>Hierarchical Child Code</name>
+                           <usage>R</usage>
+                           <seq>04</seq>
+                           <valid_codes>
+                              <code>1</code>
+                           </valid_codes>
+                        </element>
+                     </segment>
                      <!--End of HL segment-->
                      <loop xid="2010B">
                         <name>Requester Name</name>
@@ -875,44 +876,43 @@
                         <usage>R</usage>
                         <pos>180</pos>
                         <repeat>1</repeat>
-                        <!--<segment xid="HL">-->
-                        <!--<name>Subscriber Level</name>-->
-                        <!--<usage>R</usage>-->
-                        <!--<pos>010</pos>-->
-                        <!--<max_use>1</max_use>-->
-                        <!--<element xid="HL01">-->
-                        <!--<data_ele>628</data_ele>-->
-                        <!--<name>Hierarchical ID Number</name>-->
-                        <!--<usage>R</usage>-->
-                        <!--<seq>01</seq>-->
-                        <!--</element>-->
-                        <!--<element xid="HL02">-->
-                        <!--<data_ele>734</data_ele>-->
-                        <!--<name>Hierarchical Parent ID Number</name>-->
-                        <!--<usage>R</usage>-->
-                        <!--<seq>02</seq>-->
-                        <!--</element>-->
-                        <!--<element xid="HL03">-->
-                        <!--<data_ele>735</data_ele>-->
-                        <!--<name>Hierarchical Level Code</name>-->
-                        <!--<usage>R</usage>-->
-                        <!--<seq>03</seq>-->
-                        <!--<valid_codes>-->
-                        <!--<code>22</code>-->
-                        <!--</valid_codes>-->
-                        <!--</element>-->
-                        <!--<element xid="HL04">-->
-                        <!--<data_ele>736</data_ele>-->
-                        <!--<name>Hierarchical Child Code</name>-->
-                        <!--<usage>R</usage>-->
-                        <!--<seq>04</seq>-->
-                        <!--<valid_codes>-->
-                        <!--<code>1</code>-->
-                        <!--</valid_codes>-->
-                        <!--</element>-->
-                        <!--</segment>-->
+                        <segment xid="HL">
+                           <name>Subscriber Level</name>
+                           <usage>R</usage>
+                           <pos>010</pos>
+                           <max_use>1</max_use>
+                           <element xid="HL01">
+                              <data_ele>628</data_ele>
+                              <name>Hierarchical ID Number</name>
+                              <usage>R</usage>
+                              <seq>01</seq>
+                           </element>
+                           <element xid="HL02">
+                              <data_ele>734</data_ele>
+                              <name>Hierarchical Parent ID Number</name>
+                              <usage>R</usage>
+                              <seq>02</seq>
+                           </element>
+                           <element xid="HL03">
+                              <data_ele>735</data_ele>
+                              <name>Hierarchical Level Code</name>
+                              <usage>R</usage>
+                              <seq>03</seq>
+                              <valid_codes>
+                                 <code>22</code>
+                              </valid_codes>
+                           </element>
+                           <element xid="HL04">
+                              <data_ele>736</data_ele>
+                              <name>Hierarchical Child Code</name>
+                              <usage>R</usage>
+                              <seq>04</seq>
+                              <valid_codes>
+                                 <code>1</code>
+                              </valid_codes>
+                           </element>
+                        </segment>
                         <!--End of HL segment-->
-
                         <loop xid="2010C">
                            <name>Subscriber Name</name>
                            <usage>R</usage>
@@ -1259,42 +1259,42 @@
                            <usage>S</usage>
                            <pos>180</pos>
                            <repeat>1</repeat>
-                           <!--<segment xid="HL">-->
-                           <!--<name>Dependent Level</name>-->
-                           <!--<usage>R</usage>-->
-                           <!--<pos>010</pos>-->
-                           <!--<max_use>1</max_use>-->
-                           <!--<element xid="HL01">-->
-                           <!--<data_ele>628</data_ele>-->
-                           <!--<name>Hierarchical ID Number</name>-->
-                           <!--<usage>R</usage>-->
-                           <!--<seq>01</seq>-->
-                           <!--</element>-->
-                           <!--<element xid="HL02">-->
-                           <!--<data_ele>734</data_ele>-->
-                           <!--<name>Hierarchical Parent ID Number</name>-->
-                           <!--<usage>R</usage>-->
-                           <!--<seq>02</seq>-->
-                           <!--</element>-->
-                           <!--<element xid="HL03">-->
-                           <!--<data_ele>735</data_ele>-->
-                           <!--<name>Hierarchical Level Code</name>-->
-                           <!--<usage>R</usage>-->
-                           <!--<seq>03</seq>-->
-                           <!--<valid_codes>-->
-                           <!--<code>23</code>-->
-                           <!--</valid_codes>-->
-                           <!--</element>-->
-                           <!--<element xid="HL04">-->
-                           <!--<data_ele>736</data_ele>-->
-                           <!--<name>Hierarchical Child Code</name>-->
-                           <!--<usage>R</usage>-->
-                           <!--<seq>04</seq>-->
-                           <!--<valid_codes>-->
-                           <!--<code>1</code>-->
-                           <!--</valid_codes>-->
-                           <!--</element>-->
-                           <!--</segment>-->
+                           <segment xid="HL">
+                              <name>Dependent Level</name>
+                              <usage>S</usage>
+                              <pos>010</pos>
+                              <max_use>1</max_use>
+                              <element xid="HL01">
+                                 <data_ele>628</data_ele>
+                                 <name>Hierarchical ID Number</name>
+                                 <usage>R</usage>
+                                 <seq>01</seq>
+                              </element>
+                              <element xid="HL02">
+                                 <data_ele>734</data_ele>
+                                 <name>Hierarchical Parent ID Number</name>
+                                 <usage>R</usage>
+                                 <seq>02</seq>
+                              </element>
+                              <element xid="HL03">
+                                 <data_ele>735</data_ele>
+                                 <name>Hierarchical Level Code</name>
+                                 <usage>R</usage>
+                                 <seq>03</seq>
+                                 <valid_codes>
+                                    <code>23</code>
+                                 </valid_codes>
+                              </element>
+                              <element xid="HL04">
+                                 <data_ele>736</data_ele>
+                                 <name>Hierarchical Child Code</name>
+                                 <usage>R</usage>
+                                 <seq>04</seq>
+                                 <valid_codes>
+                                    <code>1</code>
+                                 </valid_codes>
+                              </element>
+                           </segment>
                            <!--End of HL segment-->
                            <loop xid="2010D">
                               <name>Dependent Name</name>
@@ -1671,7 +1671,44 @@
                               <name>Patient Event Level</name>
                               <usage>R</usage>
                               <pos>180</pos>
-                              <repeat>>1</repeat>
+                              <repeat>&gt;1</repeat>
+                              <segment xid="HL">
+                                 <name>Service Level</name>
+                                 <usage>R</usage>
+                                 <pos>010</pos>
+                                 <max_use>1</max_use>
+                                 <element xid="HL01">
+                                    <data_ele>628</data_ele>
+                                    <name>Hierarchical ID Number</name>
+                                    <usage>R</usage>
+                                    <seq>01</seq>
+                                 </element>
+                                 <element xid="HL02">
+                                    <data_ele>734</data_ele>
+                                    <name>Hierarchical Parent ID Number</name>
+                                    <usage>R</usage>
+                                    <seq>02</seq>
+                                 </element>
+                                 <element xid="HL03">
+                                    <data_ele>735</data_ele>
+                                    <name>Hierarchical Level Code</name>
+                                    <usage>R</usage>
+                                    <seq>03</seq>
+                                    <valid_codes>
+                                       <code>24</code>
+                                    </valid_codes>
+                                 </element>
+                                 <element xid="HL04">
+                                    <data_ele>736</data_ele>
+                                    <name>Hierarchical Child Code</name>
+                                    <usage>R</usage>
+                                    <seq>04</seq>
+                                    <valid_codes>
+                                       <code>1</code>
+                                    </valid_codes>
+                                 </element>
+                              </segment>
+                              <!--End of HL segment-->
                               <segment xid="TRN">
                                  <name>Patient Event Tracking Number</name>
                                  <usage>S</usage>
@@ -5608,6 +5645,7 @@
                                     <seq>09</seq>
                                  </element>
                               </segment>
+                              <!--<loop xid="2010E">-->
                               <loop xid="2010EA">
                                  <name>Patient Event Provider Name</name>
                                  <usage>R</usage>
@@ -5968,7 +6006,7 @@
                               <!--End of 2010EA loop-->
                               <loop xid="2010EB">
                                  <name>Patient Event Transport Information</name>
-                                 <usage>R</usage>
+                                 <usage>S</usage>
                                  <pos>170</pos>
                                  <repeat>1</repeat>
                                  <segment xid="NM1">
@@ -6053,11 +6091,12 @@
                                  <!--End of N4 segment-->
                               </loop>
                               <!--End of 2010EB loop-->
+                              <!--</loop>-->
                               <loop xid="2000F">
                                  <name>Service Level</name>
                                  <usage>S</usage>
                                  <pos>180</pos>
-                                 <repeat>>1</repeat>
+                                 <repeat>&gt;1</repeat>
                                  <segment xid="HL">
                                     <name>Service Level</name>
                                     <usage>S</usage>
@@ -6081,7 +6120,7 @@
                                        <usage>R</usage>
                                        <seq>03</seq>
                                        <valid_codes>
-                                          <code>SS</code>
+                                          <code>25</code>
                                        </valid_codes>
                                     </element>
                                     <element xid="HL04">
@@ -6404,7 +6443,7 @@
                                  <segment xid="SV1">
                                     <name>Professional Service</name>
                                     <usage>S</usage>
-                                    <pos>3700</pos>
+                                    <pos>370</pos>
                                     <max_use>1</max_use>
                                     <syntax>P0304</syntax>
                                     <composite xid="SV101">
@@ -6620,11 +6659,12 @@
                                  <segment xid="SV2">
                                     <name>Institutional Service</name>
                                     <usage>S</usage>
-                                    <pos>3700</pos>
+                                    <pos>100</pos>
                                     <max_use>1</max_use>
-                                    <syntax>P0304</syntax>
+                                    <syntax>R0102</syntax>
+                                    <syntax>P0405</syntax>
                                     <element xid="SV201">
-                                       <data_ele>235</data_ele>
+                                       <data_ele>234</data_ele>
                                        <name>Service Line Revenue Code</name>
                                        <usage>S</usage>
                                        <seq>01</seq>
@@ -6633,7 +6673,7 @@
                                        <data_ele>C003</data_ele>
                                        <name>Composite Medical Procedure Identifier</name>
                                        <usage>S</usage>
-                                       <seq>01</seq>
+                                       <seq>02</seq>
                                        <element xid="SV202-01">
                                           <data_ele>235</data_ele>
                                           <name>Product or Service ID Qualifier</name>
@@ -6695,13 +6735,13 @@
                                        <data_ele>782</data_ele>
                                        <name>Line Item Charge Amount</name>
                                        <usage>S</usage>
-                                       <seq>02</seq>
+                                       <seq>03</seq>
                                     </element>
                                     <element xid="SV204">
                                        <data_ele>355</data_ele>
                                        <name>Unit or Basis for Measurement Code</name>
                                        <usage>S</usage>
-                                       <seq>03</seq>
+                                       <seq>04</seq>
                                        <valid_codes>
                                           <code>DA</code>
                                           <code>F2</code>
@@ -6712,20 +6752,34 @@
                                        <data_ele>380</data_ele>
                                        <name>Service Unit Count</name>
                                        <usage>S</usage>
-                                       <seq>04</seq>
+                                       <seq>05</seq>
                                     </element>
                                     <element xid="SV206">
-                                       <data_ele>1331</data_ele>
+                                       <data_ele>1371</data_ele>
                                        <name>Service line Rate</name>
                                        <usage>S</usage>
-                                       <seq>05</seq>
-                                       <valid_codes external="pos" />
+                                       <seq>06</seq>
+                                       <!--<valid_codes external="pos" />-->
+                                    </element>
+                                    <element xid="SV207">
+                                       <data_ele>782</data_ele>
+                                       <name>Line Item Denied Charge or Non-Covered Charge Amount</name>
+                                       <usage>N</usage>
+                                       <seq>07</seq>
+                                       <valid_codes />
+                                    </element>
+                                    <element xid="SV208">
+                                       <data_ele>1073</data_ele>
+                                       <name>Yes/No Condition or Response Code</name>
+                                       <usage>N</usage>
+                                       <seq>08</seq>
+                                       <valid_codes />
                                     </element>
                                     <element xid="SV209">
-                                       <data_ele>1337</data_ele>
+                                       <data_ele>1345</data_ele>
                                        <name>Nursing Home Residential Status Code</name>
-                                       <usage>S</usage>
-                                       <seq>20</seq>
+                                       <usage>N</usage>
+                                       <seq>09</seq>
                                        <valid_codes>
                                           <code>1</code>
                                           <code>2</code>
@@ -6741,7 +6795,7 @@
                                        <data_ele>1337</data_ele>
                                        <name>Nursing Home Level of Care</name>
                                        <usage>S</usage>
-                                       <seq>20</seq>
+                                       <seq>10</seq>
                                        <valid_codes>
                                           <code>1</code>
                                           <code>2</code>
@@ -6758,7 +6812,7 @@
                                  <segment xid="SV3">
                                     <name>Dental Service</name>
                                     <usage>S</usage>
-                                    <pos>3700</pos>
+                                    <pos>370</pos>
                                     <max_use>1</max_use>
                                     <syntax>P0304</syntax>
                                     <composite xid="SV301">
@@ -6822,14 +6876,14 @@
                                        <data_ele>1331</data_ele>
                                        <name>Service line Amount</name>
                                        <usage>S</usage>
-                                       <seq>05</seq>
+                                       <seq>02</seq>
                                        <valid_codes />
                                     </element>
                                     <composite xid="SV304">
                                        <data_ele>C003</data_ele>
                                        <name>Oral Cavity Designation</name>
                                        <usage>R</usage>
-                                       <seq>01</seq>
+                                       <seq>04</seq>
                                        <element xid="SV304-01">
                                           <data_ele>235</data_ele>
                                           <name>Oral Cavity Designation code</name>
@@ -7491,7 +7545,7 @@
                                        <element xid="N406">
                                           <data_ele>310</data_ele>
                                           <name>Country Subdivision Code</name>
-                                          <usage>N</usage>
+                                          <usage>S</usage>
                                           <seq>06</seq>
                                        </element>
                                     </segment>

@@ -117,7 +117,7 @@ def convertToX12():
         elif loop_elem.attrib['id'] == '2010F':
             if 'item' in claim_json:
                 if 'careTeamSequence' in claim_json['item'][0] and 'careTeam' in claim_json:
-                    loop2010F( claim_json, pa_xml,claim_json['item'][0]['careTeamSequence'])
+                    loop2010F(claim_json, pa_xml,claim_json['item'][0]['careTeamSequence'])
                 else:
                     response['x12_response'] += "The Care Team Information is missing."
             else:
@@ -130,7 +130,7 @@ def convertToX12():
     for s in total_seg:
         seg_num =seg_num+1
     st_elem[0].text = str(int(seg_num-4))
-    print "final----------", ET.tostring(pa_xml)
+    # print "final----------", ET.tostring(pa_xml)
     if response['x12_response'] == '':
         output_x12 = converter.convertXMLToX12(ET.tostring(pa_xml))
         if output_x12:
@@ -379,6 +379,9 @@ def loop2000F(loop_elem, claim_json,procedure_codes,procedure_desc):
                     if 'quantity' not in claim_json['item'][0]:
                         if element_child.attrib['id'] == 'SV204' or element_child.attrib['id'] == 'SV205':
                             seg_child.remove(element_child)
+                    if 'net' not in claim_json['item'][0]:
+                        if element_child.attrib['id'] == 'SV206':
+                            seg_child.remove(element_child)
 
             if seg_child.attrib['id'] == 'SV1':
                 loop_elem.remove(seg_child)
@@ -418,7 +421,7 @@ def loop2000F(loop_elem, claim_json,procedure_codes,procedure_desc):
 
 def loop2010F(claim_json, pa_xml,careTeamSeq):
     providers = []
-    loop_2010F ="""<loop id="2010F" repeat="0">
+    loop_2010F ="""<loop id="2010F">
                 <seg id="NM1">
                   <ele id="NM101">P3</ele>
                   <ele id="NM102">1</ele>
@@ -449,8 +452,6 @@ def loop2010F(claim_json, pa_xml,careTeamSeq):
                <!--Service Provider contact information-->
                <seg id='PER'>
                    <ele id="PER01">IC</ele>
-                   <ele id='PER03'>TE</ele>
-                   <ele id='PER04'>claim_json.provider.telecom.0.value</ele>
                </seg>
                <!--Reference Identification Qualifier-->
                <!--<seg id='PRV'>-->
@@ -483,6 +484,13 @@ def loop2010F(claim_json, pa_xml,careTeamSeq):
             z = z + 1
     j = 0
     while j < len(final_array):
+        seg_children = final_array[j].getchildren()
+        for seg_child in seg_children[:]:
+            if seg_child.attrib['id'] == 'PER':
+                if 'telecom' in providers[j]:
+                    phone_segment(final_array[j], providers[j], seg_child)
+                else:
+                    final_array[j].remove(seg_child)
         modify_name(final_array[j], providers[j])
         j = j + 1
     for a in final_array:
