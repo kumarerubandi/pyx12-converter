@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d4facb67-f234-45cc-a133-d27032f1a477" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/converter/Payer/payer_common.py" afterPath="$PROJECT_DIR$/converter/Payer/payer_common.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/converter/issues" afterPath="$PROJECT_DIR$/converter/issues" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyx12/map/278.5010.X217.27.A1.xml" afterPath="$PROJECT_DIR$/pyx12/map/278.5010.X217.27.A1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyx12/map/278.5010.X217.A1.xml" afterPath="$PROJECT_DIR$/pyx12/map/278.5010.X217.A1.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,8 +21,8 @@
       <file leaf-file-name="payer_common.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/converter/Payer/payer_common.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="46" column="9" lean-forward="false" selection-start-line="46" selection-start-column="9" selection-end-line="46" selection-end-column="9" />
+            <state relative-caret-position="391">
+              <caret line="45" column="11" lean-forward="false" selection-start-line="45" selection-start-column="11" selection-end-line="45" selection-end-column="11" />
               <folding>
                 <element signature="e#0#67#0" expanded="true" />
               </folding>
@@ -49,30 +53,34 @@
       <file leaf-file-name="278.5010.X217.A1.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pyx12/map/278.5010.X217.A1.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-651">
-              <caret line="125" column="30" lean-forward="true" selection-start-line="125" selection-start-column="30" selection-end-line="125" selection-end-column="30" />
+            <state relative-caret-position="103">
+              <caret line="7693" column="57" lean-forward="true" selection-start-line="7339" selection-start-column="33" selection-end-line="7693" selection-end-column="57" />
               <folding>
                 <element signature="e#632#636#0" expanded="true" />
                 <element signature="e#5461#5465#0" expanded="true" />
                 <element signature="e#7873#7877#0" expanded="true" />
                 <element signature="e#11715#11719#0" expanded="true" />
                 <element signature="e#80119#80123#0" expanded="true" />
+                <element signature="n#segment#4;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+                <element signature="n#segment#5;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+                <element signature="n#segment#6;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+                <element signature="n#segment#7;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+                <element signature="n#segment#8;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+                <element signature="n#segment#9;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+                <element signature="n#segment#10;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+                <element signature="n#segment#11;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+                <element signature="n#segment#1;n#loop#0;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+                <element signature="n#segment#2;n#loop#0;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+                <element signature="n#segment#3;n#loop#0;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+                <element signature="n#segment#4;n#loop#0;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+                <element signature="n#segment#5;n#loop#0;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
                 <element signature="e#326940#326944#0" expanded="true" />
-                <element signature="n#segment#1;n#loop#2;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
-                <element signature="n#segment#3;n#loop#2;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
-                <element signature="n#segment#4;n#loop#2;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
-                <element signature="n#segment#5;n#loop#2;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
                 <element signature="n#segment#6;n#loop#2;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+                <element signature="n#segment#7;n#loop#2;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
                 <element signature="n#segment#8;n#loop#2;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
-                <element signature="n#segment#9;n#loop#2;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
                 <element signature="n#segment#10;n#loop#2;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
                 <element signature="n#segment#11;n#loop#2;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
-                <element signature="n#segment#12;n#loop#2;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
-                <element signature="n#segment#1;n#loop#0;n#loop#2;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
-                <element signature="n#segment#2;n#loop#0;n#loop#2;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
-                <element signature="n#segment#3;n#loop#0;n#loop#2;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
-                <element signature="n#segment#4;n#loop#0;n#loop#2;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
-                <element signature="n#segment#5;n#loop#0;n#loop#2;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+                <element signature="n#loop#0;n#loop#2;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -81,16 +89,38 @@
       <file leaf-file-name="278.5010.X217.27.A1.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pyx12/map/278.5010.X217.27.A1.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
-              <caret line="993" column="29" lean-forward="false" selection-start-line="993" selection-start-column="29" selection-end-line="993" selection-end-column="29" />
+            <state relative-caret-position="18845">
+              <caret line="7436" column="60" lean-forward="false" selection-start-line="7436" selection-start-column="60" selection-end-line="7436" selection-end-column="60" />
               <folding>
-                <element signature="e#638#642#0" expanded="true" />
-                <element signature="e#5463#5467#0" expanded="true" />
-                <element signature="e#7875#7879#0" expanded="true" />
-                <element signature="e#11757#11761#0" expanded="true" />
-                <element signature="e#161135#161139#0" expanded="true" />
-                <element signature="e#187875#187879#0" expanded="true" />
-                <element signature="e#321880#321884#0" expanded="true" />
+                <element signature="e#636#640#0" expanded="true" />
+                <element signature="e#5461#5465#0" expanded="true" />
+                <element signature="e#7873#7877#0" expanded="true" />
+                <element signature="e#11755#11759#0" expanded="true" />
+                <element signature="e#89121#89125#0" expanded="true" />
+                <element signature="n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+                <element signature="e#265223#265227#0" expanded="true" />
+                <element signature="n#segment#0;n#loop#3;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+                <element signature="n#segment#1;n#loop#3;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+                <element signature="n#segment#3;n#loop#3;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+                <element signature="n#segment#4;n#loop#3;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+                <element signature="n#segment#5;n#loop#3;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+                <element signature="n#segment#6;n#loop#3;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+                <element signature="n#segment#7;n#loop#3;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+                <element signature="n#segment#8;n#loop#3;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+                <element signature="n#segment#9;n#loop#3;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+                <element signature="n#segment#10;n#loop#3;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+                <element signature="n#segment#11;n#loop#3;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+                <element signature="n#segment#12;n#loop#3;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+                <element signature="n#segment#13;n#loop#3;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+                <element signature="n#segment#14;n#loop#3;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+                <element signature="n#segment#15;n#loop#3;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+                <element signature="n#segment#16;n#loop#3;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+                <element signature="n#segment#17;n#loop#3;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+                <element signature="n#segment#20;n#loop#3;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+                <element signature="n#segment#21;n#loop#3;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+                <element signature="n#loop#0;n#loop#3;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+                <element signature="n#segment#6;n#loop#0;n#loop#3;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+                <element signature="e#398544#398548#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -99,9 +129,20 @@
       <file leaf-file-name="278.4010.X094.27.A1.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pyx12/map/278.4010.X094.27.A1.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="7177" column="24" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="7321" selection-end-column="0" />
+            <state relative-caret-position="363">
+              <caret line="4574" column="43" lean-forward="true" selection-start-line="4561" selection-start-column="28" selection-end-line="4574" selection-end-column="43" />
               <folding>
+                <element signature="n#segment#1;n#loop#0;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+                <element signature="n#segment#2;n#loop#0;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+                <element signature="n#segment#3;n#loop#0;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+                <element signature="n#segment#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+                <element signature="n#segment#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+                <element signature="n#segment#3;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+                <element signature="n#segment#4;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+                <element signature="n#segment#5;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+                <element signature="n#segment#6;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+                <element signature="n#segment#7;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+                <element signature="n#segment#8;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
                 <element signature="n#segment#4;n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
                 <element signature="n#segment#5;n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
                 <element signature="n#segment#6;n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
@@ -111,7 +152,6 @@
                 <element signature="n#loop#1;n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
                 <element signature="n#segment#0;n#loop#2;n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
                 <element signature="n#segment#1;n#loop#2;n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
-                <element signature="n#loop#0;n#loop#2;n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
                 <element signature="n#segment#0;n#loop#1;n#loop#2;n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
                 <element signature="n#segment#1;n#loop#1;n#loop#2;n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
                 <element signature="n#segment#2;n#loop#1;n#loop#2;n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
@@ -141,40 +181,50 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="issues" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/converter/issues">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="36">
+              <caret line="2" column="20" lean-forward="false" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>isa08</find>
-      <find>f</find>
-      <find>fa</find>
-      <find>failed</find>
-      <find>failed to`</find>
-      <find>x12rea</find>
-      <find>X12Base</find>
-      <find>2000f</find>
-      <find>2010ea</find>
-      <find>failed to</find>
-      <find>00</find>
-      <find>00501</find>
-      <find>005010X217</find>
-      <find>05010X217</find>
-      <find>facil</find>
-      <find>UM04</find>
-      <find>5</find>
-      <find>0</find>
-      <find>050</find>
-      <find>05010</find>
-      <find>05010x</find>
-      <find>05010x2</find>
-      <find>05010x21</find>
-      <find>um04</find>
       <find>'05010x217</find>
       <find>'005010x217</find>
       <find>'005010x217'</find>
       <find>05010x217</find>
       <find>005010x217</find>
       <find>0050</find>
+      <find>&quot;states&quot;</find>
+      <find>&quot;states</find>
+      <find>states</find>
+      <find>2000e</find>
+      <find>UM</find>
+      <find>UM&quot;</find>
+      <find>UM03</find>
+      <find>&lt;repeat&gt;</find>
+      <find>admini</find>
+      <find>menstr</find>
+      <find>hi</find>
+      <find>pwk</find>
+      <find>ob</find>
+      <find>2010e</find>
+      <find>2010cb</find>
+      <find>2010eb</find>
+      <find>transpo</find>
+      <find>&lt;segment xid=&quot;REF&quot;</find>
+      <find>surg</find>
+      <find>surger</find>
+      <find>sv1</find>
+      <find>aaa</find>
+      <find>AAA03</find>
+      <find>aaa03</find>
     </findStrings>
     <replaceStrings>
       <replace>SV2</replace>
@@ -213,13 +263,14 @@
         <option value="$PROJECT_DIR$/converter/Payer/UHC_payer.py" />
         <option value="$PROJECT_DIR$/converter/Payer/payer_abstract.py" />
         <option value="$PROJECT_DIR$/pyx12/x12n_document.py" />
-        <option value="$PROJECT_DIR$/pyx12/map/278.5010.X217.27.A1.xml" />
-        <option value="$PROJECT_DIR$/pyx12/map/278.5010.X217.A1.xml" />
         <option value="/var/www/html/claim.json" />
         <option value="$PROJECT_DIR$/pyx12/map_index.py" />
         <option value="$PROJECT_DIR$/converter/Payer/standard_278.xml" />
         <option value="$PROJECT_DIR$/pyx12/error_999.py" />
         <option value="$PROJECT_DIR$/build/lib.linux-x86_64-2.7/pyx12/error_999.py" />
+        <option value="$PROJECT_DIR$/converter/issues" />
+        <option value="$PROJECT_DIR$/pyx12/map/278.5010.X217.A1.xml" />
+        <option value="$PROJECT_DIR$/pyx12/map/278.5010.X217.27.A1.xml" />
         <option value="$PROJECT_DIR$/converter/Payer/payer_common.py" />
       </list>
     </option>
@@ -459,7 +510,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14164743" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291536" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -475,13 +526,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/requirements.dev.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="6" lean-forward="false" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///var/www/html/Provider-App/src/containers/Main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2000">
@@ -633,6 +677,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="130">
           <caret line="4571" column="32" lean-forward="true" selection-start-line="4571" selection-start-column="32" selection-end-line="4571" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -805,49 +850,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pyx12/map/278.4010.X094.27.A1.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="7177" column="24" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="7321" selection-end-column="0" />
-          <folding>
-            <element signature="n#segment#4;n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
-            <element signature="n#segment#5;n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
-            <element signature="n#segment#6;n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
-            <element signature="n#segment#7;n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
-            <element signature="n#segment#8;n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
-            <element signature="n#loop#0;n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
-            <element signature="n#loop#1;n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
-            <element signature="n#segment#0;n#loop#2;n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
-            <element signature="n#segment#1;n#loop#2;n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
-            <element signature="n#loop#0;n#loop#2;n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
-            <element signature="n#segment#0;n#loop#1;n#loop#2;n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
-            <element signature="n#segment#1;n#loop#1;n#loop#2;n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
-            <element signature="n#segment#2;n#loop#1;n#loop#2;n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
-            <element signature="n#segment#3;n#loop#1;n#loop#2;n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
-            <element signature="n#segment#4;n#loop#1;n#loop#2;n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
-            <element signature="n#segment#5;n#loop#1;n#loop#2;n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
-            <element signature="n#segment#6;n#loop#1;n#loop#2;n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
-            <element signature="n#segment#7;n#loop#1;n#loop#2;n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
-            <element signature="n#segment#8;n#loop#1;n#loop#2;n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
-            <element signature="n#segment#9;n#loop#1;n#loop#2;n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
-            <element signature="n#segment#10;n#loop#1;n#loop#2;n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
-            <element signature="n#segment#11;n#loop#1;n#loop#2;n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
-            <element signature="n#segment#12;n#loop#1;n#loop#2;n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
-            <element signature="n#segment#13;n#loop#1;n#loop#2;n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
-            <element signature="n#segment#14;n#loop#1;n#loop#2;n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
-            <element signature="n#segment#15;n#loop#1;n#loop#2;n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
-            <element signature="n#segment#16;n#loop#1;n#loop#2;n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
-            <element signature="n#segment#17;n#loop#1;n#loop#2;n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
-            <element signature="n#segment#18;n#loop#1;n#loop#2;n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
-            <element signature="n#segment#19;n#loop#1;n#loop#2;n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
-            <element signature="n#segment#20;n#loop#1;n#loop#2;n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
-            <element signature="n#element#7;n#segment#20;n#loop#1;n#loop#2;n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
-            <element signature="n#segment#21;n#loop#1;n#loop#2;n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
-            <element signature="n#element#2;n#segment#21;n#loop#1;n#loop#2;n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pyx12/map/278.4010.X094.A1.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1382">
@@ -937,22 +939,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pyx12/map/278.5010.X217.27.A1.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="993" column="29" lean-forward="false" selection-start-line="993" selection-start-column="29" selection-end-line="993" selection-end-column="29" />
-          <folding>
-            <element signature="e#638#642#0" expanded="true" />
-            <element signature="e#5463#5467#0" expanded="true" />
-            <element signature="e#7875#7879#0" expanded="true" />
-            <element signature="e#11757#11761#0" expanded="true" />
-            <element signature="e#161135#161139#0" expanded="true" />
-            <element signature="e#187875#187879#0" expanded="true" />
-            <element signature="e#321880#321884#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///var/www/html/claim.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-931">
@@ -993,40 +979,143 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/converter/issues">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="20" lean-forward="false" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pyx12/map/278.5010.X217.A1.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-651">
-          <caret line="125" column="30" lean-forward="true" selection-start-line="125" selection-start-column="30" selection-end-line="125" selection-end-column="30" />
+        <state relative-caret-position="103">
+          <caret line="7693" column="57" lean-forward="true" selection-start-line="7339" selection-start-column="33" selection-end-line="7693" selection-end-column="57" />
           <folding>
             <element signature="e#632#636#0" expanded="true" />
             <element signature="e#5461#5465#0" expanded="true" />
             <element signature="e#7873#7877#0" expanded="true" />
             <element signature="e#11715#11719#0" expanded="true" />
             <element signature="e#80119#80123#0" expanded="true" />
+            <element signature="n#segment#4;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#5;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#6;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#7;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#8;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#9;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#10;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#11;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#1;n#loop#0;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#2;n#loop#0;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#3;n#loop#0;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#4;n#loop#0;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#5;n#loop#0;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
             <element signature="e#326940#326944#0" expanded="true" />
-            <element signature="n#segment#1;n#loop#2;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
-            <element signature="n#segment#3;n#loop#2;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
-            <element signature="n#segment#4;n#loop#2;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
-            <element signature="n#segment#5;n#loop#2;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
             <element signature="n#segment#6;n#loop#2;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#7;n#loop#2;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
             <element signature="n#segment#8;n#loop#2;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
-            <element signature="n#segment#9;n#loop#2;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
             <element signature="n#segment#10;n#loop#2;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
             <element signature="n#segment#11;n#loop#2;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
-            <element signature="n#segment#12;n#loop#2;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
-            <element signature="n#segment#1;n#loop#0;n#loop#2;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
-            <element signature="n#segment#2;n#loop#0;n#loop#2;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
-            <element signature="n#segment#3;n#loop#0;n#loop#2;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
-            <element signature="n#segment#4;n#loop#0;n#loop#2;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
-            <element signature="n#segment#5;n#loop#0;n#loop#2;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#loop#0;n#loop#2;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pyx12/map/278.4010.X094.27.A1.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="4574" column="43" lean-forward="true" selection-start-line="4561" selection-start-column="28" selection-end-line="4574" selection-end-column="43" />
+          <folding>
+            <element signature="n#segment#1;n#loop#0;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#2;n#loop#0;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#3;n#loop#0;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#3;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#4;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#5;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#6;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#7;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#8;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#4;n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#5;n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#6;n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#7;n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#8;n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#loop#0;n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#loop#1;n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#0;n#loop#2;n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#1;n#loop#2;n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#0;n#loop#1;n#loop#2;n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#1;n#loop#1;n#loop#2;n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#2;n#loop#1;n#loop#2;n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#3;n#loop#1;n#loop#2;n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#4;n#loop#1;n#loop#2;n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#5;n#loop#1;n#loop#2;n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#6;n#loop#1;n#loop#2;n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#7;n#loop#1;n#loop#2;n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#8;n#loop#1;n#loop#2;n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#9;n#loop#1;n#loop#2;n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#10;n#loop#1;n#loop#2;n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#11;n#loop#1;n#loop#2;n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#12;n#loop#1;n#loop#2;n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#13;n#loop#1;n#loop#2;n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#14;n#loop#1;n#loop#2;n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#15;n#loop#1;n#loop#2;n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#16;n#loop#1;n#loop#2;n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#17;n#loop#1;n#loop#2;n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#18;n#loop#1;n#loop#2;n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#19;n#loop#1;n#loop#2;n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#20;n#loop#1;n#loop#2;n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#element#7;n#segment#20;n#loop#1;n#loop#2;n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#21;n#loop#1;n#loop#2;n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#element#2;n#segment#21;n#loop#1;n#loop#2;n#loop#2;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pyx12/map/278.5010.X217.27.A1.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18845">
+          <caret line="7436" column="60" lean-forward="false" selection-start-line="7436" selection-start-column="60" selection-end-line="7436" selection-end-column="60" />
+          <folding>
+            <element signature="e#636#640#0" expanded="true" />
+            <element signature="e#5461#5465#0" expanded="true" />
+            <element signature="e#7873#7877#0" expanded="true" />
+            <element signature="e#11755#11759#0" expanded="true" />
+            <element signature="e#89121#89125#0" expanded="true" />
+            <element signature="n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="e#265223#265227#0" expanded="true" />
+            <element signature="n#segment#0;n#loop#3;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#1;n#loop#3;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#3;n#loop#3;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#4;n#loop#3;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#5;n#loop#3;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#6;n#loop#3;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#7;n#loop#3;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#8;n#loop#3;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#9;n#loop#3;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#10;n#loop#3;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#11;n#loop#3;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#12;n#loop#3;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#13;n#loop#3;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#14;n#loop#3;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#15;n#loop#3;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#16;n#loop#3;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#17;n#loop#3;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#20;n#loop#3;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#21;n#loop#3;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#loop#0;n#loop#3;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="n#segment#6;n#loop#0;n#loop#3;n#loop#1;n#loop#1;n#loop#1;n#loop#1;n#loop#0;n#loop#1;n#loop#0;n#loop#0;n#loop#0;n#transaction#0;n#!!top" expanded="false" />
+            <element signature="e#398544#398548#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/converter/Payer/payer_common.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="46" column="9" lean-forward="false" selection-start-line="46" selection-start-column="9" selection-end-line="46" selection-end-column="9" />
+        <state relative-caret-position="391">
+          <caret line="45" column="11" lean-forward="false" selection-start-line="45" selection-start-column="11" selection-end-line="45" selection-end-column="11" />
           <folding>
             <element signature="e#0#67#0" expanded="true" />
           </folding>

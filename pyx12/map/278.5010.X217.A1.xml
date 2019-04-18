@@ -5763,7 +5763,7 @@
                                        <usage>R</usage>
                                        <seq>01</seq>
                                        <valid_codes>
-                                          <code>OB</code>
+                                          <code>0B</code>
                                           <code>1G</code>
                                           <code>1J</code>
                                           <code>EI</code>
