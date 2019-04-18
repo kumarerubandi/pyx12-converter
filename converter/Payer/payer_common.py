@@ -116,7 +116,7 @@ def convertToX12():
             else:
                 loop_2000e = [element for element in pa_xml.getiterator() if
                               element.tag == 'loop' and element.attrib['id'] == '2000E']
-                if len(loop_2000e):
+                if len(loop_2000e)>0:
                     loop_2000e[0].remove(loop_elem)
                 # response['x12_response'] += "The Service Level Information is missing."
         # Service Provider
@@ -126,7 +126,7 @@ def convertToX12():
                     loop2010F(claim_json, pa_xml,claim_json['item'][0]['careTeamSequence'])
                 else:
                     loop_2000f = [element for element in pa_xml.getiterator() if element.tag == 'loop' and element.attrib['id']=='2000F']
-                    if len(loop_2000f):
+                    if len(loop_2000f)>0:
                         loop_2000f[0].remove(loop_elem)
                     # response['x12_response'] += "The Care Team Information is missing."
             # else:
