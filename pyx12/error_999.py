@@ -48,8 +48,8 @@ class error_999_visitor(pyx12.error_visitor.error_visitor):
         self.isa_control_num = None
         self.gs_control_num = None
         self.st_control_num = 0
-        self.vriic = '005010X231'
-
+        # self.vriic = '005010X231'
+        self.vriic = '05010x217'
 
     def visit_root_pre(self, errh):
         """
@@ -262,6 +262,7 @@ class error_999_visitor(pyx12.error_visitor.error_visitor):
         for elem in err_st.elements:
             for (err_cde, err_str, bad_value) in elem.errors:
                 # Ugly
+                print "errrr",err_codes, st_ele_err_map, err_str
                 if 'ST' in err_str:
                     err_codes.append(st_ele_err_map[elem.ele_pos])
                 elif 'SE' in err_str:

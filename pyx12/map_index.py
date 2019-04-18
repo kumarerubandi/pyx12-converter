@@ -65,7 +65,7 @@ class map_index(object):
         """
         print "icvn, vriic, fic, tspc",icvn, vriic, fic, tspc
         for a in self.maps:
-            if a['vriic'] == '005010X217':
+            if a['vriic'] == '05010x217':
                 print a['icvn'], a['vriic'], a['fic'], a['tspc']
             if a['icvn'] == icvn and a['vriic'] == vriic and a['fic'] == fic \
                     and (tspc is None or a['tspc'] == tspc):

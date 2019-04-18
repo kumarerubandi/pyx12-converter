@@ -23,9 +23,9 @@ class GetFilename(unittest.TestCase):
         self.assertEqual(
             self.idx.get_abbr('00401', '004010X094A1', 'HI'), '278a')
         self.assertEqual(self.idx.get_filename(
-            '00501', '005010X217', 'HI'), '278.5010.X217.A1.xml')
+            '00501', '05010x217', 'HI'), '278.5010.X217.A1.xml')
         self.assertEqual(
-            self.idx.get_abbr('00501', '005010X217', 'HI'), '278b')
+            self.idx.get_abbr('00501', '05010x217', 'HI'), '278b')
 
     def test_get_278(self):
         self.assertEqual(self.idx.get_filename('00401',
@@ -38,9 +38,9 @@ class GetFilename(unittest.TestCase):
             '00401', '004010X094A1', 'HI', '13'), '278b')
 
         self.assertEqual(self.idx.get_filename('00501',
-                                               '005010X217', 'HI', '13'), '278.5010.X217.A1.xml')
+                                               '05010x217', 'HI', '13'), '278.5010.X217.A1.xml')
         self.assertEqual(self.idx.get_abbr(
-            '00501', '005010X217', 'HI', '13'), '278b')
+            '00501', '05010x217', 'HI', '13'), '278b')
 
 
 class GetFilenameMapPath(unittest.TestCase):
@@ -64,9 +64,9 @@ class GetFilenameMapPath(unittest.TestCase):
         self.assertEqual(
             self.idx.get_abbr('00401', '004010X094A1', 'HI'), '278a')
         self.assertEqual(self.idx.get_filename(
-            '00501', '005010X217', 'HI'), '278.5010.X217.A1.xml')
+            '00501', '05010x217', 'HI'), '278.5010.X217.A1.xml')
         self.assertEqual(
-            self.idx.get_abbr('00501', '005010X217', 'HI'), '278b')
+            self.idx.get_abbr('00501', '05010x217', 'HI'), '278b')
 
     def test_get_278(self):
         self.assertEqual(self.idx.get_filename('00401',
@@ -79,6 +79,6 @@ class GetFilenameMapPath(unittest.TestCase):
             '00401', '004010X094A1', 'HI', '13'), '278b')
 
         self.assertEqual(self.idx.get_filename('00501',
-                                               '005010X217', 'HI', '13'), '278.5010.X217.A1.xml')
+                                               '05010x217', 'HI', '13'), '278.5010.X217.A1.xml')
         self.assertEqual(self.idx.get_abbr(
-            '00501', '005010X217', 'HI', '13'), '278b')
+            '00501', '05010x217', 'HI', '13'), '278b')
