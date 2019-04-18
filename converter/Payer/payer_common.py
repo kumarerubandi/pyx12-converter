@@ -159,6 +159,8 @@ def loopA(loop_elem, claim_json):
                         payer.loopA_umo_entity(element_child, insurer['resourceType'])
                     if element_child.attrib['id'] == 'NM108':
                         payer.loopA_umo_id(element_child, insurer['resourceType'])
+                    if element_child.attrib['id'] == 'NM109':
+                        payer.loopA_umo_id_value(element_child, insurer['resourceType'])
         modify_name(loop_elem,insurer)
 
 def loopB(loop_elem,claim_json):

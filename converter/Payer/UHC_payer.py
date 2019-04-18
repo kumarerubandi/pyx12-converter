@@ -23,6 +23,10 @@ class UHC_Payer(Payer_Abstract):
     def loopA_umo_id(self,element_child, insurer):
         element_child.text = 'PI'
 
+    def loopA_umo_id_value(self,element_child, insurer):
+        element_child.text = '06111'
+        # element_child.text = '87726'
+
     def loopB_requester_entity(self,element_child, enterer):
         if enterer == 'Practitioner':
             element_child.text = '1P'

@@ -18,6 +18,10 @@ class Payer_Abstract():
         pass
 
     @abstractmethod
+    def loopA_umo_id_value(self, loop_elem, claim_json):
+        pass
+
+    @abstractmethod
     def loopB_requester_entity(self,element_child, enterer):
         pass
 
