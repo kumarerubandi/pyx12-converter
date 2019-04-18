@@ -28,13 +28,13 @@
             <ele id="GS05">1439</ele>
             <ele id="GS06">1</ele>
             <ele id="GS07">X</ele>
-            <ele id="GS08">005010X217</ele>
+            <ele id="GS08">05010X217</ele>
          </seg>
          <loop id="ST_LOOP">
             <seg id="ST">
                <ele id="ST01">278</ele>
                <ele id="ST02">300145997</ele>
-               <ele id="ST03">005010X217</ele>
+               <ele id="ST03">05010X217</ele>
             </seg>
             <loop id="HEADER">
                <seg id="BHT">

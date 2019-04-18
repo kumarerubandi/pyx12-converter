@@ -128,6 +128,9 @@
             <name>Interchange Control Version Number</name>
             <usage>R</usage>
             <seq>12</seq>
+             <valid_codes>
+                <code>00501</code>
+              </valid_codes>
          </element>
          <element xid="ISA13">
             <data_ele>I12</data_ele>
@@ -229,7 +232,7 @@
                <usage>R</usage>
                <seq>08</seq>
                <valid_codes>
-                  <code>005010X217</code>
+                  <code>05010X217</code>
                </valid_codes>
             </element>
          </segment>
@@ -265,7 +268,7 @@
                   <usage>R</usage>
                   <seq>03</seq>
                   <valid_codes>
-                     <code>005010X217</code>
+                     <code>05010X217</code>
                   </valid_codes>
                </element>
             </segment>
@@ -287,7 +290,6 @@
                      <seq>01</seq>
                      <valid_codes>
                         <code>0007</code>
-                        <code>0019</code>
                      </valid_codes>
                   </element>
                   <element xid="BHT02">
@@ -5650,7 +5652,7 @@
                                  <name>Patient Event Provider Name</name>
                                  <usage>R</usage>
                                  <pos>170</pos>
-                                 <repeat>3</repeat>
+                                 <repeat>14</repeat>
                                  <segment xid="NM1">
                                     <name>Patient Event Provider Name</name>
                                     <usage>S</usage>
