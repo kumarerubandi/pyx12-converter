@@ -232,7 +232,7 @@
                <usage>R</usage>
                <seq>08</seq>
                <valid_codes>
-                  <code>05010X217</code>
+                  <code>005010X217</code>
                </valid_codes>
             </element>
          </segment>
@@ -268,7 +268,7 @@
                   <usage>R</usage>
                   <seq>03</seq>
                   <valid_codes>
-                     <code>05010X217</code>
+                     <code>005010X217</code>
                   </valid_codes>
                </element>
             </segment>
@@ -298,9 +298,9 @@
                      <usage>R</usage>
                      <seq>02</seq>
                      <valid_codes>
-                        <code>01</code>
+                        <!--<code>01</code>-->
                         <code>13</code>
-                        <code>36</code>
+                        <!--<code>36</code>-->
                      </valid_codes>
                   </element>
                   <element xid="BHT03">

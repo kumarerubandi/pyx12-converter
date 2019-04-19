@@ -232,7 +232,7 @@
                <usage>R</usage>
                <seq>08</seq>
                <valid_codes>
-                  <code>05010X217</code>
+                  <code>005010X217</code>
                </valid_codes>
             </element>
          </segment>
@@ -268,7 +268,7 @@
                   <usage>R</usage>
                   <seq>03</seq>
                   <valid_codes>
-                     <code>05010X217</code>
+                     <code>005010X217</code>
                   </valid_codes>
                </element>
             </segment>
@@ -1394,7 +1394,7 @@
                            <repeat>1</repeat>
                            <segment xid="HL">
                               <name>Dependent Level</name>
-                              <usage>R</usage>
+                              <usage>S</usage>
                               <pos>010</pos>
                               <max_use>1</max_use>
                               <element xid="HL01">
@@ -1432,7 +1432,7 @@
                            <!--End of HL segment-->
                            <loop xid="2010D">
                               <name>Dependent Name</name>
-                              <usage>R</usage>
+                              <usage>S</usage>
                               <pos>170</pos>
                               <repeat>1</repeat>
                               <segment xid="NM1">

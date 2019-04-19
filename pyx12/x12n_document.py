@@ -98,7 +98,6 @@ def x12n_document(param, src_file, fd_997, fd_html,
     for seg in src:
         #find node
         orig_node = node
-
         if False:
             print('--------------------------------------------')
             print(seg)
@@ -128,6 +127,7 @@ def x12n_document(param, src_file, fd_997, fd_html,
         if node is None:
             node = orig_node
         else:
+            # print "seg.get_seg_id()------",seg.get_seg_id()
             if seg.get_seg_id() == 'ISA':
                 errh.add_isa_loop(seg, src)
                 icvn = seg.get_value('ISA12')
@@ -159,12 +159,15 @@ def x12n_document(param, src_file, fd_997, fd_html,
                 errh.handle_errors(src.pop_errors())
             elif seg.get_seg_id() == 'BHT':
                 # special case for 4010 837P
-                if vriic in ('004010X094', '004010X094A1'):
+                # print "----------in BHT"
+                if vriic in ['004010X094', '004010X094A1','005010X217']:
                     tspc = seg.get_value('BHT02')
                     logger.debug('icvn=%s, fic=%s, vriic=%s, tspc=%s' %
                                  (icvn, fic, vriic, tspc))
+                    print "icvn, vriic, fic, tspc", icvn, vriic, fic, tspc
                     map_file_new = map_index_if.get_filename(icvn, vriic, fic, tspc)
                     logger.debug('New map file: %s' % (map_file_new))
+                    print "mapfile------",map_file_new
                     if map_file != map_file_new:
                         map_file = map_file_new
                         if map_file is None:
