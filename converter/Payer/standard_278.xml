@@ -83,9 +83,10 @@
                            <ele id="NM108">requestor_id</ele>
                            <ele id="NM109">claim_json.enterer.identifier.0.value</ele>
                         </seg>
+                         <!--Requestor Supplemental Identifier-->
                         <seg id="REF">
                             <ele id="REF01">EI</ele>
-                            <ele id="REF02">Requestor Supplemental Identifier</ele>
+                            <ele id="REF02">22</ele>
                         </seg>
                         <seg id="N3">
                            <ele id="N301">claim_json.enterer.address.0.line.0</ele>
@@ -112,14 +113,11 @@
                            <!--<ele id='PER04'>claim_json.enterer.telecom.0.value</ele>-->
                         </seg>
                         <!--Requester Provider Information-->
-                        <!--<seg id='PRV'>-->
-                        <!--<ele id='PRV01'>PXC</ele>-->
-                        <!--<ele id='PRV02'>101Y00000X</ele>-->
-                        <!--<ele id='PRV03'>PXC</ele>-->
-                        <!--<ele id='PRV04'>101Y00000X</ele>-->
-                        <!--<ele id='PRV05'>PXC</ele>-->
-                        <!--<ele id='PRV06'>101Y00000X</ele>-->
-                        <!--</seg>-->
+                        <seg id='PRV'>
+                            <ele id='PRV01'>AD</ele>
+                            <ele id='PRV02'>PXC</ele>
+                            <ele id='PRV03'>21345690</ele>
+                        </seg>
                      </loop>
                      <!--Subscriber Name Loop-->
                      <loop id="2000C">
@@ -142,10 +140,10 @@
                               <ele id="NM109">claim_json.Patient.identifier.0.value</ele>
                            </seg>
                            <!--Subscriber Supplemental Identification-->
-                           <!--<seg id='REF'>-->
-                           <!--<ele id='REF01'>1D</ele>-->
-                           <!--<ele id='REF02'>1705555</ele>-->
-                           <!--</seg>-->
+                           <seg id='REF'>
+                               <ele id='REF01'>1D</ele>
+                               <ele id='REF02'>1705555</ele>
+                           </seg>
                            <seg id="N3">
                               <ele id="N301">claim_json.Patient.address.0.line.0</ele>
                               <ele id="N302">claim_json.Patient.address.0.line.1</ele>
@@ -182,11 +180,10 @@
                            <!--<ele id='PER04'>claim_json.Patient.telecom.0.value</ele>-->
                            <!--</seg>-->
                            <!--Subscriber Relationship-->
-                           <!--<seg id='INS'>-->
-                           <!--<ele id='INS01'>Y</ele>-->
-                           <!--<ele id='INS02'>1</ele>-->
-                           <!--<ele id='INS08'>22</ele>-->
-                           <!--</seg>-->
+                           <seg id='INS'>
+                               <ele id='INS01'>Y</ele>
+                               <ele id='INS02'>18</ele>
+                           </seg>
                         </loop>
                         <!--Dependent Name Loop-->
                         <loop id="2000D">
@@ -206,6 +203,11 @@
                                  <ele id="NM106">claim_json.payee.name.0.prefix</ele>
                                  <ele id="NM107">claim_json.payee.name.0.suffix</ele>
                               </seg>
+                               <!--Dependent Supplemental Identification-->
+                               <seg id='REF'>
+                                   <ele id='REF01'>SY</ele>
+                                   <ele id='REF02'>1705555</ele>
+                               </seg>
                               <seg id="N3">
                                  <ele id="N301">claim_json.payee.address.0.line.0</ele>
                                  <ele id="N302">claim_json.payee.address.0.line.1</ele>
@@ -222,11 +224,10 @@
                                  <ele id="DMG03">claim_json.payee.gender</ele>
                               </seg>
                               <!--Subscriber Relationship-->
-                              <!--<seg id='INS'>-->
-                              <!--<ele id='INS01'>Y</ele>-->
-                              <!--<ele id='INS02'>1</ele>-->
-                              <!--<ele id='INS08'>22</ele>-->
-                              <!--</seg>-->
+                              <seg id='INS'>
+                                  <ele id='INS01'>N</ele>
+                                  <ele id='INS02'>01</ele>
+                              </seg>
                               <!--<seg id='PER'>-->
                               <!--<ele id='PER03'>TE</ele>-->
                               <!--<ele id='PER04'>claim_json.payee.telecom.0.value</ele>-->
@@ -241,11 +242,12 @@
                                <ele id='HL03'>24</ele>
                                <ele id='HL04'>1</ele>
                              </seg>
-                              <!--&lt;!&ndash;Patient Event Tracking Number&ndash;&gt;-->
-                              <!--<seg id='TRN'>-->
-                              <!--<ele id='TRN02'>Reference Identification</ele>-->
-                              <!--<ele id='TRN04'>Reference Identification</ele>-->
-                              <!--</seg>-->
+                              <!--Patient Event Tracking Number-->
+                              <seg id='TRN'>
+                                  <ele id='TRN01'>1</ele>
+                                  <ele id='TRN02'>201503251246005544</ele>
+                                  <ele id='TRN03'>1238946</ele>
+                              </seg>
                               <seg id="UM">
                                  <ele id="UM01">IN</ele>
                                  <ele id="UM02">I</ele>
@@ -272,14 +274,15 @@
                                  <!--<ele id='UM10'>Y</ele>-->
                               </seg>
                               <!--Previous Review Authorization Number-->
-                              <!--<seg id="REF">-->
-                              <!--<ele id="REF02">N</ele>-->
-                              <!--</seg>-->
+                              <seg id="REF">
+                                  <ele id="REF01">BB</ele>
+                                  <ele id="REF02">456</ele>
+                              </seg>
                               <!--Previous Review Administrative Reference Number-->
                               <!--<seg id="REF">-->
-                              <!--<ele id="REF01">NT</ele>-->
-                              <!--Reference Identification Qualifier-->
-                              <!--<ele id="REF02">N</ele>-->
+                                  <!--<ele id="REF01">NT</ele>-->
+                                  <!--&lt;!&ndash;Reference Identification Qualifier&ndash;&gt;-->
+                                  <!--<ele id="REF02">N</ele>-->
                               <!--</seg>-->
                               <!--Accident date-->
                               <seg id="DTP">
@@ -300,11 +303,11 @@
                               <!--<ele id='DTP03'>claim_json.accident.date</ele>-->
                               <!--</seg>-->
                               <!--Onset of Current Symptoms or Illness Date-->
-                              <!--<seg id='DTP'>-->
-                              <!--<ele id='DTP01'>431</ele>-->
-                              <!--<ele id='DTP02'>D8</ele>-->
-                              <!--<ele id='DTP03'>claim_json.accident.date</ele>-->
-                              <!--</seg>-->
+                              <seg id='DTP'>
+                                  <ele id='DTP01'>431</ele>
+                                  <ele id='DTP02'>D8</ele>
+                                  <ele id='DTP03'>12082019</ele>
+                              </seg>
                               <!--Event Date-->
                               <!--<seg id='DTP'>-->
                               <!--<ele id='DTP01'>AAH</ele>-->
@@ -333,8 +336,14 @@
                                  <!--</comp>-->
                               </seg>
                               <!--Health Care Services Delivery-->
-                              <!--<seg id='HSD'>-->
-                              <!--</seg>-->
+                              <seg id='HSD'>
+                                  <ele id='HSD01'>HS</ele>
+                                  <ele id='HSD02'>1</ele>
+                                  <ele id='HSD03'>DA</ele>
+                                  <ele id='HSD05'>21</ele>
+                                  <ele id='HSD06'>4</ele>
+                                  <ele id='HSD07'>A</ele>
+                              </seg>
                               <!--Services Information-->
                               <!--Patient Condition Information-->
                               <!--Ambulance Certification Information-->
@@ -403,6 +412,10 @@
                                     <!--<ele id="NM108">MI</ele>-->
                                     <!--<ele id="NM109">claim_json.Practitioner.identifier.0.value</ele>-->
                                  </seg>
+                                  <seg id="REF">
+                                    <ele id="REF01">EI</ele>
+                                    <ele id="REF02">21</ele>
+                                </seg>
                                  <seg id="N3">
                                     <ele id="N301">claim_json.provider.address.0.line.0</ele>
                                     <ele id="N302">claim_json.provider.address.0.line.1</ele>
@@ -425,10 +438,11 @@
                                     <!--<ele id='PER08'>8005557444</ele>-->
                                  </seg>
                                  <!--Patient Event Provider Information-->
-                                 <!--<seg id='PRV'>-->
-                                 <!--<ele id='PRV02'>PXC</ele>-->
-                                 <!--<ele id='PRV03'>101Y00000X</ele>-->
-                                 <!--</seg>-->
+                                 <seg id='PRV'>
+                                     <ele id='PRV01'>AD</ele>
+                                     <ele id='PRV02'>PXC</ele>
+                                     <ele id='PRV03'>101Y00000X</ele>
+                                 </seg>
                                  <!--Patient Event Transport Information-->
                                  <!--<loop id="2010EB">-->
                                  <!--<seg id="NM1">-->
@@ -482,10 +496,11 @@
                                   <ele id='HL04'>0</ele>
                                 </seg>
                                  <!--Service Trace Number-->
-                                 <!--<seg id='TRN'>-->
-                                 <!--<ele id='TRN02'>IN</ele>-->
-                                 <!--<ele id='TRN03'>I</ele>-->
-                                 <!--</seg>-->
+                                 <seg id='TRN'>
+                                  <ele id='TRN01'>1</ele>
+                                  <ele id='TRN02'>201503251246005544</ele>
+                                  <ele id='TRN03'>1238946</ele>
+                              </seg>
                                  <!--Health Care Services Review Information-->
                                  <seg id="UM" name="Procedure">
                                     <!--Request Category Code-->
@@ -501,15 +516,15 @@
                                     </comp>
                                  </seg>
                                  <!--Previous Review Authorization -->
-                                 <!--<seg id="REF">-->
-                                 <!--&lt;!&ndash;Previous Review Authorization Number&ndash;&gt;-->
-                                 <!--<ele id="REF02">claim_json.insurance.preAuthRef</ele>-->
-                                 <!--</seg>-->
+                                 <seg id="REF">
+                                  <ele id="REF01">BB</ele>
+                                  <ele id="REF02">456</ele>
+                                 </seg>
                                  <!--Previous Review Administrative Reference Number-->
-                                 <!--<seg id="REF">-->
-                                 <!--<ele id="REF01">1G</ele>-->
-                                 <!--<ele id="REF02">claim_json.Practitioner.identifier.0.value</ele>-->
-                                 <!--</seg>-->
+                                 <seg id="REF">
+                                 <ele id="REF01">NT</ele>
+                                 <ele id="REF02">768</ele>
+                                 </seg>
                                  <!--Service date-->
                                  <seg id="DTP">
                                     <ele id="DTP01">472</ele>
