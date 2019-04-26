@@ -59,10 +59,6 @@
                         <ele id="NM101">umo_code</ele>
                         <ele id="NM102">2</ele>
                         <ele id="NM103">claim_json.insurer.name</ele>
-                        <!--<ele id="NM104">claim_json.insurer.name.0.given.0</ele>-->
-                        <!--<ele id="NM105">claim_json.insurer.name.0.given.1</ele>-->
-                        <!--<ele id="NM106">claim_json.insurer.name.0.prefix</ele>-->
-                        <!--<ele id="NM107">claim_json.insurer.name.0.suffix</ele>-->
                         <ele id="NM108">umo_id</ele>
                         <ele id="NM109">claim_json.insurer.identifier.0.value</ele>
                      </seg>
@@ -87,10 +83,10 @@
                            <ele id="NM108">requestor_id</ele>
                            <ele id="NM109">claim_json.enterer.identifier.0.value</ele>
                         </seg>
-                        <!--<seg id="REF">-->
-                        <!--<ele id="REF01">EI</ele>-->
-                        <!--<ele id="REF02">Requestor Supplemental Identifier</ele>-->
-                        <!--</seg>-->
+                        <seg id="REF">
+                            <ele id="REF01">EI</ele>
+                            <ele id="REF02">Requestor Supplemental Identifier</ele>
+                        </seg>
                         <seg id="N3">
                            <ele id="N301">claim_json.enterer.address.0.line.0</ele>
                            <ele id="N302">claim_json.enterer.address.0.line.1</ele>
@@ -209,8 +205,6 @@
                                  <ele id="NM105">claim_json.payee.name.0.given.1</ele>
                                  <ele id="NM106">claim_json.payee.name.0.prefix</ele>
                                  <ele id="NM107">claim_json.payee.name.0.suffix</ele>
-                                 <!--<ele id="NM108">MI</ele>-->
-                                 <!--<ele id="NM109">claim_json.payee.identifier.0.value</ele>-->
                               </seg>
                               <seg id="N3">
                                  <ele id="N301">claim_json.payee.address.0.line.0</ele>

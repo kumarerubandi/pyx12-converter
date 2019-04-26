@@ -52,40 +52,40 @@ def convertToX12():
         # UMO
         if loop_elem.attrib['id'] == '2010A':
             if 'insurer' in claim_json:
-                loopA(loop_elem, claim_json)
+                response['x12_response'] = loopA(loop_elem, claim_json,response['x12_response'])
                 # print "loopA----------", ET.tostring(loop_elem)
             else:
                 response['x12_response']+= "The Payer Information is missing."
         # Requestor Name
         elif loop_elem.attrib['id'] == '2010B':
             if 'enterer' in claim_json:
-                loopB(loop_elem,claim_json)
+                response['x12_response'] = loopB(loop_elem,claim_json,response['x12_response'])
                 # print "loopB----------", ET.tostring(loop_elem)
             else:
                 response['x12_response'] += "The Requester Information is missing."
         # Subscriber Name
         elif loop_elem.attrib['id'] == '2010C':
             if 'patient' in claim_json:
-                loopC(loop_elem, claim_json)
+                response['x12_response'] = loopC(loop_elem, claim_json,response['x12_response'])
                 # print "loopC----------", ET.tostring(loop_elem)
             else:
                 response['x12_response'] += "The Subscriber Information is missing."
         #Dependent Name
         elif loop_elem.attrib['id'] == '2010D':
             if 'payee' in claim_json:
-                loopD(loop_elem, claim_json)
+                response['x12_response'] = loopD(loop_elem, claim_json,response['x12_response'])
                 # print "loopD----------", ET.tostring(loop_elem)
             else:
                 response['x12_response'] += "The Dependent Information is missing."
         elif loop_elem.attrib['id'] == '2000E':
             if 'diagnosis' in claim_json:
-                loopE(loop_elem, claim_json)
+                response['x12_response'] = loopE(loop_elem, claim_json,response['x12_response'])
                 # print "loop E---------", ET.tostring(loop_elem)
             else:
                 response['x12_response'] += "The Patient Level Diagnosis Information is missing."
         elif loop_elem.attrib['id'] == '2010EA':
             if 'provider' in claim_json:
-                loopEA(loop_elem, claim_json)
+                response['x12_response'] = loopEA(loop_elem, claim_json,response['x12_response'])
             else:
                 response['x12_response'] += "The Patient Level Provider Information is missing."
 
@@ -148,15 +148,18 @@ def convertToX12():
     return json.dumps(response)
 
 
-def loopA(loop_elem, claim_json):
+def loopA(loop_elem, claim_json,response):
     insurer = {}
     seg_children = loop_elem.getchildren()
     if 'contained' in claim_json:
         for c in claim_json['contained']:
             if 'id' in c:
-                if c['id'] == claim_json['insurer']['reference'][1:]:
-                    insurer = c
-                    break
+                if 'insurer' in claim_json:
+                    if 'reference' in claim_json['insurer']:
+                        if c['id'] == claim_json['insurer']['reference'][1:]:
+                            insurer = c
+                            break
+
     if insurer:
         for seg_child in seg_children[:]:
             if seg_child.attrib['id'] == 'NM1':
@@ -169,8 +172,11 @@ def loopA(loop_elem, claim_json):
                     if element_child.attrib['id'] == 'NM109':
                         payer.loopA_umo_id_value(element_child, insurer['resourceType'])
         modify_name(loop_elem,insurer)
+    else:
+        response += "The Payer Information is missing."
+    return response
 
-def loopB(loop_elem,claim_json):
+def loopB(loop_elem,claim_json,response):
     req = {'id': '', 'value': ''}
     enterer = {}
     seg_children = loop_elem.getchildren()
@@ -178,8 +184,11 @@ def loopB(loop_elem,claim_json):
         # print " before element_child.text.....", element_child.text, element_child.tag
         if 'resourceType' in c:
             if 'id' in c:
-                if c['id'] == claim_json['enterer']['reference'][1:]:
-                    enterer = c
+                if 'enterer' in claim_json:
+                    if 'reference' in claim_json['enterer']:
+                        if c['id'] == claim_json['enterer']['reference'][1:]:
+                            enterer = c
+
     if enterer:
         for seg_child in seg_children[:]:
             if seg_child.attrib['id'] == 'NM1':
@@ -195,6 +204,9 @@ def loopB(loop_elem,claim_json):
                             element_child.text = req_id['id']
                         if element_child.attrib['id'] == 'NM109':
                             element_child.text = req_id['value']
+                    else:
+                        if element_child.attrib['id'] == 'NM108' or element_child.attrib['id'] == 'NM109':
+                            seg_child.remove(element_child)
                     # if enterer['resourceType']== 'Location':
                     #     if element_child.attrib['id'] == 'NM104':
                     #         # print "seg child",element_child.attrib
@@ -221,53 +233,78 @@ def loopB(loop_elem,claim_json):
                 else:
                     loop_elem.remove(seg_child)
         modify_name(loop_elem, enterer)
+    else:
+        response += "The Requester Information is missing."
+    return response
 
-def loopC(loop_elem, claim_json):
+def loopC(loop_elem, claim_json,response):
     seg_children = loop_elem.getchildren()
     patient = {}
     if 'contained' in claim_json:
         for c in claim_json['contained']:
             if 'id' in c:
-                if c['id'] == claim_json['patient']['reference'][1:]:
-                    patient = c
-                    break
+                if 'patient' in claim_json:
+                    if 'reference' in claim_json['patient']:
+                        if c['id'] == claim_json['patient']['reference'][1:]:
+                            patient = c
+                            break
     if patient:
         for seg_child in seg_children[:]:
             if seg_child.attrib['id'] == 'NM1':
                 element_children = seg_child.getchildren()
                 for element_child in element_children[:]:
-                    if element_child.attrib['id'] == 'NM108':
-                        payer.loopC_identifier_code_id(element_child, patient['resourceType'])
+                    if 'identifier' in patient:
+                        if element_child.attrib['id'] == 'NM108':
+                            payer.loopC_identifier_code_id(element_child, patient['resourceType'])
+                    else:
+                        if element_child.attrib['id'] == 'NM108' or element_child.attrib['id'] == 'NM109':
+                            seg_child.remove(element_child)
         modify_name(loop_elem,patient)
+    else:
+        response += "The Patient Information is missing."
+    return response
 
-def loopD(loop_elem, claim_json):
+def loopD(loop_elem, claim_json,response):
     dependent = {}
     for c in claim_json['contained']:
         if 'resourceType' in c:
             if 'id' in c:
-                if c['id'] == claim_json['payee']['party']['reference'][1:]:
-                    if c['resourceType'] == 'RelatedPerson':
-                        dependent = c
+                if 'payee' in claim_json:
+                    if 'party' in claim_json['payee']:
+                        if 'reference' in claim_json['payee']['party']:
+                            if c['id'] == claim_json['payee']['party']['reference'][1:]:
+                                # if c['resourceType'] == 'RelatedPerson':
+                                dependent = c
     if dependent:
-        seg_children = loop_elem.getchildren()
-        for seg_child in seg_children[:]:
-            if seg_child.attrib['id'] == 'NM1':
-                element_children = seg_child.getchildren()
-                for element_child in element_children[:]:
-                    if element_child.attrib['id'] == 'NM108':
-                        payer.loopD_identifier_code_id(element_child, dependent['resourceType'])
+        # seg_children = loop_elem.getchildren()
+        # for seg_child in seg_children[:]:
+        #     if seg_child.attrib['id'] == 'NM1':
+        #         element_children = seg_child.getchildren()
+        #         for element_child in element_children[:]:
+        #             if 'identifier' in dependent:
+        #                 if element_child.attrib['id'] == 'NM108':
+        #                     payer.loopD_identifier_code_id(element_child, dependent['resourceType'])
+        #             else:
+        #                 if element_child.attrib['id'] == 'NM108' or element_child.attrib['id'] == 'NM109':
+        #                     seg_child.remove(element_child)
+
         modify_name(loop_elem, dependent)
+    else:
+        response += "The Dependent Information is missing."
+    return response
 
-
-def loopE(loop_elem, claim_json):
+def loopE(loop_elem, claim_json,response):
     seg_children = loop_elem.getchildren()
     for seg_child in seg_children[:]:
         if seg_child.attrib['id'] == 'UM':
             element_children = seg_child.getchildren()
             for element_child in element_children[:]:
                 if element_child.attrib['id'] == 'UM03':
-                    if 'code' in claim_json['healthCareService']:
-                        element_child.text = claim_json['healthCareService']['code']
+                    if 'healthCareService' in claim_json:
+                        if 'code' in claim_json['healthCareService']:
+                            element_child.text = claim_json['healthCareService']['code']
+                        else:
+                            seg_child.remove(element_child)
                     else:
                         seg_child.remove(element_child)
                 elif element_child.attrib['id'] == 'UM04':
@@ -295,17 +332,19 @@ def loopE(loop_elem, claim_json):
         if seg_child.attrib['id'] == 'HI':
             if len(claim_json['diagnosis'])>0:
                 modify_conditions(claim_json['diagnosis'], seg_child, claim_json)
+    return response
 
 
-
-def loopEA(loop_elem, claim_json):
+def loopEA(loop_elem, claim_json,response):
     provider = {}
     if 'contained' in claim_json:
         for c in claim_json['contained']:
             if 'id' in c:
-                if c['id'] == claim_json['provider']['reference'][1:]:
-                    provider = c
-                    break
+                if 'provider' in claim_json:
+                    if 'reference' in claim_json['provider']:
+                        if c['id'] == claim_json['provider']['reference'][1:]:
+                            provider = c
+                            break
     if provider:
         if 'resourceType' in provider:
             if provider['resourceType'] == 'Organization':
@@ -338,7 +377,9 @@ def loopEA(loop_elem, claim_json):
                         else:
                             loop_elem.remove(seg_child)
         modify_name(loop_elem, provider)
-
+    else:
+        response += "The Patient Level Provider Information is missing."
+    return response
 
 def loop2000F(loop_elem, claim_json,procedure_codes,procedure_desc):
     claim_type = ""
@@ -352,9 +393,14 @@ def loop2000F(loop_elem, claim_json,procedure_codes,procedure_desc):
             for element_child in element_children[:]:
                 if element_child.attrib['id'] == 'UM02':
                     payer.loop2000F_certification_code(element_child)
-                if element_child.attrib['id'] == 'UM03' and 'healthCareService' in claim_json:
-                    if 'code' in claim_json['healthCareService']:
-                        element_child.text = claim_json['healthCareService']['code']
+                if element_child.attrib['id'] == 'UM03':
+                    if 'healthCareService' in claim_json:
+                        if 'code' in claim_json['healthCareService']:
+                            element_child.text = claim_json['healthCareService']['code']
+                        else:
+                            seg_child.remove(element_child)
+                    else:
+                        seg_child.remove(element_child)
                 if element_child.attrib['id'] == 'UM04':
                     if 'facility' in claim_json:
                         if 'type' in claim_json['facility']:
@@ -485,8 +531,10 @@ def loop2010F(claim_json, pa_xml,careTeamSeq):
         for c in claim_json['contained']:
             for p in careTeam_final:
                 if 'id' in c:
-                    if c['id'] == p['provider']['reference'][1:]:
-                        providers.append(c)
+                    if 'provider' in p:
+                        if 'reference' in p['provider']:
+                            if c['id'] == p['provider']['reference'][1:]:
+                                providers.append(c)
     final_array = []
     z = 0
     for p in providers:
