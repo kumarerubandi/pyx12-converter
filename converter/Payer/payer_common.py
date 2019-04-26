@@ -90,7 +90,7 @@ def convertToX12():
                 response['x12_response'] += "The Patient Level Provider Information is missing."
 
         elif loop_elem.attrib['id'] == '2000F':
-            if 'item' in claim_json:
+            if 'item' in claim_json and len(claim_json['item'])>0:
                 if 'procedureSequence' in claim_json['item'][0] and 'procedure' in claim_json:
                     procedure_codes = []
                     procedures = []
@@ -180,14 +180,15 @@ def loopB(loop_elem,claim_json,response):
     req = {'id': '', 'value': ''}
     enterer = {}
     seg_children = loop_elem.getchildren()
-    for c in claim_json['contained']:
-        # print " before element_child.text.....", element_child.text, element_child.tag
-        if 'resourceType' in c:
-            if 'id' in c:
-                if 'enterer' in claim_json:
-                    if 'reference' in claim_json['enterer']:
-                        if c['id'] == claim_json['enterer']['reference'][1:]:
-                            enterer = c
+    if 'contained' in claim_json:
+        for c in claim_json['contained']:
+            # print " before element_child.text.....", element_child.text, element_child.tag
+            if 'resourceType' in c:
+                if 'id' in c:
+                    if 'enterer' in claim_json:
+                        if 'reference' in claim_json['enterer']:
+                            if c['id'] == claim_json['enterer']['reference'][1:]:
+                                enterer = c
 
     if enterer:
         for seg_child in seg_children[:]:
@@ -266,15 +267,16 @@ def loopC(loop_elem, claim_json,response):
 
 def loopD(loop_elem, claim_json,response):
     dependent = {}
-    for c in claim_json['contained']:
-        if 'resourceType' in c:
-            if 'id' in c:
-                if 'payee' in claim_json:
-                    if 'party' in claim_json['payee']:
-                        if 'reference' in claim_json['payee']['party']:
-                            if c['id'] == claim_json['payee']['party']['reference'][1:]:
-                                # if c['resourceType'] == 'RelatedPerson':
-                                dependent = c
+    if 'contained' in claim_json:
+        for c in claim_json['contained']:
+            if 'resourceType' in c:
+                if 'id' in c:
+                    if 'payee' in claim_json:
+                        if 'party' in claim_json['payee']:
+                            if 'reference' in claim_json['payee']['party']:
+                                if c['id'] == claim_json['payee']['party']['reference'][1:]:
+                                    # if c['resourceType'] == 'RelatedPerson':
+                                    dependent = c
     if dependent:
         # seg_children = loop_elem.getchildren()
         # for seg_child in seg_children[:]:
@@ -617,11 +619,12 @@ def modify_conditions(condition_values, seg_child,claim_json):
         diagnosis = {}
         if 'diagnosisReference' in condition_values[z]:
             if 'reference' in condition_values[z]['diagnosisReference']:
-                for diag in claim_json['contained']:
-                    if 'id' in diag:
-                        if diag['id'] == condition_values[z]['diagnosisReference']['reference'][1:]:
-                            diagnosis = diag
-                            break
+                if 'contained' in claim_json:
+                    for diag in claim_json['contained']:
+                        if 'id' in diag:
+                            if diag['id'] == condition_values[z]['diagnosisReference']['reference'][1:]:
+                                diagnosis = diag
+                                break
         if diagnosis:
             if 'onsetDateTime' in diagnosis:
                 date_iden = ET._Element("subele", {'id': dtp})
