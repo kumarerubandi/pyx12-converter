@@ -46,48 +46,48 @@ def convertToX12():
     # claim_json = json.loads(get_json())
     pa_xml = standard_278.getroot()
     loop_elems = [element for element in pa_xml.getiterator() if element.tag=='loop']
-    response= {"x12_response":""}
+    response= {"x12_response":"","error":""}
     for loop_elem in loop_elems[:]:
         # print "loop elem---",loop_elem.attrib['id']
         # UMO
         if loop_elem.attrib['id'] == '2010A':
             if 'insurer' in claim_json:
-                response['x12_response'] = loopA(loop_elem, claim_json,response['x12_response'])
+                response['error'] = loopA(loop_elem, claim_json,response['error'])
                 # print "loopA----------", ET.tostring(loop_elem)
             else:
-                response['x12_response']+= "The Payer Information is missing."
+                response['error']+= "The Payer Information is missing."
         # Requestor Name
         elif loop_elem.attrib['id'] == '2010B':
             if 'enterer' in claim_json:
-                response['x12_response'] = loopB(loop_elem,claim_json,response['x12_response'])
+                response['error'] = loopB(loop_elem,claim_json,response['error'])
                 # print "loopB----------", ET.tostring(loop_elem)
             else:
-                response['x12_response'] += "The Requester Information is missing."
+                response['error'] += "The Requester Information is missing."
         # Subscriber Name
         elif loop_elem.attrib['id'] == '2010C':
             if 'patient' in claim_json:
-                response['x12_response'] = loopC(loop_elem, claim_json,response['x12_response'])
+                response['error'] = loopC(loop_elem, claim_json,response['error'])
                 # print "loopC----------", ET.tostring(loop_elem)
             else:
-                response['x12_response'] += "The Subscriber Information is missing."
+                response['error'] += "The Subscriber Information is missing."
         #Dependent Name
         elif loop_elem.attrib['id'] == '2010D':
             if 'payee' in claim_json:
-                response['x12_response'] = loopD(loop_elem, claim_json,response['x12_response'])
+                response['error'] = loopD(loop_elem, claim_json,response['error'])
                 # print "loopD----------", ET.tostring(loop_elem)
             else:
-                response['x12_response'] += "The Dependent Information is missing."
+                response['error'] += "The Dependent Information is missing."
         elif loop_elem.attrib['id'] == '2000E':
             if 'diagnosis' in claim_json:
-                response['x12_response'] = loopE(loop_elem, claim_json,response['x12_response'])
+                response['error'] = loopE(loop_elem, claim_json,response['error'])
                 # print "loop E---------", ET.tostring(loop_elem)
             else:
-                response['x12_response'] += "The Patient Level Diagnosis Information is missing."
+                response['error'] += "The Patient Level Diagnosis Information is missing."
         elif loop_elem.attrib['id'] == '2010EA':
             if 'provider' in claim_json:
-                response['x12_response'] = loopEA(loop_elem, claim_json,response['x12_response'])
+                response['error'] = loopEA(loop_elem, claim_json,response['error'])
             else:
-                response['x12_response'] += "The Patient Level Provider Information is missing."
+                response['error'] += "The Patient Level Provider Information is missing."
 
         elif loop_elem.attrib['id'] == '2000F':
             if 'item' in claim_json and len(claim_json['item'])>0:
@@ -112,7 +112,7 @@ def convertToX12():
                     loop2000F(loop_elem, claim_json,procedure_codes, procedure_desc)
 
                 else:
-                    response['x12_response'] += "The Service Level Procedure Information is missing."
+                    response['error'] += "The Service Level Procedure Information is missing."
             else:
                 loop_2000e = [element for element in pa_xml.getiterator() if
                               element.tag == 'loop' and element.attrib['id'] == '2000E']
@@ -140,7 +140,7 @@ def convertToX12():
         seg_num =seg_num+1
     st_elem[0].text = str(int(seg_num-4))
     # print "final----------", ET.tostring(pa_xml)
-    if response['x12_response'] == '':
+    if response['error'] == '':
         output_x12 = converter.convertXMLToX12(ET.tostring(pa_xml))
         if output_x12:
             print "---------", str(output_x12.replace('~', '~\n'))
