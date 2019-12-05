@@ -38,13 +38,13 @@ def get_json():
 
 @app.route('/xmlx12', methods=['POST','GET'])
 def convertToX12():
-    # req_json = json.loads(request.data)
-    # if 'claim_json' in req_json:
-    #    claim_json = req_json['claim_json']
+    req_json = json.loads(request.data)
+    if 'claim_json' in req_json:
+        claim_bundle = req_json['claim_json']
     #print "-------",claim_json
     standard_278 = ET.parse("standard_278.xml")
     response = {"x12_response": "", "error": ""}
-    claim_bundle = json.loads(get_json())
+    # claim_bundle = json.loads(get_json())
     claim_json = {}
     # print "-------", claim_bundle
     if 'entry' in claim_bundle:
@@ -57,96 +57,96 @@ def convertToX12():
         pa_xml = standard_278.getroot()
         loop_elems = [element for element in pa_xml.getiterator() if element.tag=='loop']
 
-        # try:
-        for loop_elem in loop_elems[:]:
-            # UMO
-            if loop_elem.attrib['id'] == '2010A':
-                if 'insurer' in claim_json:
-                    response['error'] = loopA(loop_elem, claim_bundle['entry'],claim_json,response['error'])
-                    # print "loopA----------", ET.tostring(loop_elem)
-                else:
-                    response['error']+= "The Payer Information is missing."
-            # Requestor Name
-            elif loop_elem.attrib['id'] == '2010B':
-                if 'enterer' in claim_json:
-                    response['error'] = loopB(loop_elem, claim_bundle['entry'],claim_json,response['error'])
-                    # print "loopB----------", ET.tostring(loop_elem)
-                else:
-                    response['error'] += "The Requester Information is missing."
-            # Subscriber Name
-            elif loop_elem.attrib['id'] == '2010C':
-                if 'patient' in claim_json:
-                    response['error'] = loopC(loop_elem, claim_bundle['entry'], claim_json,response['error'])
-                    # print "loopC----------", ET.tostring(loop_elem)
-                else:
-                    response['error'] += "The Subscriber Information is missing."
-            #Dependent Name
-            elif loop_elem.attrib['id'] == '2010D':
-                if 'payee' in claim_json:
-                    response['error'] = loopD(loop_elem, claim_bundle['entry'], claim_json,response['error'])
-                    # print "loopD----------", ET.tostring(loop_elem)
-                # else:
-                #     response['error'] += "The Dependent Information is missing."
-                else:
-                    loop_2010d = [element for element in pa_xml.getiterator() if
-                                  element.tag == 'loop' and element.attrib['id'] == '2000D']
-                    if len(loop_2010d)>0:
-                        loop_2010d[0].remove(loop_elem)
-            elif loop_elem.attrib['id'] == '2000E':
-                if 'diagnosis' in claim_json:
-                    response['error'] = loopE(loop_elem, claim_bundle['entry'], claim_json,response['error'])
-                    # print "loop E---------", ET.tostring(loop_elem)
-                else:
-                    response['error'] += "The Patient Level Diagnosis Information is missing."
-            elif loop_elem.attrib['id'] == '2010EA':
-                if 'provider' in claim_json:
-                    response['error'] = loopEA(loop_elem, claim_bundle['entry'], claim_json,response['error'])
-                else:
-                    response['error'] += "The Patient Level Provider Information is missing."
-
-            elif loop_elem.attrib['id'] == '2000F':
-                if 'item' in claim_json and len(claim_json['item'])>0:
-                    if 'procedureSequence' in claim_json['item'][0] and 'procedure' in claim_json:
-                        procedure_codes = []
-                        procedures = []
-                        procedure_desc = []
-                        service_code = ''
-                        for d in claim_json['procedure']:
-                            i = 0
-                            while i < len(claim_json['item'][0]['procedureSequence']):
-                                if 'sequence' in d:
-                                    if d['sequence'] == claim_json['item'][0]['procedureSequence'][i]:
-                                        procedures.append(d)
-                                i = i + 1
-                        for p in procedures:
-                            if 'procedureCodeableConcept' in p:
-                                if 'coding' in p['procedureCodeableConcept']:
-                                    procedure_codes.append(p['procedureCodeableConcept']['coding'][0]['code'])
-                                if 'text' in p['procedureCodeableConcept']:
-                                    procedure_desc.append(p['procedureCodeableConcept']['text'])
-                        loop2000F(loop_elem, claim_bundle['entry'], claim_json,procedure_codes, procedure_desc)
-
-                    # else:
-                    #     response['error'] += "The Service Level Procedure Information is missing."
-                else:
-                    loop_2000e = [element for element in pa_xml.getiterator() if
-                                  element.tag == 'loop' and element.attrib['id'] == '2000E']
-                    if len(loop_2000e)>0:
-                        loop_2000e[0].remove(loop_elem)
-                    # response['x12_response'] += "The Service Level Information is missing."
-            # Service Provider
-            elif loop_elem.attrib['id'] == '2010F':
-                if 'item' in claim_json:
-                    if 'careTeamSequence' in claim_json['item'][0] and 'careTeam' in claim_json:
-                        loop2010F(claim_json, claim_bundle['entry'], pa_xml,claim_json['item'][0]['careTeamSequence'])
+        try:
+            for loop_elem in loop_elems[:]:
+                # UMO
+                if loop_elem.attrib['id'] == '2010A':
+                    if 'insurer' in claim_json:
+                        response['error'] = loopA(loop_elem, claim_bundle['entry'],claim_json,response['error'])
+                        # print "loopA----------", ET.tostring(loop_elem)
                     else:
-                        loop_2000f = [element for element in pa_xml.getiterator() if element.tag == 'loop' and element.attrib['id']=='2000F']
-                        if len(loop_2000f)>0:
-                            loop_2000f[0].remove(loop_elem)
-                    # response['x12_response'] += "The Care Team Information is missing."
+                        response['error']+= "The Payer Information is missing."
+                # Requestor Name
+                elif loop_elem.attrib['id'] == '2010B':
+                    if 'enterer' in claim_json:
+                        response['error'] = loopB(loop_elem, claim_bundle['entry'],claim_json,response['error'])
+                        # print "loopB----------", ET.tostring(loop_elem)
+                    else:
+                        response['error'] += "The Requester Information is missing."
+                # Subscriber Name
+                elif loop_elem.attrib['id'] == '2010C':
+                    if 'patient' in claim_json:
+                        response['error'] = loopC(loop_elem, claim_bundle['entry'], claim_json,response['error'])
+                        # print "loopC----------", ET.tostring(loop_elem)
+                    else:
+                        response['error'] += "The Subscriber Information is missing."
+                #Dependent Name
+                elif loop_elem.attrib['id'] == '2010D':
+                    if 'payee' in claim_json:
+                        response['error'] = loopD(loop_elem, claim_bundle['entry'], claim_json,response['error'])
+                        # print "loopD----------", ET.tostring(loop_elem)
+                    # else:
+                    #     response['error'] += "The Dependent Information is missing."
+                    else:
+                        loop_2010d = [element for element in pa_xml.getiterator() if
+                                      element.tag == 'loop' and element.attrib['id'] == '2000D']
+                        if len(loop_2010d)>0:
+                            loop_2010d[0].remove(loop_elem)
+                elif loop_elem.attrib['id'] == '2000E':
+                    if 'diagnosis' in claim_json:
+                        response['error'] = loopE(loop_elem, claim_bundle['entry'], claim_json,response['error'])
+                        # print "loop E---------", ET.tostring(loop_elem)
+                    else:
+                        response['error'] += "The Patient Level Diagnosis Information is missing."
+                elif loop_elem.attrib['id'] == '2010EA':
+                    if 'provider' in claim_json:
+                        response['error'] = loopEA(loop_elem, claim_bundle['entry'], claim_json,response['error'])
+                    else:
+                        response['error'] += "The Patient Level Provider Information is missing."
 
-        # except:
-        #     response['error'] = "The X12 could not be created!!"
+                elif loop_elem.attrib['id'] == '2000F':
+                    if 'item' in claim_json and len(claim_json['item'])>0:
+                        if 'procedureSequence' in claim_json['item'][0] and 'procedure' in claim_json:
+                            procedure_codes = []
+                            procedures = []
+                            procedure_desc = []
+                            service_code = ''
+                            for d in claim_json['procedure']:
+                                i = 0
+                                while i < len(claim_json['item'][0]['procedureSequence']):
+                                    if 'sequence' in d:
+                                        if d['sequence'] == claim_json['item'][0]['procedureSequence'][i]:
+                                            procedures.append(d)
+                                    i = i + 1
+                            for p in procedures:
+                                if 'procedureCodeableConcept' in p:
+                                    if 'coding' in p['procedureCodeableConcept']:
+                                        procedure_codes.append(p['procedureCodeableConcept']['coding'][0]['code'])
+                                    if 'text' in p['procedureCodeableConcept']:
+                                        procedure_desc.append(p['procedureCodeableConcept']['text'])
+                            loop2000F(loop_elem, claim_bundle['entry'], claim_json,procedure_codes, procedure_desc)
+
+                        # else:
+                        #     response['error'] += "The Service Level Procedure Information is missing."
+                    else:
+                        loop_2000e = [element for element in pa_xml.getiterator() if
+                                      element.tag == 'loop' and element.attrib['id'] == '2000E']
+                        if len(loop_2000e)>0:
+                            loop_2000e[0].remove(loop_elem)
+                        # response['x12_response'] += "The Service Level Information is missing."
+                # Service Provider
+                elif loop_elem.attrib['id'] == '2010F':
+                    if 'item' in claim_json:
+                        if 'careTeamSequence' in claim_json['item'][0] and 'careTeam' in claim_json:
+                            loop2010F(claim_json, claim_bundle['entry'], pa_xml,claim_json['item'][0]['careTeamSequence'])
+                        else:
+                            loop_2000f = [element for element in pa_xml.getiterator() if element.tag == 'loop' and element.attrib['id']=='2000F']
+                            if len(loop_2000f)>0:
+                                loop_2000f[0].remove(loop_elem)
+                        # response['x12_response'] += "The Care Team Information is missing."
+
+        except:
+            response['error'] = "The X12 could not be created!!"
         st_elem = [element for element in pa_xml.getiterator() if
                    element.text == 'segment_count']
         total_seg = [element for element in pa_xml.getiterator() if
