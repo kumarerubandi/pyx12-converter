@@ -1,0 +1,4807 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Claim",
+        "status": "active",
+        "type": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/claim-type",
+              "code": "professional",
+              "display": "Professional"
+            }
+          ]
+        },
+        "subType": {
+          "coding": [
+            {
+              "system": "https://www.cms.gov/codes/billtype",
+              "code": "41",
+              "display": "Hospital Outpatient Surgery performed in an Ambulatory ​Surgical Center"
+            }
+          ]
+        },
+        "use": "preauthorization",
+        "patient": {
+          "reference": "Patient/4342012"
+        },
+        "enterer": {
+          "reference": "Practitioner/1912007"
+        },
+        "provider": {
+          "reference": "Practitioner/1912007"
+        },
+        "insurer": {
+          "reference": "Organization/567"
+        },
+        "created": "2019-12-04",
+        "priority": {
+          "coding": [
+            {
+              "code": "normal"
+            }
+          ]
+        },
+        "supportingInfo": [
+          {
+            "sequence": 1,
+            "category": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/us/davinci-pas/CodeSystem/PASSupportingInfoType",
+                  "code": "patientEvent"
+                }
+              ]
+            },
+            "timingPeriod": {
+              "start": "2019-01-05T00:00:00-07:00",
+              "end": "2019-03-05T00:00:00-07:00"
+            }
+          },
+          {
+            "sequence": 2,
+            "category": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/claiminformationcategory",
+                  "code": "info",
+                  "display": "Information"
+                }
+              ]
+            },
+            "valueReference": {
+              "reference": "QuestionnaireResponse/response1"
+            }
+          }
+        ],
+        "careTeam": [
+          {
+            "sequence": 1,
+            "provider": {
+              "reference": "Practitioner/1912007"
+            },
+            "extension": [
+              {
+                "url": "http://terminology.hl7.org/ValueSet/v2-0912",
+                "valueCode": "OP"
+              }
+            ]
+          }
+        ],
+        "diagnosis": [
+          {
+            "sequence": 1,
+            "diagnosisReference": {
+              "reference": "Condition/p12909861"
+            }
+          },
+          {
+            "sequence": 2,
+            "diagnosisReference": {
+              "reference": "Condition/p13825865"
+            }
+          },
+          {
+            "sequence": 3,
+            "diagnosisReference": {
+              "reference": "Condition/p9281969"
+            }
+          },
+          {
+            "sequence": 4,
+            "diagnosisReference": {
+              "reference": "Condition/p11253869"
+            }
+          },
+          {
+            "sequence": 5,
+            "diagnosisReference": {
+              "reference": "Condition/p10721997"
+            }
+          },
+          {
+            "sequence": 6,
+            "diagnosisReference": {
+              "reference": "Condition/p10914233"
+            }
+          },
+          {
+            "sequence": 7,
+            "diagnosisReference": {
+              "reference": "Condition/p10914213"
+            }
+          },
+          {
+            "sequence": 8,
+            "diagnosisReference": {
+              "reference": "Condition/p11097861"
+            }
+          },
+          {
+            "sequence": 9,
+            "diagnosisReference": {
+              "reference": "Condition/p10537943"
+            }
+          },
+          {
+            "sequence": 10,
+            "diagnosisReference": {
+              "reference": "Condition/p11253877"
+            }
+          },
+          {
+            "sequence": 11,
+            "diagnosisReference": {
+              "reference": "Condition/p11253861"
+            }
+          },
+          {
+            "sequence": 12,
+            "diagnosisReference": {
+              "reference": "Condition/p13809879"
+            }
+          },
+          {
+            "sequence": 13,
+            "diagnosisReference": {
+              "reference": "Condition/p13817877"
+            }
+          },
+          {
+            "sequence": 14,
+            "diagnosisReference": {
+              "reference": "Condition/p11577925"
+            }
+          },
+          {
+            "sequence": 15,
+            "diagnosisReference": {
+              "reference": "Condition/p13817861"
+            }
+          },
+          {
+            "sequence": 16,
+            "diagnosisReference": {
+              "reference": "Condition/p12129861"
+            }
+          },
+          {
+            "sequence": 17,
+            "diagnosisReference": {
+              "reference": "Condition/p13733869"
+            }
+          },
+          {
+            "sequence": 18,
+            "diagnosisReference": {
+              "reference": "Condition/p12125961"
+            }
+          },
+          {
+            "sequence": 19,
+            "diagnosisReference": {
+              "reference": "Condition/p12998053"
+            }
+          },
+          {
+            "sequence": 20,
+            "diagnosisReference": {
+              "reference": "Condition/p10918009"
+            }
+          },
+          {
+            "sequence": 21,
+            "diagnosisReference": {
+              "reference": "Condition/p12089861"
+            }
+          },
+          {
+            "sequence": 22,
+            "diagnosisReference": {
+              "reference": "Condition/p13817909"
+            }
+          },
+          {
+            "sequence": 23,
+            "diagnosisReference": {
+              "reference": "Condition/p11577953"
+            }
+          },
+          {
+            "sequence": 24,
+            "diagnosisReference": {
+              "reference": "Condition/p10914205"
+            }
+          },
+          {
+            "sequence": 25,
+            "diagnosisReference": {
+              "reference": "Condition/p11125923"
+            }
+          },
+          {
+            "sequence": 26,
+            "diagnosisReference": {
+              "reference": "Condition/p11125899"
+            }
+          },
+          {
+            "sequence": 27,
+            "diagnosisReference": {
+              "reference": "Condition/p11249861"
+            }
+          },
+          {
+            "sequence": 28,
+            "diagnosisReference": {
+              "reference": "Condition/p12521861"
+            }
+          },
+          {
+            "sequence": 29,
+            "diagnosisReference": {
+              "reference": "Condition/p11081873"
+            }
+          },
+          {
+            "sequence": 30,
+            "diagnosisReference": {
+              "reference": "Condition/p12901943"
+            }
+          },
+          {
+            "sequence": 31,
+            "diagnosisReference": {
+              "reference": "Condition/p10877893"
+            }
+          },
+          {
+            "sequence": 32,
+            "diagnosisReference": {
+              "reference": "Condition/p11801869"
+            }
+          },
+          {
+            "sequence": 33,
+            "diagnosisReference": {
+              "reference": "Condition/p13817885"
+            }
+          },
+          {
+            "sequence": 34,
+            "diagnosisReference": {
+              "reference": "Condition/p13817869"
+            }
+          },
+          {
+            "sequence": 35,
+            "diagnosisReference": {
+              "reference": "Condition/p11125891"
+            }
+          },
+          {
+            "sequence": 36,
+            "diagnosisReference": {
+              "reference": "Condition/p13817901"
+            }
+          },
+          {
+            "sequence": 37,
+            "diagnosisReference": {
+              "reference": "Condition/p12073881"
+            }
+          },
+          {
+            "sequence": 38,
+            "diagnosisReference": {
+              "reference": "Condition/p10914273"
+            }
+          },
+          {
+            "sequence": 39,
+            "diagnosisReference": {
+              "reference": "Condition/p11533881"
+            }
+          },
+          {
+            "sequence": 40,
+            "diagnosisReference": {
+              "reference": "Condition/p11849869"
+            }
+          },
+          {
+            "sequence": 41,
+            "diagnosisReference": {
+              "reference": "Condition/p9957997"
+            }
+          },
+          {
+            "sequence": 42,
+            "diagnosisReference": {
+              "reference": "Condition/p11801861"
+            }
+          },
+          {
+            "sequence": 43,
+            "diagnosisReference": {
+              "reference": "Condition/p11577941"
+            }
+          },
+          {
+            "sequence": 44,
+            "diagnosisReference": {
+              "reference": "Condition/p13809871"
+            }
+          },
+          {
+            "sequence": 45,
+            "diagnosisReference": {
+              "reference": "Condition/p11501907"
+            }
+          },
+          {
+            "sequence": 46,
+            "diagnosisReference": {
+              "reference": "Condition/p13405865"
+            }
+          },
+          {
+            "sequence": 47,
+            "diagnosisReference": {
+              "reference": "Condition/p11125883"
+            }
+          },
+          {
+            "sequence": 48,
+            "diagnosisReference": {
+              "reference": "Condition/p10157899"
+            }
+          },
+          {
+            "sequence": 49,
+            "diagnosisReference": {
+              "reference": "Condition/p11553869"
+            }
+          },
+          {
+            "sequence": 50,
+            "diagnosisReference": {
+              "reference": "Condition/p13817893"
+            }
+          }
+        ],
+        "insurance": [
+          {
+            "sequence": 1,
+            "focal": true
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "QuestionnaireResponse",
+        "id": "response1",
+        "authored": "2019-12-04",
+        "status": "completed",
+        "item": [
+          {
+            "linkId": "1",
+            "text": "Beneficiary Information",
+            "item": [
+              {
+                "linkId": "1.1",
+                "text": "Beneficiary’s Name",
+                "answer": [
+                  {
+                    "valueString": "TIMMY  SMART"
+                  }
+                ]
+              },
+              {
+                "linkId": "1.2",
+                "text": "Beneficiary’s Date Of Birth",
+                "answer": [
+                  {
+                    "valueDate": "2015-02-20"
+                  }
+                ]
+              },
+              {
+                "linkId": "1.3",
+                "text": "Beneficiary’s Identification Number",
+                "answer": [
+                  {
+                    "valueString": "10002704"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "linkId": "2",
+            "text": "Certifying Physician/Practitioner Information",
+            "item": [
+              {
+                "linkId": "2.1",
+                "text": "Physician/Practitioner’s Name"
+              },
+              {
+                "linkId": "2.2",
+                "text": "Physician/Practitioner’s NPI"
+              },
+              {
+                "linkId": "2.3",
+                "text": "Physician/Practitioner PTAN"
+              },
+              {
+                "linkId": "2.4",
+                "text": "Physician/Practitioner’s Address"
+              }
+            ]
+          },
+          {
+            "linkId": "3",
+            "text": "Additional Information",
+            "item": [
+              {
+                "linkId": "3.1",
+                "text": "Body Mass Index(kg/m2)"
+              },
+              {
+                "linkId": "3.2",
+                "text": "Co-morbidities",
+                "answer": [
+                  {
+                    "valueCoding": {
+                      "code": "Hypertension",
+                      "display": "Hypertension"
+                    }
+                  }
+                ]
+              },
+              {
+                "linkId": "3.3",
+                "text": "Is there a previous unsuccessful medical treatment?"
+              }
+            ]
+          },
+          {
+            "linkId": "4",
+            "text": "Additional Documentation Required",
+            "item": [
+              {
+                "linkId": "4.1",
+                "text": "Physician certification statement (LP74233-5,LP74233-5)"
+              },
+              {
+                "linkId": "4.2",
+                "text": "Medical records (11503-0)"
+              },
+              {
+                "linkId": "4.3",
+                "text": "Psychology Initial evaluation note (18738-5)"
+              },
+              {
+                "linkId": "4.4",
+                "text": "Surgery Hospital Progress note (64057-3)"
+              },
+              {
+                "linkId": "4.5",
+                "text": "Any other relevant document as deemed necessary by the MAC to process the prior authorization"
+              }
+            ]
+          },
+          {
+            "linkId": "5",
+            "text": "Submitter Information",
+            "item": [
+              {
+                "linkId": "5.1",
+                "text": "Contact Name"
+              },
+              {
+                "linkId": "5.2",
+                "text": "Telephone Number"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "id": "4342012",
+        "meta": {
+          "versionId": "183",
+          "lastUpdated": "2019-08-28T19:10:42.000Z"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Patient</b></p><p><b>Status</b>: Active</p><p><b>Name</b>: SMART, TIMMY</p><p><b>DOB</b>: Feb 20, 2015</p><p><b>Administrative Gender</b>: Male</p><p><b>Marital Status</b>: Single</p></div>"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+            "extension": [
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2076-8",
+                  "display": "Native Hawaiian or Other Pacific Islander",
+                  "userSelected": false
+                }
+              },
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2028-9",
+                  "display": "Asian",
+                  "userSelected": false
+                }
+              },
+              {
+                "url": "detailed",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2078-4",
+                  "display": "Polynesian",
+                  "userSelected": false
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "Asian, Polynesian"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+            "extension": [
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2135-2",
+                  "display": "Hispanic or Latino",
+                  "userSelected": false
+                }
+              },
+              {
+                "url": "detailed",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2184-0",
+                  "display": "Dominican",
+                  "userSelected": false
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "Dominican, Hispanic or Latino"
+              }
+            ]
+          }
+        ],
+        "identifier": [
+          {
+            "id": "CI-10768383-0",
+            "use": "usual",
+            "type": {
+              "coding": [
+                {
+                  "system": "https://fhir.cerner.com/0b8a0111-e8e6-4c26-a91c-5069cbc6b1ca/codeSet/4",
+                  "code": "2",
+                  "display": "Community Medical Record Number",
+                  "userSelected": true
+                },
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "MR",
+                  "display": "Medical record number",
+                  "userSelected": false
+                }
+              ],
+              "text": "Community Medical Record Number"
+            },
+            "system": "urn:oid:2.16.840.1.113883.3.787.0.0",
+            "value": "2453248",
+            "period": {
+              "start": "2019-07-25T15:10:20.000Z"
+            }
+          },
+          {
+            "id": "CI-6810285-1",
+            "use": "usual",
+            "type": {
+              "coding": [
+                {
+                  "system": "https://fhir.cerner.com/0b8a0111-e8e6-4c26-a91c-5069cbc6b1ca/codeSet/4",
+                  "code": "10",
+                  "display": "MRN",
+                  "userSelected": true
+                },
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "MR",
+                  "display": "Medical record number",
+                  "userSelected": false
+                }
+              ],
+              "text": "MRN"
+            },
+            "system": "urn:oid:1.1.1.1.1.1",
+            "value": "10002704",
+            "period": {
+              "start": "2016-06-22T21:16:55.000Z"
+            }
+          },
+          {
+            "id": "CI-10768385-3",
+            "use": "usual",
+            "type": {
+              "coding": [
+                {
+                  "system": "https://fhir.cerner.com/0b8a0111-e8e6-4c26-a91c-5069cbc6b1ca/codeSet/4",
+                  "code": "22",
+                  "display": "Military Id",
+                  "userSelected": true
+                }
+              ],
+              "text": "Military Id"
+            },
+            "system": "urn:oid:2.16.840.1.113883.3.42.10001.100001.12",
+            "value": "564568",
+            "period": {
+              "start": "2019-07-25T15:10:20.000Z"
+            }
+          },
+          {
+            "id": "CI-8934240-4",
+            "use": "usual",
+            "type": {
+              "coding": [
+                {
+                  "system": "https://fhir.cerner.com/0b8a0111-e8e6-4c26-a91c-5069cbc6b1ca/codeSet/4",
+                  "code": "670843",
+                  "display": "Messaging",
+                  "userSelected": true
+                },
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "U",
+                  "display": "Unspecified identifier",
+                  "userSelected": false
+                }
+              ],
+              "text": "Messaging"
+            },
+            "system": "urn:oid:2.16.840.1.113883.3.13.8",
+            "value": "19866A87CD8F4ED0AAF3C432B688633E",
+            "period": {
+              "start": "2018-09-13T16:52:52.000Z"
+            }
+          },
+          {
+            "id": "CI-7476215-5",
+            "use": "usual",
+            "type": {
+              "coding": [
+                {
+                  "system": "https://fhir.cerner.com/0b8a0111-e8e6-4c26-a91c-5069cbc6b1ca/codeSet/4",
+                  "code": "36322657",
+                  "display": "Federated Person Principal",
+                  "userSelected": true
+                },
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "AN",
+                  "display": "Account number",
+                  "userSelected": false
+                }
+              ],
+              "text": "Federated Person Principal"
+            },
+            "system": "urn:oid:2.16.840.1.113883.3.13.6",
+            "value": "URN:CERNER:IDENTITY-FEDERATION:REALM:687F29DD-69DD-4DE5-ACB1-FD8A2241EF3A:PRINCIPAL:K77HB79F7RI",
+            "period": {
+              "start": "2016-01-01T10:00:00.000Z"
+            }
+          },
+          {
+            "id": "CI-7476216-6",
+            "use": "usual",
+            "type": {
+              "coding": [
+                {
+                  "system": "https://fhir.cerner.com/0b8a0111-e8e6-4c26-a91c-5069cbc6b1ca/codeSet/4",
+                  "code": "36322657",
+                  "display": "Federated Person Principal",
+                  "userSelected": true
+                },
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "AN",
+                  "display": "Account number",
+                  "userSelected": false
+                }
+              ],
+              "text": "Federated Person Principal"
+            },
+            "system": "urn:oid:2.16.840.1.113883.3.13.6",
+            "value": "urn:cerner:identity-federation:realm:687f29dd-69dd-4de5-acb1-fd8a2241ef3a:principal:K77hB79F7ri",
+            "period": {
+              "start": "2016-01-01T10:00:00.000Z"
+            }
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "id": "CI-4342012-0",
+            "use": "official",
+            "text": "SMART, TIMMY",
+            "family": "SMART",
+            "given": [
+              "TIMMY"
+            ],
+            "period": {
+              "start": "2016-06-22T21:16:56.000Z"
+            }
+          },
+          {
+            "id": "CI-10516203-0",
+            "use": "old",
+            "text": "SMART, Tute",
+            "family": "SMART",
+            "given": [
+              "Tute"
+            ],
+            "period": {
+              "start": "2016-06-22T21:16:56.000Z",
+              "end": "2019-06-24T15:22:13.000Z"
+            }
+          },
+          {
+            "id": "CI-10282210-1",
+            "use": "old",
+            "text": "SMART, Tute C.",
+            "family": "SMART",
+            "given": [
+              "Tute C."
+            ],
+            "period": {
+              "start": "2016-06-22T21:16:56.000Z",
+              "end": "2019-05-22T17:53:03.000Z"
+            }
+          },
+          {
+            "id": "CI-10272237-2",
+            "use": "old",
+            "text": "SMART, TuteZ",
+            "family": "SMART",
+            "given": [
+              "TuteZ"
+            ],
+            "period": {
+              "start": "2016-06-22T21:16:56.000Z",
+              "end": "2019-05-21T18:55:00.000Z"
+            }
+          },
+          {
+            "id": "CI-10272229-3",
+            "use": "old",
+            "text": "SMART, Tute",
+            "family": "SMART",
+            "given": [
+              "Tute"
+            ],
+            "period": {
+              "start": "2016-06-22T21:16:56.000Z",
+              "end": "2019-05-21T18:53:46.000Z"
+            }
+          },
+          {
+            "id": "CI-10272218-4",
+            "use": "old",
+            "text": "SMART, TIMMY",
+            "family": "SMART",
+            "given": [
+              "TIMMY"
+            ],
+            "period": {
+              "start": "2016-06-22T21:16:56.000Z",
+              "end": "2019-05-21T18:50:23.000Z"
+            }
+          }
+        ],
+        "telecom": [
+          {
+            "id": "CI-PH-2969944-0",
+            "system": "phone",
+            "value": "3472869010",
+            "use": "work",
+            "rank": "10"
+          },
+          {
+            "id": "CI-PH-2275938-1",
+            "system": "phone",
+            "value": "3472869010",
+            "use": "home",
+            "rank": "11",
+            "period": {
+              "start": "2018-08-02T15:42:13.000Z"
+            }
+          },
+          {
+            "id": "CI-PH-2965940-2",
+            "system": "phone",
+            "value": "3472869014",
+            "use": "mobile",
+            "rank": "1"
+          },
+          {
+            "id": "CI-EM-3219950-0",
+            "system": "email",
+            "value": "test@yopmail.com",
+            "use": "home",
+            "rank": "13",
+            "period": {
+              "start": "2019-07-25T15:10:20.000Z"
+            }
+          },
+          {
+            "id": "CI-EM-2399944-1",
+            "system": "email",
+            "value": "tutecosta2@gmail.com",
+            "use": "home",
+            "rank": "13",
+            "period": {
+              "start": "2018-09-13T16:52:00.000Z"
+            }
+          }
+        ],
+        "gender": "male",
+        "birthDate": "2015-02-20",
+        "address": [
+          {
+            "id": "CI-2153896-0",
+            "use": "home",
+            "text": "111 River St\nHoboken, NJ 07030\nUSA",
+            "line": [
+              "111 River St"
+            ],
+            "city": "Hoboken",
+            "district": "Hudson",
+            "state": "NJ",
+            "postalCode": "07030",
+            "country": "USA",
+            "period": {
+              "start": "2018-08-02T15:42:13.000Z"
+            }
+          }
+        ],
+        "maritalStatus": {
+          "coding": [
+            {
+              "system": "https://fhir.cerner.com/0b8a0111-e8e6-4c26-a91c-5069cbc6b1ca/codeSet/38",
+              "code": "309239",
+              "display": "Single",
+              "userSelected": true
+            },
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+              "code": "U",
+              "display": "unmarried",
+              "userSelected": false
+            }
+          ],
+          "text": "Single"
+        },
+        "contact": [
+          {
+            "relationship": [
+              {
+                "coding": [
+                  {
+                    "system": "https://fhir.cerner.com/0b8a0111-e8e6-4c26-a91c-5069cbc6b1ca/codeSet/351",
+                    "code": "36327661",
+                    "display": "Authorized Representative",
+                    "userSelected": true
+                  }
+                ],
+                "text": "Authorized Representative"
+              }
+            ],
+            "name": {
+              "id": "CI-4342010-0",
+              "use": "official",
+              "text": "SMART, JOE",
+              "family": "SMART",
+              "given": [
+                "JOE"
+              ],
+              "period": {
+                "start": "2016-06-22T21:06:59.000Z"
+              }
+            },
+            "telecom": [
+              {
+                "system": "phone",
+                "value": "9139898765",
+                "use": "home",
+                "rank": "1",
+                "period": {
+                  "start": "2017-06-27T21:47:16.000Z"
+                }
+              },
+              {
+                "system": "phone",
+                "value": "9137876555",
+                "use": "mobile",
+                "rank": "1",
+                "period": {
+                  "start": "2017-06-27T21:47:16.000Z"
+                }
+              },
+              {
+                "system": "email",
+                "value": "kathy.pickering@cerner.com",
+                "use": "home",
+                "rank": "1",
+                "period": {
+                  "start": "2018-09-13T16:43:28.000Z"
+                }
+              }
+            ],
+            "address": {
+              "use": "home",
+              "text": "1234 Blvd\nOverland Park, KS 66213\nUSA",
+              "line": [
+                "1234 Blvd"
+              ],
+              "city": "Overland Park",
+              "district": "Johnson",
+              "state": "KS",
+              "postalCode": "66213",
+              "country": "USA",
+              "period": {
+                "start": "2017-06-27T21:47:16.000Z"
+              }
+            },
+            "gender": "male",
+            "period": {
+              "start": "2017-06-09T13:41:09.000Z",
+              "end": "2018-08-02T15:42:17.000Z"
+            }
+          },
+          {
+            "relationship": [
+              {
+                "coding": [
+                  {
+                    "system": "https://fhir.cerner.com/0b8a0111-e8e6-4c26-a91c-5069cbc6b1ca/codeSet/351",
+                    "code": "36327661",
+                    "display": "Authorized Representative",
+                    "userSelected": true
+                  }
+                ],
+                "text": "Authorized Representative"
+              }
+            ],
+            "name": {
+              "id": "CI-4342009-0",
+              "use": "official",
+              "text": "SMART, NANCY",
+              "family": "SMART",
+              "given": [
+                "NANCY"
+              ],
+              "period": {
+                "start": "2016-06-22T20:43:05.000Z"
+              }
+            },
+            "telecom": [
+              {
+                "system": "phone",
+                "value": "9035768555",
+                "use": "home",
+                "rank": "1",
+                "period": {
+                  "start": "2019-09-18T20:48:19.000Z"
+                }
+              },
+              {
+                "system": "email",
+                "value": "kathy.pickering@cerner.com",
+                "use": "home",
+                "rank": "1",
+                "period": {
+                  "start": "2018-09-13T16:37:32.000Z"
+                }
+              }
+            ],
+            "gender": "female",
+            "period": {
+              "start": "2017-06-09T13:41:09.000Z",
+              "end": "2018-08-02T15:42:17.000Z"
+            }
+          }
+        ],
+        "communication": [
+          {
+            "language": {
+              "coding": [
+                {
+                  "system": "https://fhir.cerner.com/0b8a0111-e8e6-4c26-a91c-5069cbc6b1ca/codeSet/36",
+                  "code": "312748",
+                  "display": "Italian",
+                  "userSelected": true
+                },
+                {
+                  "system": "urn:ietf:bcp:47",
+                  "code": "it",
+                  "display": "Italian",
+                  "userSelected": false
+                }
+              ],
+              "text": "Italian"
+            },
+            "preferred": true
+          }
+        ],
+        "generalPractitioner": [
+          {
+            "id": "CI-6810291-5",
+            "reference": "Practitioner/1912007",
+            "display": "McCurdy, Michael"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Procedure",
+        "id": "38702559",
+        "meta": {
+          "versionId": "0",
+          "lastUpdated": "2018-07-05T16:40:29Z"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Procedure</b></p><p><b>Patient</b>: SMART, TIMMY</p><p><b>Procedure</b>: Appendectomy;</p><p><b>Status</b>: Completed</p><p><b>Recorder</b>: EP, PW</p></div>"
+        },
+        "status": "completed",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.ama-assn.org/go/cpt",
+              "code": "44950",
+              "display": "Appendectomy;",
+              "userSelected": true
+            }
+          ],
+          "text": "Appendectomy;"
+        },
+        "subject": {
+          "reference": "Patient/4342012",
+          "display": "SMART, TIMMY"
+        },
+        "encounter": {
+          "reference": "Encounter/4027930"
+        },
+        "_performedDateTime": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+              "valueCode": "unknown"
+            }
+          ]
+        },
+        "recorder": {
+          "reference": "Practitioner/4526007",
+          "display": "EP, PW"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Procedure",
+        "id": "38702555",
+        "meta": {
+          "versionId": "0",
+          "lastUpdated": "2018-07-05T16:39:53Z"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Procedure</b></p><p><b>Patient</b>: SMART, TIMMY</p><p><b>Procedure</b>: Removal of benign tumor from bone</p><p><b>Status</b>: Completed</p><p><b>Recorder</b>: EP, PW</p></div>"
+        },
+        "status": "completed",
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "120232004",
+              "display": "Removal of benign tumor from bone (procedure)",
+              "userSelected": true
+            }
+          ],
+          "text": "Removal of benign tumor from bone"
+        },
+        "subject": {
+          "reference": "Patient/4342012",
+          "display": "SMART, TIMMY"
+        },
+        "encounter": {
+          "reference": "Encounter/4027930"
+        },
+        "_performedDateTime": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+              "valueCode": "unknown"
+            }
+          ]
+        },
+        "recorder": {
+          "reference": "Practitioner/4526007",
+          "display": "EP, PW"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "p12909861",
+        "meta": {
+          "versionId": "12909861",
+          "lastUpdated": "2019-08-27T00:13:35.000Z"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Condition</b></p><p><b>Patient</b>: SMART, TIMMY</p><p><b>Problem</b>: Back pain with history of spinal surgery, Post-surgery back pain (finding)</p><p><b>Clinical Status</b>: Active</p><p><b>Verification Status</b>: Confirmed</p></div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active",
+              "userSelected": false
+            }
+          ],
+          "text": "Active"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed",
+              "userSelected": false
+            }
+          ],
+          "text": "Confirmed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem List Item"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "279049005",
+              "display": "Post-surgery back pain (finding)",
+              "userSelected": true
+            }
+          ],
+          "text": "Back pain with history of spinal surgery"
+        },
+        "subject": {
+          "reference": "Patient/4342012",
+          "display": "SMART, TIMMY"
+        },
+        "recordedDate": "2019-08-27T00:13:35.000Z",
+        "recorder": {
+          "reference": "Practitioner/4464007",
+          "display": "Portal, Portal"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "p13825865",
+        "meta": {
+          "versionId": "13825865",
+          "lastUpdated": "2019-10-31T16:43:56.000Z"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Condition</b></p><p><b>Patient</b>: SMART, TIMMY</p><p><b>Problem</b>: CHF (congestive heart failure), NYHA class IV, Symptomatic congestive heart failure (disorder)</p><p><b>Clinical Status</b>: Active</p><p><b>Verification Status</b>: Confirmed</p></div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active",
+              "userSelected": false
+            }
+          ],
+          "text": "Active"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed",
+              "userSelected": false
+            }
+          ],
+          "text": "Confirmed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem List Item"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "698594003",
+              "display": "Symptomatic congestive heart failure (disorder)",
+              "userSelected": false
+            },
+            {
+              "system": "http://e-imo.com/products/problem-it",
+              "code": "598274",
+              "display": "CHF (congestive heart failure), NYHA class IV",
+              "userSelected": false
+            }
+          ],
+          "text": "CHF (congestive heart failure), NYHA class IV"
+        },
+        "subject": {
+          "reference": "Patient/4342012",
+          "display": "SMART, TIMMY"
+        },
+        "recordedDate": "2019-10-31T16:43:55.000Z",
+        "recorder": {
+          "reference": "Practitioner/4464007",
+          "display": "Portal, Portal"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "p9281969",
+        "meta": {
+          "versionId": "9281969",
+          "lastUpdated": "2018-09-07T16:59:28.000Z"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Condition</b></p><p><b>Patient</b>: SMART, TIMMY</p><p><b>Problem</b>: Cataract, bilateral, Bilateral cataracts (disorder)</p><p><b>Clinical Status</b>: Active</p><p><b>Verification Status</b>: Confirmed</p></div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active",
+              "userSelected": false
+            }
+          ],
+          "text": "Active"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed",
+              "userSelected": false
+            }
+          ],
+          "text": "Confirmed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem List Item"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "95722004",
+              "display": "Bilateral cataracts (disorder)",
+              "userSelected": false
+            }
+          ],
+          "text": "Cataract, bilateral"
+        },
+        "subject": {
+          "reference": "Patient/4342012",
+          "display": "SMART, TIMMY"
+        },
+        "recordedDate": "2018-09-07T16:59:28.000Z",
+        "recorder": {
+          "reference": "Practitioner/4464007",
+          "display": "Portal, Portal"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "p11253869",
+        "meta": {
+          "versionId": "11253869",
+          "lastUpdated": "2019-04-17T16:07:25.000Z"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Condition</b></p><p><b>Patient</b>: SMART, TIMMY</p><p><b>Problem</b>: Mad cow disease (human variant), New variant of Creutzfeldt-Jakob disease (disorder)</p><p><b>Clinical Status</b>: Active</p><p><b>Verification Status</b>: Confirmed</p></div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active",
+              "userSelected": false
+            }
+          ],
+          "text": "Active"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed",
+              "userSelected": false
+            }
+          ],
+          "text": "Confirmed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem List Item"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "304603007",
+              "display": "New variant of Creutzfeldt-Jakob disease (disorder)",
+              "userSelected": false
+            }
+          ],
+          "text": "Mad cow disease (human variant)"
+        },
+        "subject": {
+          "reference": "Patient/4342012",
+          "display": "SMART, TIMMY"
+        },
+        "recordedDate": "2019-04-17T16:07:25.000Z",
+        "recorder": {
+          "reference": "Practitioner/4464007",
+          "display": "Portal, Portal"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "p10721997",
+        "meta": {
+          "versionId": "10721997",
+          "lastUpdated": "2019-03-01T15:43:46.000Z"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Condition</b></p><p><b>Patient</b>: SMART, TIMMY</p><p><b>Problem</b>: Back pain associated with peripheral numbness, Backache (finding)</p><p><b>Clinical Status</b>: Active</p><p><b>Verification Status</b>: Confirmed</p></div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active",
+              "userSelected": false
+            }
+          ],
+          "text": "Active"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed",
+              "userSelected": false
+            }
+          ],
+          "text": "Confirmed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem List Item"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "161891005",
+              "display": "Backache (finding)",
+              "userSelected": false
+            }
+          ],
+          "text": "Back pain associated with peripheral numbness"
+        },
+        "subject": {
+          "reference": "Patient/4342012",
+          "display": "SMART, TIMMY"
+        },
+        "recordedDate": "2019-03-01T15:43:46.000Z",
+        "recorder": {
+          "reference": "Practitioner/4464007",
+          "display": "Portal, Portal"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "p10914233",
+        "meta": {
+          "versionId": "10914233",
+          "lastUpdated": "2019-03-20T16:28:20.000Z"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Condition</b></p><p><b>Patient</b>: SMART, TIMMY</p><p><b>Problem</b>: Back pain due to inflammatory process, Backache (finding)</p><p><b>Clinical Status</b>: Active</p><p><b>Verification Status</b>: Confirmed</p></div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active",
+              "userSelected": false
+            }
+          ],
+          "text": "Active"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed",
+              "userSelected": false
+            }
+          ],
+          "text": "Confirmed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem List Item"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "161891005",
+              "display": "Backache (finding)",
+              "userSelected": false
+            }
+          ],
+          "text": "Back pain due to inflammatory process"
+        },
+        "subject": {
+          "reference": "Patient/4342012",
+          "display": "SMART, TIMMY"
+        },
+        "recordedDate": "2019-03-20T16:28:20.000Z",
+        "recorder": {
+          "reference": "Practitioner/4464007",
+          "display": "Portal, Portal"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "p10914213",
+        "meta": {
+          "versionId": "10914213",
+          "lastUpdated": "2019-03-20T16:18:10.000Z"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Condition</b></p><p><b>Patient</b>: SMART, TIMMY</p><p><b>Problem</b>: Back pain due to injury, Backache (finding)</p><p><b>Clinical Status</b>: Active</p><p><b>Verification Status</b>: Confirmed</p></div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active",
+              "userSelected": false
+            }
+          ],
+          "text": "Active"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed",
+              "userSelected": false
+            }
+          ],
+          "text": "Confirmed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem List Item"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "161891005",
+              "display": "Backache (finding)",
+              "userSelected": false
+            }
+          ],
+          "text": "Back pain due to injury"
+        },
+        "subject": {
+          "reference": "Patient/4342012",
+          "display": "SMART, TIMMY"
+        },
+        "recordedDate": "2019-03-20T16:18:09.000Z",
+        "recorder": {
+          "reference": "Practitioner/4464007",
+          "display": "Portal, Portal"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "p11097861",
+        "meta": {
+          "versionId": "11097861",
+          "lastUpdated": "2019-04-08T17:27:15.000Z"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Condition</b></p><p><b>Patient</b>: SMART, TIMMY</p><p><b>Problem</b>: Headache as late effect of brain injury, Posttraumatic headache (finding)</p><p><b>Clinical Status</b>: Active</p><p><b>Verification Status</b>: Confirmed</p></div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active",
+              "userSelected": false
+            }
+          ],
+          "text": "Active"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed",
+              "userSelected": false
+            }
+          ],
+          "text": "Confirmed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem List Item"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "54012000",
+              "display": "Posttraumatic headache (finding)",
+              "userSelected": false
+            }
+          ],
+          "text": "Headache as late effect of brain injury"
+        },
+        "subject": {
+          "reference": "Patient/4342012",
+          "display": "SMART, TIMMY"
+        },
+        "recordedDate": "2019-04-08T17:27:15.000Z",
+        "recorder": {
+          "reference": "Practitioner/4464007",
+          "display": "Portal, Portal"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "p10537943",
+        "meta": {
+          "versionId": "12921891",
+          "lastUpdated": "2019-08-27T18:53:38.000Z"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Condition</b></p><p><b>Patient</b>: SMART, TIMMY</p><p><b>Problem</b>: CHF due to valvular disease, Congestive heart failure due to valvular disease (disorder)</p><p><b>Clinical Status</b>: Active</p><p><b>Verification Status</b>: Confirmed</p><p><b>Onset</b>: Aug 16, 2019</p></div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active",
+              "userSelected": false
+            }
+          ],
+          "text": "Active"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed",
+              "userSelected": false
+            }
+          ],
+          "text": "Confirmed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem List Item"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "426611007",
+              "display": "Congestive heart failure due to valvular disease (disorder)",
+              "userSelected": false
+            }
+          ],
+          "text": "CHF due to valvular disease"
+        },
+        "subject": {
+          "reference": "Patient/4342012",
+          "display": "SMART, TIMMY"
+        },
+        "onsetDateTime": "2019-08-16",
+        "recordedDate": "2019-02-12T18:55:29.000Z",
+        "recorder": {
+          "reference": "Practitioner/4464007",
+          "display": "Portal, Portal"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "p11253877",
+        "meta": {
+          "versionId": "11253877",
+          "lastUpdated": "2019-04-17T16:07:38.000Z"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Condition</b></p><p><b>Patient</b>: SMART, TIMMY</p><p><b>Problem</b>: Fatal familial insomnia, Fatal familial insomnia (disorder)</p><p><b>Clinical Status</b>: Active</p><p><b>Verification Status</b>: Confirmed</p></div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active",
+              "userSelected": false
+            }
+          ],
+          "text": "Active"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed",
+              "userSelected": false
+            }
+          ],
+          "text": "Confirmed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem List Item"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "83157008",
+              "display": "Fatal familial insomnia (disorder)",
+              "userSelected": false
+            }
+          ],
+          "text": "Fatal familial insomnia"
+        },
+        "subject": {
+          "reference": "Patient/4342012",
+          "display": "SMART, TIMMY"
+        },
+        "recordedDate": "2019-04-17T16:07:38.000Z",
+        "recorder": {
+          "reference": "Practitioner/4464007",
+          "display": "Portal, Portal"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "p11253861",
+        "meta": {
+          "versionId": "11253861",
+          "lastUpdated": "2019-04-17T15:41:26.000Z"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Condition</b></p><p><b>Patient</b>: SMART, TIMMY</p><p><b>Problem</b>: Cancer of hippocampus, Malignant neoplasm of hippocampus (disorder)</p><p><b>Clinical Status</b>: Active</p><p><b>Verification Status</b>: Confirmed</p></div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active",
+              "userSelected": false
+            }
+          ],
+          "text": "Active"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed",
+              "userSelected": false
+            }
+          ],
+          "text": "Confirmed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem List Item"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "188289008",
+              "display": "Malignant neoplasm of hippocampus (disorder)",
+              "userSelected": false
+            }
+          ],
+          "text": "Cancer of hippocampus"
+        },
+        "subject": {
+          "reference": "Patient/4342012",
+          "display": "SMART, TIMMY"
+        },
+        "recordedDate": "2019-04-17T15:41:26.000Z",
+        "recorder": {
+          "reference": "Practitioner/4464007",
+          "display": "Portal, Portal"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "p13809879",
+        "meta": {
+          "versionId": "13809879",
+          "lastUpdated": "2019-10-31T05:38:16.000Z"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Condition</b></p><p><b>Patient</b>: SMART, TIMMY</p><p><b>Problem</b>: Cancer determined by colorectal biopsy, Cancer determined by colorectal biopsy</p><p><b>Clinical Status</b>: Active</p><p><b>Verification Status</b>: Confirmed</p></div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active",
+              "userSelected": false
+            }
+          ],
+          "text": "Active"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed",
+              "userSelected": false
+            }
+          ],
+          "text": "Confirmed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem List Item"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://e-imo.com/products/problem-it",
+              "code": "58045365",
+              "display": "Cancer determined by colorectal biopsy",
+              "userSelected": false
+            },
+            {
+              "system": "http://snomed.info/sct",
+              "code": "363510005",
+              "display": "Malignant tumor of large intestine (disorder)",
+              "userSelected": false
+            }
+          ],
+          "text": "Cancer determined by colorectal biopsy"
+        },
+        "subject": {
+          "reference": "Patient/4342012",
+          "display": "SMART, TIMMY"
+        },
+        "recordedDate": "2019-10-31T05:38:16.000Z",
+        "recorder": {
+          "reference": "Practitioner/4464007",
+          "display": "Portal, Portal"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "p13817877",
+        "meta": {
+          "versionId": "13817877",
+          "lastUpdated": "2019-10-31T14:18:16.000Z"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Condition</b></p><p><b>Patient</b>: SMART, TIMMY</p><p><b>Problem</b>: Sugar cane worker pneumonitis, Bagassosis (disorder)</p><p><b>Clinical Status</b>: Active</p><p><b>Verification Status</b>: Confirmed</p></div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active",
+              "userSelected": false
+            }
+          ],
+          "text": "Active"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed",
+              "userSelected": false
+            }
+          ],
+          "text": "Confirmed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem List Item"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "67242002",
+              "display": "Bagassosis (disorder)",
+              "userSelected": false
+            },
+            {
+              "system": "http://e-imo.com/products/problem-it",
+              "code": "317925",
+              "display": "Sugar cane worker pneumonitis",
+              "userSelected": false
+            }
+          ],
+          "text": "Sugar cane worker pneumonitis"
+        },
+        "subject": {
+          "reference": "Patient/4342012",
+          "display": "SMART, TIMMY"
+        },
+        "recordedDate": "2019-10-31T14:18:16.000Z",
+        "recorder": {
+          "reference": "Practitioner/4464007",
+          "display": "Portal, Portal"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "p11577925",
+        "meta": {
+          "versionId": "11577925",
+          "lastUpdated": "2019-05-14T20:20:32.000Z"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Condition</b></p><p><b>Patient</b>: SMART, TIMMY</p><p><b>Problem</b>: End stage renal disease, End stage renal disease</p><p><b>Clinical Status</b>: Active</p><p><b>Verification Status</b>: Confirmed</p></div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active",
+              "userSelected": false
+            }
+          ],
+          "text": "Active"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed",
+              "userSelected": false
+            }
+          ],
+          "text": "Confirmed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem List Item"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://e-imo.com/products/problem-it",
+              "code": "11894",
+              "display": "End stage renal disease",
+              "userSelected": false
+            },
+            {
+              "system": "http://snomed.info/sct",
+              "code": "46177005",
+              "display": "End stage renal disease (disorder)",
+              "userSelected": false
+            }
+          ],
+          "text": "End stage renal disease"
+        },
+        "subject": {
+          "reference": "Patient/4342012",
+          "display": "SMART, TIMMY"
+        },
+        "recordedDate": "2019-05-14T20:20:32.000Z",
+        "recorder": {
+          "reference": "Practitioner/4464007",
+          "display": "Portal, Portal"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "p13817861",
+        "meta": {
+          "versionId": "13817861",
+          "lastUpdated": "2019-10-31T14:13:32.000Z"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Condition</b></p><p><b>Patient</b>: SMART, TIMMY</p><p><b>Problem</b>: Cancer associated with transplanted organ, Postoperative complication (disorder)</p><p><b>Clinical Status</b>: Active</p><p><b>Verification Status</b>: Confirmed</p></div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active",
+              "userSelected": false
+            }
+          ],
+          "text": "Active"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed",
+              "userSelected": false
+            }
+          ],
+          "text": "Confirmed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem List Item"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "385486001",
+              "display": "Postoperative complication (disorder)",
+              "userSelected": false
+            },
+            {
+              "system": "http://e-imo.com/products/problem-it",
+              "code": "716469",
+              "display": "Cancer associated with transplanted organ",
+              "userSelected": false
+            },
+            {
+              "system": "http://snomed.info/sct",
+              "code": "254289008",
+              "display": "Post-transplant neoplasia (disorder)",
+              "userSelected": false
+            }
+          ],
+          "text": "Cancer associated with transplanted organ"
+        },
+        "subject": {
+          "reference": "Patient/4342012",
+          "display": "SMART, TIMMY"
+        },
+        "recordedDate": "2019-10-31T14:13:32.000Z",
+        "recorder": {
+          "reference": "Practitioner/4464007",
+          "display": "Portal, Portal"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "p12129861",
+        "meta": {
+          "versionId": "12921875",
+          "lastUpdated": "2019-08-27T18:49:49.000Z"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Condition</b></p><p><b>Patient</b>: SMART, TIMMY</p><p><b>Problem</b>: Secondary hypertension, unspecified, Secondary hypertension (disorder)</p><p><b>Clinical Status</b>: Active</p><p><b>Verification Status</b>: Confirmed</p><p><b>Onset</b>: Aug 16, 2019</p></div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active",
+              "userSelected": false
+            }
+          ],
+          "text": "Active"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed",
+              "userSelected": false
+            }
+          ],
+          "text": "Confirmed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem List Item"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "31992008",
+              "display": "Secondary hypertension (disorder)",
+              "userSelected": false
+            }
+          ],
+          "text": "Secondary hypertension, unspecified"
+        },
+        "subject": {
+          "reference": "Patient/4342012",
+          "display": "SMART, TIMMY"
+        },
+        "onsetDateTime": "2019-08-16",
+        "recordedDate": "2019-07-01T15:30:59.000Z",
+        "recorder": {
+          "reference": "Practitioner/4464007",
+          "display": "Portal, Portal"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "p13733869",
+        "meta": {
+          "versionId": "13733869",
+          "lastUpdated": "2019-10-24T20:00:42.000Z"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Condition</b></p><p><b>Patient</b>: SMART, TIMMY</p><p><b>Problem</b>: Dependence on artificial heart, Dependance on enabling machine or device (finding)</p><p><b>Clinical Status</b>: Active</p><p><b>Verification Status</b>: Confirmed</p></div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active",
+              "userSelected": false
+            }
+          ],
+          "text": "Active"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed",
+              "userSelected": false
+            }
+          ],
+          "text": "Confirmed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem List Item"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "105501005",
+              "display": "Dependance on enabling machine or device (finding)",
+              "userSelected": true
+            }
+          ],
+          "text": "Dependence on artificial heart"
+        },
+        "subject": {
+          "reference": "Patient/4342012",
+          "display": "SMART, TIMMY"
+        },
+        "recordedDate": "2019-10-24T20:00:42.000Z",
+        "recorder": {
+          "reference": "Practitioner/4464007",
+          "display": "Portal, Portal"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "p12125961",
+        "meta": {
+          "versionId": "12125961",
+          "lastUpdated": "2019-06-28T20:50:29.000Z"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Condition</b></p><p><b>Patient</b>: SMART, TIMMY</p><p><b>Problem</b>: Open bite of right eyelid or periocular area, Periocular open wound (disorder)</p><p><b>Clinical Status</b>: Active</p><p><b>Verification Status</b>: Confirmed</p></div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active",
+              "userSelected": false
+            }
+          ],
+          "text": "Active"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed",
+              "userSelected": false
+            }
+          ],
+          "text": "Confirmed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem List Item"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "262750000",
+              "display": "Periocular open wound (disorder)",
+              "userSelected": false
+            }
+          ],
+          "text": "Open bite of right eyelid or periocular area"
+        },
+        "subject": {
+          "reference": "Patient/4342012",
+          "display": "SMART, TIMMY"
+        },
+        "recordedDate": "2019-06-28T20:50:29.000Z",
+        "recorder": {
+          "reference": "Practitioner/4464007",
+          "display": "Portal, Portal"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "p12998053",
+        "meta": {
+          "versionId": "12998053",
+          "lastUpdated": "2019-09-04T21:07:12.000Z"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Condition</b></p><p><b>Patient</b>: SMART, TIMMY</p><p><b>Problem</b>: Chest pain, Chest pain (finding)</p><p><b>Clinical Status</b>: Active</p><p><b>Verification Status</b>: Confirmed</p></div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active",
+              "userSelected": false
+            }
+          ],
+          "text": "Active"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed",
+              "userSelected": false
+            }
+          ],
+          "text": "Confirmed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem List Item"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "29857009",
+              "display": "Chest pain (finding)",
+              "userSelected": false
+            },
+            {
+              "system": "http://e-imo.com/products/problem-it",
+              "code": "85191",
+              "display": "Chest pain",
+              "userSelected": false
+            }
+          ],
+          "text": "Chest pain"
+        },
+        "subject": {
+          "reference": "Patient/4342012",
+          "display": "SMART, TIMMY"
+        },
+        "recordedDate": "2019-09-04T21:07:12.000Z",
+        "recorder": {
+          "reference": "Practitioner/4464007",
+          "display": "Portal, Portal"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "p10918009",
+        "meta": {
+          "versionId": "10918009",
+          "lastUpdated": "2019-03-20T19:54:33.000Z"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Condition</b></p><p><b>Patient</b>: SMART, TIMMY</p><p><b>Problem</b>: Diabetes insipidus, neurohypophyseal, Neurohypophyseal diabetes insipidus (disorder)</p><p><b>Clinical Status</b>: Active</p><p><b>Verification Status</b>: Confirmed</p></div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active",
+              "userSelected": false
+            }
+          ],
+          "text": "Active"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed",
+              "userSelected": false
+            }
+          ],
+          "text": "Confirmed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem List Item"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "45369008",
+              "display": "Neurohypophyseal diabetes insipidus (disorder)",
+              "userSelected": false
+            }
+          ],
+          "text": "Diabetes insipidus, neurohypophyseal"
+        },
+        "subject": {
+          "reference": "Patient/4342012",
+          "display": "SMART, TIMMY"
+        },
+        "recordedDate": "2019-03-20T19:54:32.000Z",
+        "recorder": {
+          "reference": "Practitioner/4464007",
+          "display": "Portal, Portal"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "p12089861",
+        "meta": {
+          "versionId": "12089861",
+          "lastUpdated": "2019-06-26T20:38:39.000Z"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Condition</b></p><p><b>Patient</b>: SMART, TIMMY</p><p><b>Problem</b>: Amygdalo-hippocampal epilepsy, Amygdalo-hippocampal epilepsy (disorder)</p><p><b>Clinical Status</b>: Active</p><p><b>Verification Status</b>: Confirmed</p></div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active",
+              "userSelected": false
+            }
+          ],
+          "text": "Active"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed",
+              "userSelected": false
+            }
+          ],
+          "text": "Confirmed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem List Item"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "230391003",
+              "display": "Amygdalo-hippocampal epilepsy (disorder)",
+              "userSelected": false
+            },
+            {
+              "system": "http://e-imo.com/products/problem-it",
+              "code": "354543",
+              "display": "Amygdalo-hippocampal epilepsy",
+              "userSelected": false
+            }
+          ],
+          "text": "Amygdalo-hippocampal epilepsy"
+        },
+        "subject": {
+          "reference": "Patient/4342012",
+          "display": "SMART, TIMMY"
+        },
+        "recordedDate": "2019-06-26T20:38:39.000Z",
+        "recorder": {
+          "reference": "Practitioner/4464007",
+          "display": "Portal, Portal"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "p13817909",
+        "meta": {
+          "versionId": "13817909",
+          "lastUpdated": "2019-10-31T14:37:30.000Z"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Condition</b></p><p><b>Patient</b>: SMART, TIMMY</p><p><b>Problem</b>: New ACL tear, Sprain of anterior cruciate ligament of knee (disorder)</p><p><b>Clinical Status</b>: Active</p><p><b>Verification Status</b>: Confirmed</p></div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active",
+              "userSelected": false
+            }
+          ],
+          "text": "Active"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed",
+              "userSelected": false
+            }
+          ],
+          "text": "Confirmed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem List Item"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "127292004",
+              "display": "Sprain of anterior cruciate ligament of knee (disorder)",
+              "userSelected": false
+            },
+            {
+              "system": "http://e-imo.com/products/problem-it",
+              "code": "1047872",
+              "display": "New ACL tear",
+              "userSelected": false
+            }
+          ],
+          "text": "New ACL tear"
+        },
+        "subject": {
+          "reference": "Patient/4342012",
+          "display": "SMART, TIMMY"
+        },
+        "recordedDate": "2019-10-31T14:37:29.000Z",
+        "recorder": {
+          "reference": "Practitioner/4464007",
+          "display": "Portal, Portal"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "p11577953",
+        "meta": {
+          "versionId": "11577953",
+          "lastUpdated": "2019-05-14T21:23:57.000Z"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Condition</b></p><p><b>Patient</b>: SMART, TIMMY</p><p><b>Problem</b>: Allergy desensitization therapy, Allergy desensitization therapy</p><p><b>Clinical Status</b>: Active</p><p><b>Verification Status</b>: Confirmed</p></div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active",
+              "userSelected": false
+            }
+          ],
+          "text": "Active"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed",
+              "userSelected": false
+            }
+          ],
+          "text": "Confirmed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem List Item"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://e-imo.com/products/problem-it",
+              "code": "31389297",
+              "display": "Allergy desensitization therapy",
+              "userSelected": true
+            },
+            {
+              "system": "http://snomed.info/sct",
+              "code": "106182000",
+              "display": "Immune system finding (finding)",
+              "userSelected": false
+            }
+          ],
+          "text": "Allergy desensitization therapy"
+        },
+        "subject": {
+          "reference": "Patient/4342012",
+          "display": "SMART, TIMMY"
+        },
+        "recordedDate": "2019-05-14T21:23:57.000Z",
+        "recorder": {
+          "reference": "Practitioner/4464007",
+          "display": "Portal, Portal"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "p10914205",
+        "meta": {
+          "versionId": "12921887",
+          "lastUpdated": "2019-08-27T18:52:20.000Z"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Condition</b></p><p><b>Patient</b>: SMART, TIMMY</p><p><b>Problem</b>: CHF (NYHA class I, ACC/AHA stage B), Congestive heart failure (disorder)</p><p><b>Clinical Status</b>: Active</p><p><b>Verification Status</b>: Confirmed</p><p><b>Onset</b>: Aug 16, 2019</p></div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active",
+              "userSelected": false
+            }
+          ],
+          "text": "Active"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed",
+              "userSelected": false
+            }
+          ],
+          "text": "Confirmed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem List Item"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "42343007",
+              "display": "Congestive heart failure (disorder)",
+              "userSelected": false
+            }
+          ],
+          "text": "CHF (NYHA class I, ACC/AHA stage B)"
+        },
+        "subject": {
+          "reference": "Patient/4342012",
+          "display": "SMART, TIMMY"
+        },
+        "onsetDateTime": "2019-08-16",
+        "recordedDate": "2019-03-20T15:57:17.000Z",
+        "recorder": {
+          "reference": "Practitioner/4464007",
+          "display": "Portal, Portal"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "p11125923",
+        "meta": {
+          "versionId": "11125923",
+          "lastUpdated": "2019-04-09T18:02:22.000Z"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Condition</b></p><p><b>Patient</b>: SMART, TIMMY</p><p><b>Problem</b>: Head and face pain, Craniofacial pain (finding)</p><p><b>Clinical Status</b>: Active</p><p><b>Verification Status</b>: Confirmed</p></div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active",
+              "userSelected": false
+            }
+          ],
+          "text": "Active"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed",
+              "userSelected": false
+            }
+          ],
+          "text": "Confirmed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem List Item"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "699046000",
+              "display": "Craniofacial pain (finding)",
+              "userSelected": false
+            }
+          ],
+          "text": "Head and face pain"
+        },
+        "subject": {
+          "reference": "Patient/4342012",
+          "display": "SMART, TIMMY"
+        },
+        "recordedDate": "2019-04-09T18:02:22.000Z",
+        "recorder": {
+          "reference": "Practitioner/4464007",
+          "display": "Portal, Portal"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "p11125899",
+        "meta": {
+          "versionId": "11125899",
+          "lastUpdated": "2019-04-09T17:47:49.000Z"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Condition</b></p><p><b>Patient</b>: SMART, TIMMY</p><p><b>Problem</b>: Eye abnormalities, Congenital anomaly of eye (disorder)</p><p><b>Clinical Status</b>: Active</p><p><b>Verification Status</b>: Confirmed</p></div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active",
+              "userSelected": false
+            }
+          ],
+          "text": "Active"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed",
+              "userSelected": false
+            }
+          ],
+          "text": "Confirmed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem List Item"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "19416009",
+              "display": "Congenital anomaly of eye (disorder)",
+              "userSelected": false
+            }
+          ],
+          "text": "Eye abnormalities"
+        },
+        "subject": {
+          "reference": "Patient/4342012",
+          "display": "SMART, TIMMY"
+        },
+        "recordedDate": "2019-04-09T17:47:49.000Z",
+        "recorder": {
+          "reference": "Practitioner/4464007",
+          "display": "Portal, Portal"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "p11249861",
+        "meta": {
+          "versionId": "11249861",
+          "lastUpdated": "2019-04-16T21:14:41.000Z"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Condition</b></p><p><b>Patient</b>: SMART, TIMMY</p><p><b>Problem</b>: Boat accident with submersion, Accident to watercraft causing immersion (finding)</p><p><b>Clinical Status</b>: Active</p><p><b>Verification Status</b>: Confirmed</p></div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active",
+              "userSelected": false
+            }
+          ],
+          "text": "Active"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed",
+              "userSelected": false
+            }
+          ],
+          "text": "Confirmed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem List Item"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "215415000",
+              "display": "Accident to watercraft causing immersion (finding)",
+              "userSelected": false
+            }
+          ],
+          "text": "Boat accident with submersion"
+        },
+        "subject": {
+          "reference": "Patient/4342012",
+          "display": "SMART, TIMMY"
+        },
+        "recordedDate": "2019-04-16T21:14:40.000Z",
+        "recorder": {
+          "reference": "Practitioner/4464007",
+          "display": "Portal, Portal"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "p12521861",
+        "meta": {
+          "versionId": "12521861",
+          "lastUpdated": "2019-07-30T02:09:07.000Z"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Condition</b></p><p><b>Patient</b>: SMART, TIMMY</p><p><b>Problem</b>: Freetext Condition</p><p><b>Clinical Status</b>: Active</p><p><b>Verification Status</b>: Differential</p></div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active",
+              "userSelected": false
+            }
+          ],
+          "text": "Active"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "differential",
+              "display": "Differential",
+              "userSelected": false
+            }
+          ],
+          "text": "Differential"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem List Item"
+          }
+        ],
+        "code": {
+          "text": "Freetext Condition"
+        },
+        "subject": {
+          "reference": "Patient/4342012",
+          "display": "SMART, TIMMY"
+        },
+        "recordedDate": "2019-07-30T02:09:07.000Z",
+        "recorder": {
+          "reference": "Practitioner/4464007",
+          "display": "Portal, Portal"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "p11081873",
+        "meta": {
+          "versionId": "11081873",
+          "lastUpdated": "2019-04-05T20:36:18.000Z"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Condition</b></p><p><b>Patient</b>: SMART, TIMMY</p><p><b>Problem</b>: Cough, Cough (finding)</p><p><b>Clinical Status</b>: Active</p><p><b>Verification Status</b>: Confirmed</p></div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active",
+              "userSelected": false
+            }
+          ],
+          "text": "Active"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed",
+              "userSelected": false
+            }
+          ],
+          "text": "Confirmed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem List Item"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "49727002",
+              "display": "Cough (finding)",
+              "userSelected": false
+            }
+          ],
+          "text": "Cough"
+        },
+        "subject": {
+          "reference": "Patient/4342012",
+          "display": "SMART, TIMMY"
+        },
+        "recordedDate": "2019-04-05T20:36:17.000Z",
+        "recorder": {
+          "reference": "Practitioner/4464007",
+          "display": "Portal, Portal"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "p12901943",
+        "meta": {
+          "versionId": "12901943",
+          "lastUpdated": "2019-08-26T19:13:05.000Z"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Condition</b></p><p><b>Patient</b>: SMART, TIMMY</p><p><b>Problem</b>: Cancer determined by biopsy of stomach, Cancer determined by biopsy of stomach</p><p><b>Clinical Status</b>: Active</p><p><b>Verification Status</b>: Confirmed</p></div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active",
+              "userSelected": false
+            }
+          ],
+          "text": "Active"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed",
+              "userSelected": false
+            }
+          ],
+          "text": "Confirmed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem List Item"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://e-imo.com/products/problem-it",
+              "code": "55217570",
+              "display": "Cancer determined by biopsy of stomach",
+              "userSelected": false
+            },
+            {
+              "system": "http://snomed.info/sct",
+              "code": "363349007",
+              "display": "Malignant tumor of stomach (disorder)",
+              "userSelected": false
+            }
+          ],
+          "text": "Cancer determined by biopsy of stomach"
+        },
+        "subject": {
+          "reference": "Patient/4342012",
+          "display": "SMART, TIMMY"
+        },
+        "recordedDate": "2019-08-26T19:13:05.000Z",
+        "recorder": {
+          "reference": "Practitioner/4464007",
+          "display": "Portal, Portal"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "p10877893",
+        "meta": {
+          "versionId": "10877893",
+          "lastUpdated": "2019-03-18T19:13:29.000Z"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Condition</b></p><p><b>Patient</b>: SMART, TIMMY</p><p><b>Problem</b>: Malignant neoplasm of anterior surface of epiglottis, Malignant neoplasm of anterior epiglottis (disorder)</p><p><b>Clinical Status</b>: Active</p><p><b>Verification Status</b>: Confirmed</p></div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active",
+              "userSelected": false
+            }
+          ],
+          "text": "Active"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed",
+              "userSelected": false
+            }
+          ],
+          "text": "Confirmed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem List Item"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "187681002",
+              "display": "Malignant neoplasm of anterior epiglottis (disorder)",
+              "userSelected": false
+            }
+          ],
+          "text": "Malignant neoplasm of anterior surface of epiglottis"
+        },
+        "subject": {
+          "reference": "Patient/4342012",
+          "display": "SMART, TIMMY"
+        },
+        "recordedDate": "2019-03-18T19:13:29.000Z",
+        "recorder": {
+          "reference": "Practitioner/4464007",
+          "display": "Portal, Portal"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "p11801869",
+        "meta": {
+          "versionId": "11801869",
+          "lastUpdated": "2019-06-05T19:06:16.000Z"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Condition</b></p><p><b>Patient</b>: SMART, TIMMY</p><p><b>Problem</b>: Schizophrenia, Schizophrenia</p><p><b>Clinical Status</b>: Active</p><p><b>Verification Status</b>: Confirmed</p></div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active",
+              "userSelected": false
+            }
+          ],
+          "text": "Active"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed",
+              "userSelected": false
+            }
+          ],
+          "text": "Confirmed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem List Item"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://e-imo.com/products/problem-it",
+              "code": "54193",
+              "display": "Schizophrenia",
+              "userSelected": false
+            },
+            {
+              "system": "http://snomed.info/sct",
+              "code": "58214004",
+              "display": "Schizophrenia (disorder)",
+              "userSelected": false
+            }
+          ],
+          "text": "Schizophrenia"
+        },
+        "subject": {
+          "reference": "Patient/4342012",
+          "display": "SMART, TIMMY"
+        },
+        "recordedDate": "2019-06-05T19:06:16.000Z",
+        "recorder": {
+          "reference": "Practitioner/4464007",
+          "display": "Portal, Portal"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "p13817885",
+        "meta": {
+          "versionId": "13817885",
+          "lastUpdated": "2019-10-31T14:20:12.000Z"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Condition</b></p><p><b>Patient</b>: SMART, TIMMY</p><p><b>Problem</b>: Sugar urinary, Glycosuria (finding)</p><p><b>Clinical Status</b>: Active</p><p><b>Verification Status</b>: Confirmed</p></div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active",
+              "userSelected": false
+            }
+          ],
+          "text": "Active"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed",
+              "userSelected": false
+            }
+          ],
+          "text": "Confirmed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem List Item"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "45154002",
+              "display": "Glycosuria (finding)",
+              "userSelected": false
+            },
+            {
+              "system": "http://e-imo.com/products/problem-it",
+              "code": "45216",
+              "display": "Sugar urinary",
+              "userSelected": false
+            }
+          ],
+          "text": "Sugar urinary"
+        },
+        "subject": {
+          "reference": "Patient/4342012",
+          "display": "SMART, TIMMY"
+        },
+        "recordedDate": "2019-10-31T14:20:12.000Z",
+        "recorder": {
+          "reference": "Practitioner/4464007",
+          "display": "Portal, Portal"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "p13817869",
+        "meta": {
+          "versionId": "13817869",
+          "lastUpdated": "2019-10-31T14:14:44.000Z"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Condition</b></p><p><b>Patient</b>: SMART, TIMMY</p><p><b>Problem</b>: Hereditary acanthocytosis, Hereditary acanthocytosis</p><p><b>Clinical Status</b>: Active</p><p><b>Verification Status</b>: Confirmed</p></div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active",
+              "userSelected": false
+            }
+          ],
+          "text": "Active"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed",
+              "userSelected": false
+            }
+          ],
+          "text": "Confirmed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem List Item"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://e-imo.com/products/problem-it",
+              "code": "19396",
+              "display": "Hereditary acanthocytosis",
+              "userSelected": false
+            },
+            {
+              "system": "http://snomed.info/sct",
+              "code": "11376001",
+              "display": "Hereditary acanthocytosis (disorder)",
+              "userSelected": false
+            }
+          ],
+          "text": "Hereditary acanthocytosis"
+        },
+        "subject": {
+          "reference": "Patient/4342012",
+          "display": "SMART, TIMMY"
+        },
+        "recordedDate": "2019-10-31T14:14:44.000Z",
+        "recorder": {
+          "reference": "Practitioner/4464007",
+          "display": "Portal, Portal"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "p11125891",
+        "meta": {
+          "versionId": "11125891",
+          "lastUpdated": "2019-04-09T17:35:29.000Z"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Condition</b></p><p><b>Patient</b>: SMART, TIMMY</p><p><b>Problem</b>: Toe avulsion, Open wound of toe (disorder)</p><p><b>Clinical Status</b>: Active</p><p><b>Verification Status</b>: Confirmed</p></div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active",
+              "userSelected": false
+            }
+          ],
+          "text": "Active"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed",
+              "userSelected": false
+            }
+          ],
+          "text": "Confirmed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem List Item"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "125664002",
+              "display": "Open wound of toe (disorder)",
+              "userSelected": false
+            }
+          ],
+          "text": "Toe avulsion"
+        },
+        "subject": {
+          "reference": "Patient/4342012",
+          "display": "SMART, TIMMY"
+        },
+        "recordedDate": "2019-04-09T17:35:29.000Z",
+        "recorder": {
+          "reference": "Practitioner/4464007",
+          "display": "Portal, Portal"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "p13817901",
+        "meta": {
+          "versionId": "13817901",
+          "lastUpdated": "2019-10-31T14:34:53.000Z"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Condition</b></p><p><b>Patient</b>: SMART, TIMMY</p><p><b>Problem</b>: FH: abdominal aortic aneurysm repair, FH: Aortic aneurysm (context-dependent category)</p><p><b>Clinical Status</b>: Active</p><p><b>Verification Status</b>: Confirmed</p></div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active",
+              "userSelected": false
+            }
+          ],
+          "text": "Active"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed",
+              "userSelected": false
+            }
+          ],
+          "text": "Confirmed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem List Item"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "395125009",
+              "display": "FH: Aortic aneurysm (context-dependent category)",
+              "userSelected": false
+            },
+            {
+              "system": "http://e-imo.com/products/problem-it",
+              "code": "602835",
+              "display": "FH: abdominal aortic aneurysm repair",
+              "userSelected": false
+            }
+          ],
+          "text": "FH: abdominal aortic aneurysm repair"
+        },
+        "subject": {
+          "reference": "Patient/4342012",
+          "display": "SMART, TIMMY"
+        },
+        "recordedDate": "2019-10-31T14:34:53.000Z",
+        "recorder": {
+          "reference": "Practitioner/4464007",
+          "display": "Portal, Portal"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "p12073881",
+        "meta": {
+          "versionId": "12073881",
+          "lastUpdated": "2019-06-26T14:42:00.000Z"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Condition</b></p><p><b>Patient</b>: SMART, TIMMY</p><p><b>Problem</b>: Pain in left knee, Pain in left knee</p><p><b>Clinical Status</b>: Active</p><p><b>Verification Status</b>: Confirmed</p></div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active",
+              "userSelected": false
+            }
+          ],
+          "text": "Active"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed",
+              "userSelected": false
+            }
+          ],
+          "text": "Confirmed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem List Item"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://e-imo.com/products/problem-it",
+              "code": "1004776",
+              "display": "Pain in left knee",
+              "userSelected": false
+            },
+            {
+              "system": "http://snomed.info/sct",
+              "code": "30989003",
+              "display": "Knee pain (finding)",
+              "userSelected": false
+            }
+          ],
+          "text": "Pain in left knee"
+        },
+        "subject": {
+          "reference": "Patient/4342012",
+          "display": "SMART, TIMMY"
+        },
+        "recordedDate": "2019-06-26T14:42:00.000Z",
+        "recorder": {
+          "reference": "Practitioner/4464007",
+          "display": "Portal, Portal"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "p10914273",
+        "meta": {
+          "versionId": "10914273",
+          "lastUpdated": "2019-03-20T16:45:51.000Z"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Condition</b></p><p><b>Patient</b>: SMART, TIMMY</p><p><b>Problem</b>: Headache affecting lower half of face, Headache (finding)</p><p><b>Clinical Status</b>: Active</p><p><b>Verification Status</b>: Confirmed</p></div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active",
+              "userSelected": false
+            }
+          ],
+          "text": "Active"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed",
+              "userSelected": false
+            }
+          ],
+          "text": "Confirmed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem List Item"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "25064002",
+              "display": "Headache (finding)",
+              "userSelected": false
+            }
+          ],
+          "text": "Headache affecting lower half of face"
+        },
+        "subject": {
+          "reference": "Patient/4342012",
+          "display": "SMART, TIMMY"
+        },
+        "recordedDate": "2019-03-20T16:45:51.000Z",
+        "recorder": {
+          "reference": "Practitioner/4464007",
+          "display": "Portal, Portal"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "p11533881",
+        "meta": {
+          "versionId": "11533881",
+          "lastUpdated": "2019-05-08T20:00:27.000Z"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Condition</b></p><p><b>Patient</b>: SMART, TIMMY</p><p><b>Problem</b>: Hereditary hemochromatosis, Hereditary hemochromatosis (disorder)</p><p><b>Clinical Status</b>: Active</p><p><b>Verification Status</b>: Confirmed</p></div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active",
+              "userSelected": false
+            }
+          ],
+          "text": "Active"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed",
+              "userSelected": false
+            }
+          ],
+          "text": "Confirmed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem List Item"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "35400008",
+              "display": "Hereditary hemochromatosis (disorder)",
+              "userSelected": false
+            }
+          ],
+          "text": "Hereditary hemochromatosis"
+        },
+        "subject": {
+          "reference": "Patient/4342012",
+          "display": "SMART, TIMMY"
+        },
+        "recordedDate": "2019-05-08T20:00:27.000Z",
+        "recorder": {
+          "reference": "Practitioner/4464007",
+          "display": "Portal, Portal"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "p11849869",
+        "meta": {
+          "versionId": "11849869",
+          "lastUpdated": "2019-06-07T20:09:59.000Z"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Condition</b></p><p><b>Patient</b>: SMART, TIMMY</p><p><b>Problem</b>: Type 1 diabetes mellitus with hypoglycemia and without coma, Diabetes mellitus type 1 (disorder)</p><p><b>Clinical Status</b>: Active</p><p><b>Verification Status</b>: Confirmed</p></div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active",
+              "userSelected": false
+            }
+          ],
+          "text": "Active"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed",
+              "userSelected": false
+            }
+          ],
+          "text": "Confirmed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem List Item"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "46635009",
+              "display": "Diabetes mellitus type 1 (disorder)",
+              "userSelected": false
+            },
+            {
+              "system": "http://e-imo.com/products/problem-it",
+              "code": "1621760",
+              "display": "Type 1 diabetes mellitus with hypoglycemia and without coma",
+              "userSelected": false
+            }
+          ],
+          "text": "Type 1 diabetes mellitus with hypoglycemia and without coma"
+        },
+        "subject": {
+          "reference": "Patient/4342012",
+          "display": "SMART, TIMMY"
+        },
+        "recordedDate": "2019-06-07T20:09:59.000Z",
+        "recorder": {
+          "reference": "Practitioner/4464007",
+          "display": "Portal, Portal"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "p9957997",
+        "meta": {
+          "versionId": "9957997",
+          "lastUpdated": "2019-01-07T23:03:38.000Z"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Condition</b></p><p><b>Patient</b>: SMART, TIMMY</p><p><b>Problem</b>: Cataract due to DM, Diabetic cataract (disorder)</p><p><b>Clinical Status</b>: Active</p><p><b>Verification Status</b>: Confirmed</p></div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active",
+              "userSelected": false
+            }
+          ],
+          "text": "Active"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed",
+              "userSelected": false
+            }
+          ],
+          "text": "Confirmed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem List Item"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "43959009",
+              "display": "Diabetic cataract (disorder)",
+              "userSelected": false
+            }
+          ],
+          "text": "Cataract due to DM"
+        },
+        "subject": {
+          "reference": "Patient/4342012",
+          "display": "SMART, TIMMY"
+        },
+        "recordedDate": "2019-01-07T23:03:38.000Z",
+        "recorder": {
+          "reference": "Practitioner/4464007",
+          "display": "Portal, Portal"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "p11801861",
+        "meta": {
+          "versionId": "11801861",
+          "lastUpdated": "2019-06-05T19:04:59.000Z"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Condition</b></p><p><b>Patient</b>: SMART, TIMMY</p><p><b>Problem</b>: Chronic kidney disease, stage IV (severe), Chronic kidney disease, stage IV (severe)</p><p><b>Clinical Status</b>: Active</p><p><b>Verification Status</b>: Confirmed</p></div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active",
+              "userSelected": false
+            }
+          ],
+          "text": "Active"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed",
+              "userSelected": false
+            }
+          ],
+          "text": "Confirmed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem List Item"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://e-imo.com/products/problem-it",
+              "code": "514908",
+              "display": "Chronic kidney disease, stage IV (severe)",
+              "userSelected": false
+            },
+            {
+              "system": "http://snomed.info/sct",
+              "code": "431857002",
+              "display": "Chronic kidney disease stage 4 (disorder)",
+              "userSelected": false
+            }
+          ],
+          "text": "Chronic kidney disease, stage IV (severe)"
+        },
+        "subject": {
+          "reference": "Patient/4342012",
+          "display": "SMART, TIMMY"
+        },
+        "recordedDate": "2019-06-05T19:04:59.000Z",
+        "recorder": {
+          "reference": "Practitioner/4464007",
+          "display": "Portal, Portal"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "p11577941",
+        "meta": {
+          "versionId": "11577941",
+          "lastUpdated": "2019-05-14T20:21:43.000Z"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Condition</b></p><p><b>Patient</b>: SMART, TIMMY</p><p><b>Problem</b>: Merkel cell carcinoma of skin of breast, Merkel cell carcinoma (disorder)</p><p><b>Clinical Status</b>: Active</p><p><b>Verification Status</b>: Confirmed</p></div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active",
+              "userSelected": false
+            }
+          ],
+          "text": "Active"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed",
+              "userSelected": false
+            }
+          ],
+          "text": "Confirmed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem List Item"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "253001006",
+              "display": "Merkel cell carcinoma (disorder)",
+              "userSelected": false
+            },
+            {
+              "system": "http://e-imo.com/products/problem-it",
+              "code": "1588243",
+              "display": "Merkel cell carcinoma of skin of breast",
+              "userSelected": false
+            }
+          ],
+          "text": "Merkel cell carcinoma of skin of breast"
+        },
+        "subject": {
+          "reference": "Patient/4342012",
+          "display": "SMART, TIMMY"
+        },
+        "recordedDate": "2019-05-14T20:21:43.000Z",
+        "recorder": {
+          "reference": "Practitioner/4464007",
+          "display": "Portal, Portal"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "p13809871",
+        "meta": {
+          "versionId": "13809871",
+          "lastUpdated": "2019-10-31T05:14:23.000Z"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Condition</b></p><p><b>Patient</b>: SMART, TIMMY</p><p><b>Problem</b>: Flagellantism, Flagellantism</p><p><b>Clinical Status</b>: Active</p><p><b>Verification Status</b>: Confirmed</p></div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active",
+              "userSelected": false
+            }
+          ],
+          "text": "Active"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed",
+              "userSelected": false
+            }
+          ],
+          "text": "Confirmed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem List Item"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://e-imo.com/products/problem-it",
+              "code": "15291",
+              "display": "Flagellantism",
+              "userSelected": false
+            },
+            {
+              "system": "http://snomed.info/sct",
+              "code": "41524005",
+              "display": "Flagellantism (disorder)",
+              "userSelected": false
+            }
+          ],
+          "text": "Flagellantism"
+        },
+        "subject": {
+          "reference": "Patient/4342012",
+          "display": "SMART, TIMMY"
+        },
+        "recordedDate": "2019-10-31T05:14:23.000Z",
+        "recorder": {
+          "reference": "Practitioner/4464007",
+          "display": "Portal, Portal"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "p11501907",
+        "meta": {
+          "versionId": "11501907",
+          "lastUpdated": "2019-05-03T18:53:01.000Z"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Condition</b></p><p><b>Patient</b>: SMART, TIMMY</p><p><b>Problem</b>: Family history of stillbirth, Family history: Obstetric problem (context-dependent category)</p><p><b>Clinical Status</b>: Active</p><p><b>Verification Status</b>: Confirmed</p></div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active",
+              "userSelected": false
+            }
+          ],
+          "text": "Active"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed",
+              "userSelected": false
+            }
+          ],
+          "text": "Confirmed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem List Item"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "160400002",
+              "display": "Family history: Obstetric problem (context-dependent category)",
+              "userSelected": false
+            }
+          ],
+          "text": "Family history of stillbirth"
+        },
+        "subject": {
+          "reference": "Patient/4342012",
+          "display": "SMART, TIMMY"
+        },
+        "recordedDate": "2019-05-03T18:53:01.000Z",
+        "recorder": {
+          "reference": "Practitioner/4464007",
+          "display": "Portal, Portal"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "p13405865",
+        "meta": {
+          "versionId": "13405865",
+          "lastUpdated": "2019-10-01T17:49:45.000Z"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Condition</b></p><p><b>Patient</b>: SMART, TIMMY</p><p><b>Problem</b>: End stage COPD, End stage COPD</p><p><b>Clinical Status</b>: Active</p><p><b>Verification Status</b>: Confirmed</p></div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active",
+              "userSelected": false
+            }
+          ],
+          "text": "Active"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed",
+              "userSelected": false
+            }
+          ],
+          "text": "Confirmed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem List Item"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://e-imo.com/products/problem-it",
+              "code": "1052715",
+              "display": "End stage COPD",
+              "userSelected": false
+            },
+            {
+              "system": "http://snomed.info/sct",
+              "code": "135836000",
+              "display": "End stage chronic obstructive airways disease (disorder)",
+              "userSelected": false
+            }
+          ],
+          "text": "End stage COPD"
+        },
+        "subject": {
+          "reference": "Patient/4342012",
+          "display": "SMART, TIMMY"
+        },
+        "recordedDate": "2019-10-01T17:49:45.000Z",
+        "recorder": {
+          "reference": "Practitioner/4464007",
+          "display": "Portal, Portal"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "p11125883",
+        "meta": {
+          "versionId": "11125883",
+          "lastUpdated": "2019-04-09T17:34:24.000Z"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Condition</b></p><p><b>Patient</b>: SMART, TIMMY</p><p><b>Problem</b>: Toe amputation status, Amputated toe (finding)</p><p><b>Clinical Status</b>: Active</p><p><b>Verification Status</b>: Confirmed</p></div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active",
+              "userSelected": false
+            }
+          ],
+          "text": "Active"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed",
+              "userSelected": false
+            }
+          ],
+          "text": "Confirmed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem List Item"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "299657000",
+              "display": "Amputated toe (finding)",
+              "userSelected": false
+            }
+          ],
+          "text": "Toe amputation status"
+        },
+        "subject": {
+          "reference": "Patient/4342012",
+          "display": "SMART, TIMMY"
+        },
+        "recordedDate": "2019-04-09T17:34:24.000Z",
+        "recorder": {
+          "reference": "Practitioner/4464007",
+          "display": "Portal, Portal"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "p10157899",
+        "meta": {
+          "versionId": "10157899",
+          "lastUpdated": "2019-01-22T17:18:35.000Z"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Condition</b></p><p><b>Patient</b>: SMART, TIMMY</p><p><b>Problem</b>: Depression, Depressive disorder (disorder)</p><p><b>Clinical Status</b>: Active</p><p><b>Verification Status</b>: Confirmed</p></div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active",
+              "userSelected": false
+            }
+          ],
+          "text": "Active"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed",
+              "userSelected": false
+            }
+          ],
+          "text": "Confirmed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem List Item"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "35489007",
+              "display": "Depressive disorder (disorder)",
+              "userSelected": false
+            }
+          ],
+          "text": "Depression"
+        },
+        "subject": {
+          "reference": "Patient/4342012",
+          "display": "SMART, TIMMY"
+        },
+        "recordedDate": "2019-01-22T17:18:34.000Z",
+        "recorder": {
+          "reference": "Practitioner/4464007",
+          "display": "Portal, Portal"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "p11553869",
+        "meta": {
+          "versionId": "11553869",
+          "lastUpdated": "2019-05-10T19:47:44.000Z"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Condition</b></p><p><b>Patient</b>: SMART, TIMMY</p><p><b>Problem</b>: Intractable episodic cluster headache, Intractable episodic cluster headache</p><p><b>Clinical Status</b>: Active</p><p><b>Verification Status</b>: Confirmed</p></div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active",
+              "userSelected": false
+            }
+          ],
+          "text": "Active"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed",
+              "userSelected": false
+            }
+          ],
+          "text": "Confirmed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem List Item"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://e-imo.com/products/problem-it",
+              "code": "1587871",
+              "display": "Intractable episodic cluster headache",
+              "userSelected": false
+            },
+            {
+              "system": "http://snomed.info/sct",
+              "code": "230472004",
+              "display": "Episodic cluster headache (disorder)",
+              "userSelected": false
+            }
+          ],
+          "text": "Intractable episodic cluster headache"
+        },
+        "subject": {
+          "reference": "Patient/4342012",
+          "display": "SMART, TIMMY"
+        },
+        "recordedDate": "2019-05-10T19:47:44.000Z",
+        "recorder": {
+          "reference": "Practitioner/4464007",
+          "display": "Portal, Portal"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "p13817893",
+        "meta": {
+          "versionId": "13817893",
+          "lastUpdated": "2019-10-31T14:32:31.000Z"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Condition</b></p><p><b>Patient</b>: SMART, TIMMY</p><p><b>Problem</b>: Dawson&apos;s encephalitis, Subacute sclerosing panencephalitis (disorder)</p><p><b>Clinical Status</b>: Active</p><p><b>Verification Status</b>: Confirmed</p></div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active",
+              "userSelected": false
+            }
+          ],
+          "text": "Active"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed",
+              "userSelected": false
+            }
+          ],
+          "text": "Confirmed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem List Item"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "192685000",
+              "display": "Subacute sclerosing panencephalitis (disorder)",
+              "userSelected": false
+            },
+            {
+              "system": "http://e-imo.com/products/problem-it",
+              "code": "55158",
+              "display": "Dawson's encephalitis",
+              "userSelected": false
+            }
+          ],
+          "text": "Dawson's encephalitis"
+        },
+        "subject": {
+          "reference": "Patient/4342012",
+          "display": "SMART, TIMMY"
+        },
+        "recordedDate": "2019-10-31T14:32:31.000Z",
+        "recorder": {
+          "reference": "Practitioner/4464007",
+          "display": "Portal, Portal"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "1912007",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2019-06-24T15:22:23.000Z"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Practitioner</b></p><p><b>Name</b>: McCurdy, Michael</p><p><b>Status</b>: Active</p></div>"
+        },
+        "identifier": [
+          {"type" : { "coding":{"system":{"code":{"value":"PRN" }}}},
+               "system":"urn:oid:2.16.840.1.113883.4.6",
+               "value":"1932102951"
+            }
+        ],
+        "active": true,
+        "name": [
+          {
+            "use": "usual",
+            "text": "McCurdy, Michael",
+            "family": "McCurdy",
+            "given": [
+              "Michael"
+            ],
+            "period": {
+              "start": "2013-09-27T04:25:59.000Z"
+            }
+          }
+        ],
+        "address" :[
+            {
+               "line":[
+                  "Family Health Org",
+                  "1004 Healthcare Dr."
+               ],
+               "city":"Portland",
+               "state":"OR",
+               "postalCode":"97005",
+               "country":"USA"
+            }],
+        "telecom" : [
+            {
+               "system":"phone",
+               "value":"(05) 5381 8146",
+               "use":"work",
+               "rank":2
+            },
+            {
+               "system":"phone",
+               "value":"(05) 5381 8157",
+               "use":"work",
+               "rank":2
+            }
+         ]
+      }
+    },
+    {"resource":{
+        "resourceType" : "Organization",
+         "id":"567",
+        "identifier" : [
+         {
+           "type" : { "coding":{"system":{"code":{"value":"TAX" }}}},
+           "value" : "63729"
+         }
+         ],
+        "name" : "Family Health Organization",
+        "telecom" : [
+            {
+               "system":"phone",
+               "value":"(05) 5381 8146",
+               "use":"work",
+               "rank":2
+            },
+            {
+               "system":"phone",
+               "value":"(05) 5381 8157",
+               "use":"work",
+               "rank":2
+            }
+         ],
+        "address" :[
+            {
+               "line":[
+                  "Family Health Org",
+                  "1004 Healthcare Dr."
+               ],
+               "city":"Portland",
+               "state":"OR",
+               "postalCode":"97005",
+               "country":"USA"
+            }]
+      }}
+  ]
+}

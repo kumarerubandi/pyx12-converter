@@ -33,60 +33,74 @@ identification_code = ['MI','II']
 #     return "fhir"
 
 def get_json():
-    with open("/var/www/html/claim.json", 'r') as file_object:
+    with open("Claim_bundle.json", 'r') as file_object:
         return file_object.read()
 
 @app.route('/xmlx12', methods=['POST','GET'])
 def convertToX12():
-    req_json = json.loads(request.data)
-    if 'claim_json' in req_json:
-        claim_json = req_json['claim_json']
-
+    # req_json = json.loads(request.data)
+    # if 'claim_json' in req_json:
+    #    claim_json = req_json['claim_json']
+    #print "-------",claim_json
     standard_278 = ET.parse("standard_278.xml")
-    # claim_json = json.loads(get_json())
-    pa_xml = standard_278.getroot()
-    loop_elems = [element for element in pa_xml.getiterator() if element.tag=='loop']
-    response= {"x12_response":"","error":""}
-    try:
+    response = {"x12_response": "", "error": ""}
+    claim_bundle = json.loads(get_json())
+    claim_json = {}
+    # print "-------", claim_bundle
+    if 'entry' in claim_bundle:
+        if len(claim_bundle['entry'])>0:
+            for e in claim_bundle['entry']:
+                if 'resource' in e:
+                    if e['resource']['resourceType']== 'Claim':
+                        claim_json=e['resource']
+    if claim_json:
+        pa_xml = standard_278.getroot()
+        loop_elems = [element for element in pa_xml.getiterator() if element.tag=='loop']
+
+        # try:
         for loop_elem in loop_elems[:]:
-            # print "loop elem---",loop_elem.attrib['id']
             # UMO
             if loop_elem.attrib['id'] == '2010A':
                 if 'insurer' in claim_json:
-                    response['error'] = loopA(loop_elem, claim_json,response['error'])
+                    response['error'] = loopA(loop_elem, claim_bundle['entry'],claim_json,response['error'])
                     # print "loopA----------", ET.tostring(loop_elem)
                 else:
                     response['error']+= "The Payer Information is missing."
             # Requestor Name
             elif loop_elem.attrib['id'] == '2010B':
                 if 'enterer' in claim_json:
-                    response['error'] = loopB(loop_elem,claim_json,response['error'])
+                    response['error'] = loopB(loop_elem, claim_bundle['entry'],claim_json,response['error'])
                     # print "loopB----------", ET.tostring(loop_elem)
                 else:
                     response['error'] += "The Requester Information is missing."
             # Subscriber Name
             elif loop_elem.attrib['id'] == '2010C':
                 if 'patient' in claim_json:
-                    response['error'] = loopC(loop_elem, claim_json,response['error'])
+                    response['error'] = loopC(loop_elem, claim_bundle['entry'], claim_json,response['error'])
                     # print "loopC----------", ET.tostring(loop_elem)
                 else:
                     response['error'] += "The Subscriber Information is missing."
             #Dependent Name
             elif loop_elem.attrib['id'] == '2010D':
                 if 'payee' in claim_json:
-                    response['error'] = loopD(loop_elem, claim_json,response['error'])
+                    response['error'] = loopD(loop_elem, claim_bundle['entry'], claim_json,response['error'])
                     # print "loopD----------", ET.tostring(loop_elem)
+                # else:
+                #     response['error'] += "The Dependent Information is missing."
                 else:
-                    response['error'] += "The Dependent Information is missing."
+                    loop_2010d = [element for element in pa_xml.getiterator() if
+                                  element.tag == 'loop' and element.attrib['id'] == '2000D']
+                    if len(loop_2010d)>0:
+                        loop_2010d[0].remove(loop_elem)
             elif loop_elem.attrib['id'] == '2000E':
                 if 'diagnosis' in claim_json:
-                    response['error'] = loopE(loop_elem, claim_json,response['error'])
+                    response['error'] = loopE(loop_elem, claim_bundle['entry'], claim_json,response['error'])
                     # print "loop E---------", ET.tostring(loop_elem)
                 else:
                     response['error'] += "The Patient Level Diagnosis Information is missing."
             elif loop_elem.attrib['id'] == '2010EA':
                 if 'provider' in claim_json:
-                    response['error'] = loopEA(loop_elem, claim_json,response['error'])
+                    response['error'] = loopEA(loop_elem, claim_bundle['entry'], claim_json,response['error'])
                 else:
                     response['error'] += "The Patient Level Provider Information is missing."
 
@@ -110,10 +124,10 @@ def convertToX12():
                                     procedure_codes.append(p['procedureCodeableConcept']['coding'][0]['code'])
                                 if 'text' in p['procedureCodeableConcept']:
                                     procedure_desc.append(p['procedureCodeableConcept']['text'])
-                        loop2000F(loop_elem, claim_json,procedure_codes, procedure_desc)
+                        loop2000F(loop_elem, claim_bundle['entry'], claim_json,procedure_codes, procedure_desc)
 
-                    else:
-                        response['error'] += "The Service Level Procedure Information is missing."
+                    # else:
+                    #     response['error'] += "The Service Level Procedure Information is missing."
                 else:
                     loop_2000e = [element for element in pa_xml.getiterator() if
                                   element.tag == 'loop' and element.attrib['id'] == '2000E']
@@ -124,49 +138,49 @@ def convertToX12():
             elif loop_elem.attrib['id'] == '2010F':
                 if 'item' in claim_json:
                     if 'careTeamSequence' in claim_json['item'][0] and 'careTeam' in claim_json:
-                        loop2010F(claim_json, pa_xml,claim_json['item'][0]['careTeamSequence'])
+                        loop2010F(claim_json, claim_bundle['entry'], pa_xml,claim_json['item'][0]['careTeamSequence'])
                     else:
                         loop_2000f = [element for element in pa_xml.getiterator() if element.tag == 'loop' and element.attrib['id']=='2000F']
                         if len(loop_2000f)>0:
                             loop_2000f[0].remove(loop_elem)
                     # response['x12_response'] += "The Care Team Information is missing."
-            # else:
-            #     response['x12_response'] += "The Care Team Information is missing."
-    except:
-        response['error'] = "The X12 could not be created!!"
-    st_elem = [element for element in pa_xml.getiterator() if
-               element.text == 'segment_count']
-    total_seg = [element for element in pa_xml.getiterator() if
-               element.tag == 'seg']
-    seg_num = 0
-    for s in total_seg:
-        seg_num =seg_num+1
-    st_elem[0].text = str(int(seg_num-4))
-    # print "final----------", ET.tostring(pa_xml)
-    if response['error'] == '':
-        try:
+
+        # except:
+        #     response['error'] = "The X12 could not be created!!"
+        st_elem = [element for element in pa_xml.getiterator() if
+                   element.text == 'segment_count']
+        total_seg = [element for element in pa_xml.getiterator() if
+                   element.tag == 'seg']
+        seg_num = 0
+        for s in total_seg:
+            seg_num =seg_num+1
+        st_elem[0].text = str(int(seg_num-4))
+        # print "final----------", ET.tostring(pa_xml)
+        if response['error'] == '':
+            # try:
             output_x12 = converter.convertXMLToX12(ET.tostring(pa_xml))
             if output_x12:
-                # validation = converter.x12n_document(output_x12)
+                #validation = converter.validate_x12(str(output_x12.replace('~', '~\n')))
                 print "---------", str(output_x12.replace('~', '~\n'))
                 response['x12_response']=output_x12
-        except:
-            response['error'] = "The X12 could not be created!!"
-    return json.dumps(response)
+            # except:
+            #     response['error'] = "The X12 could not be created!!"
+        return json.dumps(response)
+    else:
+        response['error']='Claim resource not found'
+        return response
 
-
-def loopA(loop_elem, claim_json,response):
+def loopA(loop_elem,entry, claim_json,response):
     insurer = {}
     seg_children = loop_elem.getchildren()
-    if 'contained' in claim_json:
-        for c in claim_json['contained']:
-            if 'id' in c:
-                if 'insurer' in claim_json:
-                    if 'reference' in claim_json['insurer']:
-                        if c['id'] == claim_json['insurer']['reference'][1:]:
-                            insurer = c
-                            break
 
+    for e in entry:
+        if 'resource' in e:
+            if 'id' in e['resource'] and 'insurer' in claim_json:
+                if 'reference' in claim_json['insurer']:
+                    if e['resource']['id'] == (claim_json['insurer']['reference'].split('/'))[1]:
+                        insurer = e['resource']
+                        break
     if insurer:
         for seg_child in seg_children[:]:
             if seg_child.attrib['id'] == 'NM1':
@@ -183,19 +197,28 @@ def loopA(loop_elem, claim_json,response):
         response += "The Payer Information is missing."
     return response
 
-def loopB(loop_elem,claim_json,response):
+def loopB(loop_elem,entry,claim_json,response):
     req = {'id': '', 'value': ''}
     enterer = {}
     seg_children = loop_elem.getchildren()
-    if 'contained' in claim_json:
-        for c in claim_json['contained']:
-            # print " before element_child.text.....", element_child.text, element_child.tag
-            if 'resourceType' in c:
-                if 'id' in c:
-                    if 'enterer' in claim_json:
-                        if 'reference' in claim_json['enterer']:
-                            if c['id'] == claim_json['enterer']['reference'][1:]:
-                                enterer = c
+
+    for e in entry:
+        if 'resource' in e:
+            if 'id' in e['resource'] and 'enterer' in claim_json:
+                if 'reference' in claim_json['enterer']:
+                    if e['resource']['id'] == (claim_json['enterer']['reference'].split('/'))[1]:
+                        enterer = e['resource']
+                        break
+
+    # if 'contained' in claim_json:
+    #     for c in claim_json['contained']:
+    #         # print " before element_child.text.....", element_child.text, element_child.tag
+    #         if 'resourceType' in c:
+    #             if 'id' in c:
+    #                 if 'enterer' in claim_json:
+    #                     if 'reference' in claim_json['enterer']:
+    #                         if c['id'] == claim_json['enterer']['reference'][1:]:
+    #                             enterer = c
 
     if enterer:
         for seg_child in seg_children[:]:
@@ -245,17 +268,26 @@ def loopB(loop_elem,claim_json,response):
         response += "The Requester Information is missing."
     return response
 
-def loopC(loop_elem, claim_json,response):
+def loopC(loop_elem,entry, claim_json,response):
     seg_children = loop_elem.getchildren()
     patient = {}
-    if 'contained' in claim_json:
-        for c in claim_json['contained']:
-            if 'id' in c:
-                if 'patient' in claim_json:
-                    if 'reference' in claim_json['patient']:
-                        if c['id'] == claim_json['patient']['reference'][1:]:
-                            patient = c
-                            break
+
+    for e in entry:
+        if 'resource' in e:
+            if 'id' in e['resource'] and 'patient' in claim_json:
+                if 'reference' in claim_json['patient']:
+                    if e['resource']['id'] == (claim_json['patient']['reference'].split('/'))[1]:
+                        patient = e['resource']
+                        break
+
+    # if 'contained' in claim_json:
+    #     for c in claim_json['contained']:
+    #         if 'id' in c:
+    #             if 'patient' in claim_json:
+    #                 if 'reference' in claim_json['patient']:
+    #                     if c['id'] == claim_json['patient']['reference'][1:]:
+    #                         patient = c
+    #                         break
     if patient:
         for seg_child in seg_children[:]:
             if seg_child.attrib['id'] == 'NM1':
@@ -272,18 +304,26 @@ def loopC(loop_elem, claim_json,response):
         response += "The Patient Information is missing."
     return response
 
-def loopD(loop_elem, claim_json,response):
+def loopD(loop_elem,entry, claim_json,response):
     dependent = {}
-    if 'contained' in claim_json:
-        for c in claim_json['contained']:
-            if 'resourceType' in c:
-                if 'id' in c:
-                    if 'payee' in claim_json:
-                        if 'party' in claim_json['payee']:
-                            if 'reference' in claim_json['payee']['party']:
-                                if c['id'] == claim_json['payee']['party']['reference'][1:]:
-                                    # if c['resourceType'] == 'RelatedPerson':
-                                    dependent = c
+    for e in entry:
+        if 'resource' in e:
+            if 'id' in e['resource'] and 'payee' in claim_json:
+                if 'party' in claim_json['payee']:
+                    if 'reference' in claim_json['payee']['party']:
+                        if e['resource']['id'] == (claim_json['payee']['party']['reference'].split('/'))[1]:
+                            dependent = e['resource']
+                            break
+    # if 'contained' in claim_json:
+    #     for c in claim_json['contained']:
+    #         if 'resourceType' in c:
+    #             if 'id' in c:
+    #                 if 'payee' in claim_json:
+    #                     if 'party' in claim_json['payee']:
+    #                         if 'reference' in claim_json['payee']['party']:
+    #                             if c['id'] == claim_json['payee']['party']['reference'][1:]:
+    #                                 # if c['resourceType'] == 'RelatedPerson':
+    #                                 dependent = c
     if dependent:
         # seg_children = loop_elem.getchildren()
         # for seg_child in seg_children[:]:
@@ -302,7 +342,7 @@ def loopD(loop_elem, claim_json,response):
         response += "The Dependent Information is missing."
     return response
 
-def loopE(loop_elem, claim_json,response):
+def loopE(loop_elem,entry, claim_json,response):
     seg_children = loop_elem.getchildren()
     for seg_child in seg_children[:]:
         if seg_child.attrib['id'] == 'UM':
@@ -340,20 +380,27 @@ def loopE(loop_elem, claim_json,response):
 
         if seg_child.attrib['id'] == 'HI':
             if len(claim_json['diagnosis'])>0:
-                modify_conditions(claim_json['diagnosis'], seg_child, claim_json)
+                modify_conditions(claim_json['diagnosis'],entry, seg_child, claim_json)
     return response
 
 
-def loopEA(loop_elem, claim_json,response):
+def loopEA(loop_elem,entry, claim_json,response):
     provider = {}
-    if 'contained' in claim_json:
-        for c in claim_json['contained']:
-            if 'id' in c:
-                if 'provider' in claim_json:
-                    if 'reference' in claim_json['provider']:
-                        if c['id'] == claim_json['provider']['reference'][1:]:
-                            provider = c
-                            break
+    for e in entry:
+        if 'resource' in e:
+            if 'id' in e['resource'] and 'provider' in claim_json:
+                if 'reference' in claim_json['provider']:
+                    if e['resource']['id'] == (claim_json['provider']['reference'].split('/'))[1]:
+                        provider = e['resource']
+                        break
+    # if 'contained' in claim_json:
+    #     for c in claim_json['contained']:
+    #         if 'id' in c:
+    #             if 'provider' in claim_json:
+    #                 if 'reference' in claim_json['provider']:
+    #                     if c['id'] == claim_json['provider']['reference'][1:]:
+    #                         provider = c
+    #                         break
     if provider:
         if 'resourceType' in provider:
             if provider['resourceType'] == 'Organization':
@@ -390,7 +437,7 @@ def loopEA(loop_elem, claim_json,response):
         response += "The Patient Level Provider Information is missing."
     return response
 
-def loop2000F(loop_elem, claim_json,procedure_codes,procedure_desc):
+def loop2000F(loop_elem,entry, claim_json,procedure_codes,procedure_desc):
     claim_type = ""
     if "type" in claim_json:
         if "coding" in claim_json['type']:
@@ -485,7 +532,7 @@ def loop2000F(loop_elem, claim_json,procedure_codes,procedure_desc):
     modify_name(loop_elem, claim_json['item'][0])
 
 
-def loop2010F(claim_json, pa_xml,careTeamSeq):
+def loop2010F(claim_json,entry, pa_xml,careTeamSeq):
     providers = []
     loop_2010F ="""<loop id="2010F">
                 <seg id="NM1">
@@ -536,13 +583,14 @@ def loop2010F(claim_json, pa_xml,careTeamSeq):
                     if d['sequence']==careTeamSeq[i]:
                         careTeam_final.append(d)
                 i= i+1
-    if 'contained' in claim_json:
-        for c in claim_json['contained']:
-            for p in careTeam_final:
-                if 'id' in c:
+
+    for c in entry:
+        for p in careTeam_final:
+            if 'resource' in c:
+                if 'id' in c['resource']:
                     if 'provider' in p:
                         if 'reference' in p['provider']:
-                            if c['id'] == p['provider']['reference'][1:]:
+                            if c['resource']['id'] == (p['provider']['reference'].split('/'))[1]:
                                 providers.append(c)
     final_array = []
     z = 0
@@ -594,7 +642,7 @@ def phone_segment(loop_elem,claim_json,seg_child):
     else:
         loop_elem.remove(seg_child)
 
-def modify_conditions(condition_values, seg_child,claim_json):
+def modify_conditions(condition_values,entry, seg_child,claim_json):
     # print "---------", condition_values
     i = 0
     a = 0
@@ -620,19 +668,34 @@ def modify_conditions(condition_values, seg_child,claim_json):
         comp.append(iden_elem)
         # seg_child.append(ET._Element('\n'))
         value_elem = ET._Element("subele", {'id': v})
-        value_elem.text = str(condition_values[z]['diagnosisCodeableConcept']['coding'][0]['code'])
-        comp.append(value_elem)
-        # seg_child.append(ET._Element('\n'))
         diagnosis = {}
-        if 'diagnosisReference' in condition_values[z]:
+
+        if 'diagnosisCodeableConcept' in condition_values[z]:
+            value_elem.text = str(condition_values[z]['diagnosisCodeableConcept']['coding'][0]['code'])
+            comp.append(value_elem)
+        # seg_child.append(ET._Element('\n'))
+
+        elif 'diagnosisReference' in condition_values[z]:
             if 'reference' in condition_values[z]['diagnosisReference']:
-                if 'contained' in claim_json:
-                    for diag in claim_json['contained']:
-                        if 'id' in diag:
-                            if diag['id'] == condition_values[z]['diagnosisReference']['reference'][1:]:
-                                diagnosis = diag
+                for diag in entry:
+                    if 'resource' in diag:
+                        if 'id' in diag['resource']:
+                            if diag['resource']['id'] == (condition_values[z]['diagnosisReference']['reference'].split('/'))[1]:
+                                diagnosis = diag['resource']
                                 break
+
+        # if 'diagnosisReference' in condition_values[z]:
+        #     if 'reference' in condition_values[z]['diagnosisReference']:
+        #         if 'contained' in claim_json:
+        #             for diag in claim_json['contained']:
+        #                 if 'id' in diag:
+        #                     if diag['id'] == condition_values[z]['diagnosisReference']['reference'][1:]:
+        #                         diagnosis = diag
+        #                         break
         if diagnosis:
+            if 'code' in diagnosis:
+                value_elem.text = str(diagnosis['code']['coding'][0]['code'])
+                comp.append(value_elem)
             if 'onsetDateTime' in diagnosis:
                 date_iden = ET._Element("subele", {'id': dtp})
                 date_iden.text = str('D8')

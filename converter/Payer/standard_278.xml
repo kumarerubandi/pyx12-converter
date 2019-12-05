@@ -141,7 +141,7 @@
                            </seg>
                            <!--Subscriber Supplemental Identification-->
                            <seg id='REF'>
-                               <ele id='REF01'>1D</ele>
+                               <ele id='REF01'>6P</ele>
                                <ele id='REF02'>1705555</ele>
                            </seg>
                            <seg id="N3">

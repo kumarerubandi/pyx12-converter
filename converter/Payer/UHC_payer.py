@@ -35,18 +35,25 @@ class UHC_Payer(Payer_Abstract):
 
     def loopB_requester_id(self,req,enterer):
         for id in enterer['identifier']:
-            if 'type' in id:
-                if id['type']['coding']['system']['code']['value'] == 'PRN':
+            if 'value' in id:
+                if 'type' in id:
+                    if id['type']['coding']['system']['code']['value'] == 'PRN':
+                        req['id'] = 'XX'
+                        req['value'] = id['value']
+                        break
+                    elif id['type']['coding']['system']['code']['value'] == 'TAX':
+                        req['id'] = '24'
+                        req['value'] = id['value']
+                        break
+                    else:
+                        if 'system' in id:
+                            if id['system'] == 'http://hl7.org/fhir/sid/us-npi':
+                                req['id'] = 'XX'
+                                req['value'] = id['value']
+                                break
+                else:
                     req['id'] = 'XX'
                     req['value'] = id['value']
-                    break
-                elif id['type']['coding']['system']['code']['value'] == 'TAX':
-                    req['id'] = '24'
-                    req['value'] = id['value']
-                    break
-            else:
-                req['id'] = 'XX'
-                req['value'] = id['value']
         return req
 
     def loopC_identifier_code_id(self, element_child, patient):
